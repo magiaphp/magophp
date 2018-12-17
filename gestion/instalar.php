@@ -1,5 +1,5 @@
 <?php
-if( ! file_exists("../admin/bd.php")){
+if(  file_exists("../admin/bd.php")){
     header("Location: index.php"); 
 }
 /**
