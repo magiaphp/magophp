@@ -1,4 +1,8 @@
 <?php
+// si no existe, redireccion para su creacion 
+if( ! file_exists("../admin/bd.php")){
+    header("Location: instalar.php"); 
+}
 session_start("magia_php");
 include "../admin/bd.php";
 include "../admin/configuracion.php";
