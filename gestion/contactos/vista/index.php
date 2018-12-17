@@ -11,7 +11,6 @@
 </h3>
 
 
-
 <form class="navbar-form navbar-left">
     <?php
     if (contactos_total_segun_estatus(-1)) {
