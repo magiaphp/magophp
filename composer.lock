@@ -1,0 +1,62 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "b5cee1bb3a90709ce5b241186ee8cf18",
+    "packages": [
+        {
+            "name": "robincoello/fechas",
+            "version": "0.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/robincoello/fechas.git",
+                "reference": "46588ad9045afd0d05d0a4db5621546046d0fd62"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/robincoello/fechas/zipball/46588ad9045afd0d05d0a4db5621546046d0fd62",
+                "reference": "46588ad9045afd0d05d0a4db5621546046d0fd62",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3.3"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "Gestion de fechas",
+            "time": "2018-01-29T18:37:54+00:00"
+        },
+        {
+            "name": "robincoello/horas",
+            "version": "0.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/robincoello/horas.git",
+                "reference": "6f07d9a78a22ad5c42876d94b6d813b57316ad43"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/robincoello/horas/zipball/6f07d9a78a22ad5c42876d94b6d813b57316ad43",
+                "reference": "6f07d9a78a22ad5c42876d94b6d813b57316ad43",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3.3 || ^7.0"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "Gestión de horas",
+            "time": "2018-09-22T15:43:05+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

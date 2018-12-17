@@ -1,0 +1,11 @@
+<?php
+
+$body = "";
+$body .= "<p>Hi, $contactos_email </p>";
+$body .= "<p>$contactos_email's password is changed</p>";
+
+$body .= "<p>Best regards</p>";
+$body .= "<h2>$config_nombre_web</h2>";
+$body .= "<p>$config_direccion</p>";
+$body .= "<p>$config_tel</p>";
+

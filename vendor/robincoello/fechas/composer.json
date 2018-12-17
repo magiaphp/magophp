@@ -1,0 +1,8 @@
+
+{
+    "name": "robincoello/fechas",
+    "description": "Gestion de fechas",
+    "require": {
+        "php": "^5.3.3"        
+    }
+}

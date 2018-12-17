@@ -1,0 +1,12 @@
+<?php
+
+$body = "";
+$body .= "<p>Estimado/a, $contactos_email </p>";
+$body .= "<p>Clave cambiada del usuario $contactos_email</p>";
+
+
+$body .= "<p>Atentamente,</p>";
+$body .= "<h2>$config_nombre_web</h2>";
+$body .= "<p>$config_direccion</p>";
+$body .= "<p>$config_tel</p>";
+
