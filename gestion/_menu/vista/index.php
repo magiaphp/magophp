@@ -1,6 +1,10 @@
 
     <div class="row">
-        <div class="col-lg-3"><hR></div>
+        <div class="col-lg-3"><hr>
+        
+            Menu
+        
+        </div>
         <div class="col-lg-9">
             <?php /**
               magia_version: 0.0.8
