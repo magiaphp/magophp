@@ -1,13 +1,8 @@
 {
-    "name": "robin/noproblemparking",
+    "name": "robincoello/mago",
+    "description": "Mago Web site",
     "require": {
-        "robincoello/fechas": "^0.0.2",
-        "robincoello/horas": "*"
-    },
-    "authors": [
-        {
-            "name": "robincoello",
-            "email": "robincoello@hotmail.com"
-        }
-    ]
+        "php": "^5*"
+        
+    }
 }
