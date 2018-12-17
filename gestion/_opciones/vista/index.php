@@ -11,43 +11,52 @@
     </a>
 </h2>
 
-<table class="table table-striped"><?php _opciones_thead(); ?><tbody>
+
+
+<div class="row">
+    <div class="col-lg-3"></div>
+    <div class="col-lg-9">
+
+        <table class="table table-striped"><?php _opciones_thead(); ?><tbody>
+
+                <?php
+                if (permisos_tiene_permiso("ver", "_opciones", $_usuarios_grupo)) {
+                    include "./_opciones/vista/tr_buscar.php";
+                }
+                ?><?php
+                $i = 1; // cuenta lineas
+                $grupo_actual = "";
+                while ($_opciones = mysql_fetch_array($sql)) {
+
+                    include "./_opciones/reg/reg.php";
+
+                    $campo_disponibles = _opciones_campos_disponibles();
+
+                    if ($grupo_actual != $_opciones_grupo) {
+                        echo "<tr><td colspan=\"6\">Grupo </td></tr>";
+                    }
+
+                    echo "<tr>";
+                    //  include "./_opciones/vista/tr_editar.php";
+                    include "./_opciones/vista/tr.php";
+                    echo "</tr>";
+                    $grupo_actual = $_opciones_grupo;
+                    $i++;
+                }
+                ?></tbody>
+            <?php
+            if (permisos_tiene_permiso("crear", "_opciones", $_usuarios_grupo)) {
+                include "./_opciones/vista/tr_anadir.php";
+            }
+            ?>
+            <?php _opciones_tfoot(); ?>
+
+        </table> 
 
         <?php
-        if (permisos_tiene_permiso("ver", "_opciones", $_usuarios_grupo)) {
-            include "./_opciones/vista/tr_buscar.php";
-        }
-        ?><?php
-        $i = 1; // cuenta lineas
-        $grupo_actual = "";
-        while ($_opciones = mysql_fetch_array($sql)) {
-
-            include "./_opciones/reg/reg.php";
-
-            $campo_disponibles = _opciones_campos_disponibles();
-
-            if ($grupo_actual != $_opciones_grupo) {
-                echo "<tr><td colspan=\"6\">Grupo </td></tr>";
-            }
-
-            echo "<tr>";
-            //  include "./_opciones/vista/tr_editar.php";
-            include "./_opciones/vista/tr.php";
-            echo "</tr>";
-            $grupo_actual = $_opciones_grupo;
-            $i++;
-        }
-        ?></tbody>
-    <?php
-    if (permisos_tiene_permiso("crear", "_opciones", $_usuarios_grupo)) {
-        include "./_opciones/vista/tr_anadir.php";
-    }
-    ?>
-    <?php _opciones_tfoot(); ?>
-
-</table> 
-
-<?php
 //echo paginacion($p, $c, isset($_REQUEST['pag'])); 
-echo paginacion_master($p, $c, $total_items, $pag);
-?>
+        echo paginacion_master($p, $c, $total_items, $pag);
+        ?>
+
+    </div>
+</div>

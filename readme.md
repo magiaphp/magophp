@@ -9,6 +9,6 @@ cd miweb
 
 git init
 
-git submodule add https://github.com/robincoello/mago
+git submodule add https://github.com/magiaphp/magophp
 
-git submodule update --remote mago
+git submodule update --remote magophp
