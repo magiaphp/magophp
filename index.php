@@ -1,5 +1,8 @@
 <?php
-//session_start("magia_php") ;
+if( ! file_exists("admin/bd.php")){
+    header("Location: gestion/instalar.php"); 
+}
+////session_start("magia_php") ;
 //error_reporting(E_ALL);
 //ini_set("display_errors", 1);
 //include "z_verificar.php";
