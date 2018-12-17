@@ -1,5 +1,22 @@
 <?php 
 /**
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
  * Al modificar un auto, no me deja ya q la placa existe
  * al crear un nuevo contacto, la confirmacion da error 
  * Al moficiar un contacto, no da pantalla de confirmacion 
