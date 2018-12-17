@@ -1,4 +1,7 @@
 <?php
+if( ! file_exists("../admin/bd.php")){
+    header("Location: index.php"); 
+}
 /**
 //session_start("magia_php");
 //include "z_verificar.php";
