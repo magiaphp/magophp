@@ -1,0 +1,3 @@
+[submodule "gestion/_imagenes"]
+	path = gestion/_imagenes
+	url = https://github.com/magiaphp/_imagenes
