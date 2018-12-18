@@ -26,6 +26,7 @@ include "../vendor/robincoello/fechas/fechas.php";
 include "../vendor/robincoello/horas/horas.php";
 ///require '../includes/PHPMailer-5.2.23/PHPMailerAutoload.php';
 _incluir_funciones();
+_incluir_funciones_gestion();
 $aqui_seccion = "";
 $aqui_pagina = "";
 $_usuarios_idioma = contactos_campo_segun_email('idioma', $_usuarios_usuario);

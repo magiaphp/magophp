@@ -52,6 +52,20 @@ function _incluir_funciones() {
         $i++;
     }
 }
+function _incluir_funciones_gestion() {
+    
+    $ruta = "../gestion/";
+    $directorio = scandir($ruta); //ruta actual
+    $i = 2; // empiezo en el segundo fichero  
+    while ($i < count($directorio)) {
+        
+        if(is_dir($directorio[$i])){
+            include ($ruta . $directorio[$i]."/funciones.php");
+        }
+        
+        $i++;
+    }
+}
 
 /**
  * 
