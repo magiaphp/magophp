@@ -6,5 +6,7 @@
  * 
  * https://www.roomster.com/needroom/Brussels,%20Belgium/
  * 
+ * Grupo por defecto ponerlo en la bd
+ * 
  * 
  */
