@@ -1,4 +1,4 @@
-<?php/*
+<?php
 switch ($_SERVER['SERVER_NAME']) {
     case "127.0.0.1":
     case "localhost":

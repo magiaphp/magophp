@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-lg-3"><hr>
         
-            Menu
+            Menu izquierdo
         
         </div>
         <div class="col-lg-9">
