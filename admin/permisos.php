@@ -74,7 +74,11 @@ echo '<div class="list-group">
 </div>';
 }
 
-
+/**
+ * 
+ * @param type $pagina
+ * @param type $accion
+ */
 function permisos_plugin_controlador($pagina, $accion){
     
     

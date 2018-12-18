@@ -294,7 +294,7 @@ CREATE TABLE `_usuarios` (
 
 LOCK TABLES `_usuarios` WRITE;
 /*!40000 ALTER TABLE `_usuarios` DISABLE KEYS */;
-INSERT INTO `_usuarios` VALUES (107,'root','admin@localhost','$2y$12$exRD3glEc99UdCIX6C56l.C8eIYl2jyrk2tqFHClvIP3GsbDUHkeS',1),(113,'usuarios','robincoello@hotmail.com','$2y$12$y13plPm85YnjCSHX.ONTXuGohwAuSpdgZTa4tVjKCRsdzoa9ASPDi',0),(115,'usuarios','usuarios@latinos.be','$2y$12$QkoBL8zsrDqWYU.ssjxALO1mVymm8t/8lLKXICKw2hMQi3MVeA/Hm',0),(117,'invitados','invitado@latinos.be','$2y$12$VzSitOfrxleA.wKElwNjmOl.Ah/xPFcjusYfNiIqYQaYwGW6APFFG',0),(118,'usuarios','patricia@latinos.be','$2y$12$SMvfy/bDzlTpLw9aDpY.guDLtt1Mw6VDNcpW4ykY4M/lNeE.RWbz.',1),(119,'usuarios','ana@latinos.be','$2y$12$DzAHgwaiU.f9QCrGojeLQObTOJCHm6MfiQ6JIAHdzfj/7laxM7g0G',0),(120,'usuarios','npp@coello.be','$2y$12$tT0E1XR8ysdDj.t4F7yGDO0VY871ym4kcPTgQMUI23gqRNZ2tRCz6',0);
+INSERT INTO `_usuarios` VALUES (107,'root','admin@localhost','$2y$12$exRD3glEc99UdCIX6C56l.C8eIYl2jyrk2tqFHClvIP3GsbDUHkeS',1),(113,'usuarios','robincoello@hotmail.com','$2y$12$y13plPm85YnjCSHX.ONTXuGohwAuSpdgZTa4tVjKCRsdzoa9ASPDi',0),(115,'usuarios','usuarios@latinos.be','$2y$12$QkoBL8zsrDqWYU.ssjxALO1mVymm8t/8lLKXICKw2hMQi3MVeA/Hm',0),(117,'invitados','invitado@latinos.be','$2y$12$VzSitOfrxleA.wKElwNjmOl.Ah/xPFcjusYfNiIqYQaYwGW6APFFG',0),(118,'usuarios','patricia@latinos.be','$2y$12$SMvfy/bDzlTpLw9aDpY.guDLtt1Mw6VDNcpW4ykY4M/lNeE.RWbz.',1),(119,'usuarios','ana@latinos.be','$2y$12$a0LFY0kbSNO6f1Cm4ooJL.TW3CyC2qM4W44bzQ0lR/JsJVIJjNIOK',0),(120,'usuarios','npp@coello.be','$2y$12$tT0E1XR8ysdDj.t4F7yGDO0VY871ym4kcPTgQMUI23gqRNZ2tRCz6',0);
 /*!40000 ALTER TABLE `_usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -366,7 +366,7 @@ CREATE TABLE `contactos` (
 
 LOCK TABLES `contactos` WRITE;
 /*!40000 ALTER TABLE `contactos` DISABLE KEYS */;
-INSERT INTO `contactos` VALUES (1110,'es_ES','','','123.123.123','Empresa Blog','Robinson Coello','','Av de la programacion 12','1200','Bruselles','','Belgique','+3265987455','','admin@localhost','',0,'2017-10-10 23:20:04','',1,1),(1118,'es_ES','','EC','1712294105001','Mande.ec','Roinson Coello','Sr.','floreana e isabela','171208','Quito','','Ecuador','+593684521','','robincoello@hotmail.com','TEST',0,'2018-10-03 13:03:41','',1,1),(1120,'es_ES','','','','','Andres usuarios','','','','','','Belgique','','','usuarios@latinos.be','',0,'2018-11-11 14:42:01','',1,1),(1122,'es_ES','','','123.654.985','Empresa Invitada','Cliente invitado','','Av de las mercedes','1200','Bruxelles','','Belgique','+32474587458','','invitado@latinos.be','',0,'2018-12-05 18:54:13','',1,0),(1123,'es_ES','null','CO','123.145.147','Patricia Parking','Patricia Cadavid','M.','Carrera 24 y 2da (calle del muerto)','1200','Cali','null','Belgique','31069584747','null','patricia@latinos.be','Notas internas',0,'2018-12-15 16:21:59',NULL,1,1),(1124,'es_ES','','','123.456','Ana SPRL','Ana Perez','','Av de la liberte 208','1200','ruxelles','','Belgique','+32474624707','','ana@latinos.be','',0,'2018-12-17 23:42:53','',1,0),(1125,'en_GB','','','','','','','','','','','Belgique','','','npp@coello.be','',0,'2018-12-18 19:42:23','',1,0);
+INSERT INTO `contactos` VALUES (1110,'es_ES','','','123.123.123','Empresa Blog','Robinson Coello','','Av de la programacion 12','1200','Bruselles','','Belgique','+3265987455','','admin@localhost','',0,'2017-10-10 23:20:04','',1,1),(1118,'es_ES','','EC','1712294105001','Mande.ec','Roinson Coello','Sr.','floreana e isabela','171208','Quito','','Ecuador','+593684521','','robincoello@hotmail.com','TEST',0,'2018-10-03 13:03:41','',1,1),(1120,'es_ES','','','','','Andres usuarios','','','','','','Belgique','','','usuarios@latinos.be','',0,'2018-11-11 14:42:01','',1,1),(1122,'es_ES','','','123.654.985','Empresa Invitada','Cliente invitado','','Av de las mercedes','1200','Bruxelles','','Belgique','+32474587458','','invitado@latinos.be','',0,'2018-12-05 18:54:13','',1,0),(1123,'es_ES','null','CO','123.145.147','Patricia Parking','Patricia Cadavid','M.','Carrera 24 y 2da (calle del muerto)','1200','Cali','null','Belgique','31069584747','null','patricia@latinos.be','Notas internas',0,'2018-12-15 16:21:59',NULL,1,1),(1124,'es_ES','','','123.456','Ana SPRL','Ana Perez','','Av de la liberte 208','1200','ruxelles','','Belgique','+32474624707','','ana@latinos.be','',0,'2018-12-17 23:42:53','',1,1),(1125,'en_GB','','','','','','','','','','','Belgique','','','npp@coello.be','',0,'2018-12-18 19:42:23','',1,0);
 /*!40000 ALTER TABLE `contactos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -413,4 +413,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-12-18 20:54:28
+-- Dump completed on 2018-12-18 21:25:07

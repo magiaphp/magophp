@@ -115,11 +115,11 @@ function contactos_numero_actual() {
 
 /**
  * Verifica si el email del contacto esta presente en la tabla de _usuarios; si es asi me entrega su id
- * sino me entrega falso
  * @global type $conexion
- * @param type $campo
- * @param type $id
- * @return boolean
+ * @param type $email Email a verificar
+ * @return boolean Entrega su id si lo halla, o falso si no lo halla
+ * @package contactos
+ * @example echo contactos_tiene_login('robincoello@hotmail.com')
  */
 function contactos_tiene_login($email) {
     global $conexion;
@@ -134,7 +134,16 @@ function contactos_tiene_login($email) {
         return false;
     }
 }
-
+/**
+ * Me entrega el valor que tiene el <b>$campo</b> deacuerdo al <b>$email</b> entregado
+ * @global type $conexion
+ * @param type $campo Cualquier campo de la tabla <i>contactos</i>
+ * @param type $email Email del contacto que deseo buscar la informacion
+ * @return boolean Entrega el <i>valor</i> del $campo 
+ * @package contactos
+ * @example <p>Esto me entregaria la nota que puse del contacto que tenga el $email</p>
+ * <pre>contactos_campo_segun_email("notas", $email)</pre>
+ */
 function contactos_campo_segun_email($campo, $email) {
     global $conexion;
     $sql = mysql_query(

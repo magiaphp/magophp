@@ -9,6 +9,7 @@
  * @param type $campo
  * @param type $id
  * @return boolean
+ * @link http://localhost/doc_magophp/function-_grupos_campo.html description
  */
 function _grupos_campo($campo, $id) {
     global $conexion;
@@ -52,7 +53,12 @@ function _grupos_campo_add($campo, $label, $selecionado = "", $excluir = "") {
         echo "value=\"$_grupos[$campo]\">$_grupos[$campo]</option> \n";
     }
 }
-
+/**
+ * 
+ * @global type $conexion
+ * @param type $selecionado
+ * @param type $excluir
+ */
 function _grupos_add($selecionado = "", $excluir = "") {
     global $conexion;
     $sql = mysql_query(

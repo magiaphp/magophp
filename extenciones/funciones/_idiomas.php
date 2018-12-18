@@ -3,6 +3,13 @@
 /**
   magia_version: 0.0.8
  * */
+/**
+ * 
+ * @global type $conexion
+ * @param type $campo
+ * @param type $id
+ * @return boolean
+ */
 function _idiomas_campo($campo, $id) {
     global $conexion;
     $sql = mysql_query(
@@ -17,7 +24,12 @@ function _idiomas_campo($campo, $id) {
         return false;
     }
 }
-
+/**
+ * 
+ * @global type $conexion
+ * @param type $iso
+ * @return boolean
+ */
 function _idiomas_segun_iso($iso) {
     global $conexion;
     $sql = mysql_query(

@@ -13,11 +13,21 @@
 function magia_version() {
     return "0.0.11";
 }
-
+/**
+ * 
+ * @param type $v1
+ * @param type $v2
+ * @return type
+ */
 function m($v1, $v2) {
     return ($v1 == $v2) ? TRUE : FALSE;
 }
-
+/**
+ * 
+ * @global type $r1
+ * @global type $r2
+ * @return type
+ */
 function x() {
     global $r1, $r2;
     return($r1 != $r2) ? die(sms(EL)) : false;
@@ -52,6 +62,9 @@ function _incluir_funciones() {
         $i++;
     }
 }
+/**
+ * 
+ */
 function _incluir_funciones_gestion() {
     
     $ruta = "../gestion/";
@@ -156,7 +169,10 @@ function _estatus($estatus) {
         return _t("Bloqueado");
     }
 }
-
+/**
+ * 
+ * @return type
+ */
 function genera_clave() {
     //Se define una cadena de caractares. Te recomiendo que uses esta.
     $cadena = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";
@@ -190,7 +206,12 @@ function codifica_clave($clave) {
 
     return password_hash($clave, PASSWORD_BCRYPT, $opciones);
 }
-
+/**
+ * 
+ * @global type $config_debug
+ * @param type $codigo
+ * @param type $notas
+ */
 function vardump($codigo, $notas = "") {
     global $config_debug;
 
@@ -225,7 +246,10 @@ function vardump($codigo, $notas = "") {
         echo "</pre></code>";
     }
 }
-
+/**
+ * 
+ * @global type $config_logo
+ */
 function logo() {
     global $config_logo;
     echo '<a href="index.php" class="thumbnail"><img src="../imagenes/' . $config_logo . '" alt=""></a>';
