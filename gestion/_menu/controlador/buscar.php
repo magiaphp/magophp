@@ -6,7 +6,7 @@
  $pagina = "_menu"; 
  if (permisos_tiene_permiso($accion,$pagina, $_usuarios_grupo)) { 
      include "./_menu/reg/get.php"; 
-     include "./_menu/modelos/buscar.php"; 
+     include "./_menu/modelos/buscar_segun_grupo.php"; 
      
      include "./_menu/vista/index.php"; 
  } else { 
