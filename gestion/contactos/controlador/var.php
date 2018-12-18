@@ -16,7 +16,7 @@
  } 
 
  
- if ($config_debug) {
+if ($config_debug) {
     // Tabla para ver los permisos de cada grupo de usuarios en la pagina presente 
     permisos_plugin_controlador($pagina, $accion);
     
@@ -28,8 +28,7 @@
         "\$_usuarios_grupo" => "$_usuarios_grupo",
         "permisos_tiene_permiso(\$accion, \$pagina, \$_usuarios_grupo)" => permisos_tiene_permiso($accion, $pagina, $_usuarios_grupo),
         "\$_REQUEST['a']" => "$_REQUEST[a]",
-        "\$_REQUEST['a']" => "$_REQUEST[a]",
-        "$autos_id" => "$autos_id"
+        "\$_REQUEST['a']" => "$_REQUEST[a]"        
     );
     echo "<table border>";
     echo "<tr><td><b>Variable</b></td><td><b>Valor</b></td></tr>";

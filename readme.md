@@ -15,3 +15,8 @@ git submodule update --remote magophp
 
 Regresa a la version anterior del documento
 
+Backup base de datos
+mysqldump -u root -p magophp > magophp.sql
+
+
+

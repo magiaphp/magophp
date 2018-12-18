@@ -56,11 +56,11 @@ if (permisos_tiene_permiso($accion, $pagina, $_usuarios_grupo)) {
 
 
         // procedemos a registrar el login 
-        $contactos_grupo = (isset($_POST['contactos_grupo'])) ? mysql_real_escape_string(trim($_POST['contactos_grupo'])) : 'centros';
+        $contactos_grupo = (isset($_POST['contactos_grupo'])) ? mysql_real_escape_string(trim($_POST['contactos_grupo'])) : _opciones_valor_segun_opcion("grupo_por_defecto");
         $contactos_clave = (isset($_POST['contactos_clave'])) ? mysql_real_escape_string(trim($_POST['contactos_clave'])) : false;
-
         include "./contactos/modelos/editar_grupo.php";
 
+        
         if ($contactos_clave) {
             $contactos_clave = codifica_clave($contactos_clave);
             include "./contactos/modelos/editar_clave.php";
@@ -85,12 +85,12 @@ if (permisos_tiene_permiso($accion, $pagina, $_usuarios_grupo)) {
     }
 } else {
     permisos_sin_permiso($accion, $pagina, $_usuarios_usuario);
-} 
+}
 
 if ($config_debug) {
     // Tabla para ver los permisos de cada grupo de usuarios en la pagina presente 
     permisos_plugin_controlador($pagina, $accion);
-    
+
     echo "<h3>Debug mode (" . __FILE__ . " )</h3>";
 
     $variables = array(
@@ -99,8 +99,7 @@ if ($config_debug) {
         "\$_usuarios_grupo" => "$_usuarios_grupo",
         "permisos_tiene_permiso(\$accion, \$pagina, \$_usuarios_grupo)" => permisos_tiene_permiso($accion, $pagina, $_usuarios_grupo),
         "\$_REQUEST['a']" => "$_REQUEST[a]",
-        "\$_REQUEST['a']" => "$_REQUEST[a]",
-        "$autos_id" => "$autos_id"
+        "\$_REQUEST['a']" => "$_REQUEST[a]"
     );
     echo "<table border>";
     echo "<tr><td><b>Variable</b></td><td><b>Valor</b></td></tr>";

@@ -1,9 +1,9 @@
- <?php  
- /**  
- magia_version: 0.0.8 
- **/ 
- 
- if (permisos_tiene_permiso("editar", "contactos_ajenos", $_usuarios_grupo)) {
+<?php
+
+/**
+  magia_version: 0.0.8
+ * */
+if (permisos_tiene_permiso("editar", "contactos_ajenos", $_usuarios_grupo)) {
     $comando = "UPDATE contactos SET  
  idioma = '$contactos_idioma'  
  ,tipo_documento = '$contactos_tipo_documento'  
@@ -25,7 +25,7 @@
  ,  es_contacto = '$contactos_es_contacto'  
  ,  estrellas = '$contactos_estrellas'  
  ,  estatus = '$contactos_estatus'  
- WHERE id = '$contactos_id'"; 
+ WHERE id = '$contactos_id'";
 } else {
     $comando = "UPDATE contactos SET  
  idioma = '$contactos_idioma'  
@@ -53,4 +53,20 @@
 
 
 
- $sql=mysql_query($contactos,$conexion) or die ("Error: ".mysql_error());   
+$sql = mysql_query($comando, $conexion) or die("Error: " . mysql_error());
+
+if($config_debug){
+    echo "<h3>Debug mode (".__FILE__." )</h3>";
+    
+    $variables = array(
+        "\$sql"=>"$sql"
+    );
+        
+    echo "<table border>";
+    echo "<tr><td><b>Variable</b></td><td><b>Valor</b></td></tr>";       
+    foreach ($variables as $key => $value) {
+        echo "<tr><td><b>$key:</b></td><td>$value</td></tr>";
+    }    
+    echo "</table>";
+
+}

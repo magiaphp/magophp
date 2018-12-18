@@ -3,6 +3,7 @@
 define("MAGIA_GESTION_PATH", "./admin");
 $path_imagenes = "/var/www/html/";
 $config_debug = 0; 
+//$config_debug = _opciones_valor_segun_opcion("debug");
 $config_nombre_web = "No Problem Parking";
 $config_url = "https://npp.coello.be"; // sin / al final
 $config_direccion = "Av. Luise 363, \n1050 Brussels, \nBelgium";

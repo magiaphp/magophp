@@ -25,8 +25,7 @@
         "\$_usuarios_grupo" => "$_usuarios_grupo",
         "permisos_tiene_permiso(\$accion, \$pagina, \$_usuarios_grupo)" => permisos_tiene_permiso($accion, $pagina, $_usuarios_grupo),
         "\$_REQUEST['a']" => "$_REQUEST[a]",
-        "\$_REQUEST['a']" => "$_REQUEST[a]",
-        "$autos_id" => "$autos_id"
+        "\$_REQUEST['a']" => "$_REQUEST[a]"
     );
     echo "<table border>";
     echo "<tr><td><b>Variable</b></td><td><b>Valor</b></td></tr>";
