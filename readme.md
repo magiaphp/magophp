@@ -18,5 +18,9 @@ Regresa a la version anterior del documento
 Backup base de datos
 mysqldump -u root -p magophp > magophp.sql
 
+root: admin@localhost / admin@localhost
+
+
+
 
 
