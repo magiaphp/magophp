@@ -226,8 +226,8 @@ function vardump($codigo, $notas = "") {
 }
 
 function logo() {
-    global $config_logo;
-    echo '<a href="index.php" class="thumbnail"><img src="../imagenes/' . $config_logo . '" alt=""></a>';
+    
+    echo '<a href="index.php?p=_opciones&c=ver&_opciones_id=5" class="thumbnail"><img src="../imagenes/' . _opciones_valor_segun_opcion("logo") . '" alt=""></a>';
 }
 
 /**

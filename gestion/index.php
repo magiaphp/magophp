@@ -121,7 +121,7 @@ $pag = (isset($_REQUEST['pag'])) ? $_REQUEST['pag'] : 0;
                         permisos_sin_permiso($a, $p, $_usuarios_usuario);
                     }
 
-                    permisos_plugin_controlador($p, $a);
+                    ($config_debug)? permisos_plugin_controlador($p, $a):"";
 
 
                     if ($config_debug) {

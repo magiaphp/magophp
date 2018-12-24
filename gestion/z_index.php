@@ -5,6 +5,7 @@ include "../admin/bd.php";
 include "../admin/errores.php";
 include "../admin/funciones.php";
 _incluir_funciones();
+_incluir_funciones_gestion();
 include "../admin/configuracion.php";
 include "../admin/coneccion.php";
 include "../admin/conec.php";
