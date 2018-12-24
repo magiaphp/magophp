@@ -17,7 +17,8 @@
 
 
 
-    <button type="button" class="btn btn-primary btn-small" data-toggle="modal" data-target="#myModal">
+    <?php 
+    /*<button type="button" class="btn btn-primary btn-small" data-toggle="modal" data-target="#myModal">
         <?php _t("Nuevo"); ?>
     </button>
 <!-- Modal -->
@@ -42,7 +43,8 @@
             </div>
         </div>
     </div>
-</div>
+</div>*/
+    ?>
 
 
 
