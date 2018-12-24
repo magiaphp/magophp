@@ -30,9 +30,10 @@ _incluir_funciones_gestion();
 $aqui_seccion = "";
 $aqui_pagina = "";
 $_usuarios_idioma = contactos_campo_segun_email('idioma', $_usuarios_usuario);
-$pagina = $p = (isset($_REQUEST['p'])) ? $_REQUEST['p'] : "home";
-$controaldor = $c = (isset($_REQUEST['c'])) ? $_REQUEST['c'] : "index";
-$accion = $a = (isset($_REQUEST['a'])) ? $_REQUEST['a'] : "ver";
+
+$pagina         = $p = (isset($_REQUEST['p'])) ? $_REQUEST['p'] : "home";
+$controaldor    = $c = (isset($_REQUEST['c'])) ? $_REQUEST['c'] : "index";
+$accion         = $a = (isset($_REQUEST['a'])) ? $_REQUEST['a'] : "ver";
 // para las paginaciones de todas las paginas
 $pag = (isset($_REQUEST['pag'])) ? $_REQUEST['pag'] : 0;
 ?>
@@ -105,13 +106,13 @@ $pag = (isset($_REQUEST['pag'])) ? $_REQUEST['pag'] : 0;
                     <?php
                     include "home/vista/sidebar.php";
 
-                   
+
                     if (permisos_tiene_permiso($a, $p, $_usuarios_grupo)) {
 
-                        
+
                         $controlador = "./$p/controlador/$c.php";
 
-                        if (file_exists($controlador)) {                                                                                    
+                        if (file_exists($controlador)) {
                             include $controlador;
                         } else {
                             echo "Controlador <b>$controlador</b> no existe";
@@ -119,17 +120,24 @@ $pag = (isset($_REQUEST['pag'])) ? $_REQUEST['pag'] : 0;
                     } else {
                         permisos_sin_permiso($a, $p, $_usuarios_usuario);
                     }
-                    
-                    permisos_plugin_controlador($pagina, $accion);
+
+                    permisos_plugin_controlador($p, $a);
+
 
                     if ($config_debug) {
+                        echo '<div class="panel panel-primary">
+                            <div class="panel-heading">/gestion/index.php</div>
+                            <div class="panel-body">';
+
+
                         echo "<h3>Debug mode (" . __FILE__ . " )</h3>";
 
                         $variables = array(
-                            "\$accion" => "$accion",
                             "\$pagina" => "$pagina",
+                            "\$controaldor" => "$controlador",
+                            "\$accion" => "$accion",                            
                             "\$_usuarios_grupo" => "$_usuarios_grupo",
-                            "permisos_tiene_permiso(\$accion, \$pagina, \$_usuarios_grupo)" => permisos_tiene_permiso($accion, $pagina, $_usuarios_grupo),
+                            "permisos_tiene_permiso($accion, $pagina,$_usuarios_grupo)" => permisos_tiene_permiso($accion, $pagina, $_usuarios_grupo),
                             "\$_REQUEST['a']" => "$_REQUEST[a]",
                             "\$_REQUEST['a']" => "$_REQUEST[a]"
                         );
@@ -138,7 +146,12 @@ $pag = (isset($_REQUEST['pag'])) ? $_REQUEST['pag'] : 0;
                         foreach ($variables as $key => $value) {
                             echo "<tr><td><b>$key:</b></td><td>$value</td></tr>";
                         }
+                            
+                        
                         echo "</table>";
+
+                        echo '</div>
+</div>';
                     }
                     ?>
 
@@ -146,11 +159,11 @@ $pag = (isset($_REQUEST['pag'])) ? $_REQUEST['pag'] : 0;
             </div>  <!-- /2 -->
         </div>	<!-- /1 -->
 
-        <?php
-        include "home/vista/footer.php";
+<?php
+include "home/vista/footer.php";
 // cerramos la coneccion 
 //  mysql_close($conexion);
-        ?>
+?>
 
 
         <!-- Bootstrap core JavaScript

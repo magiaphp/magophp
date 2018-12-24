@@ -4,7 +4,7 @@
  * Poner los permisos correctamente
  * Si el contacto no puede cambia de idioma, no mostrar el idiomaen elmenu
  * 
- * 
+ * _menu poner menu 
  * 
  * 
  * 
