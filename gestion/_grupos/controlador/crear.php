@@ -26,4 +26,4 @@ if (isset($_REQUEST['a']) == 'crear') {
     include "./_grupos/vista/crear.php";
 }
 
-permisos_plugin_controlador($pagina, $accion);
+

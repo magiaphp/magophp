@@ -35,7 +35,7 @@ $errores = array();
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <title><?php echo "$config_nombre_web"; ?></title>
+        <title><?php echo _opciones_valor_segun_opcion("nombre_web"); ?></title>
         <meta name="description" content="Admin gestion system: magia_php">
         <meta name="author" content="Robinson Coello S.">                        
         <meta name="author" content="Magia_php">                        
