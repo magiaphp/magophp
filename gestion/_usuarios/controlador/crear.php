@@ -1,15 +1,5 @@
 <?php
-
-mensaje('info',"Los usuarios se crean automaticamente al crear un nuevo contacto");
-
-
-/**
-  magia_version: 0.0.8
- * */
-$accion = "crear";
-$pagina = "_usuarios";
-if (permisos_tiene_permiso($accion, $pagina, $_usuarios_grupo)) {
-    if (isset($_REQUEST['a']) == 'crear') {
+ if (isset($_REQUEST['a']) == 'crear') {
 
         include "./_usuarios/reg/post.php";
         // si no tiene email
@@ -31,6 +21,3 @@ if (permisos_tiene_permiso($accion, $pagina, $_usuarios_grupo)) {
     } else {
 //        include "./_usuarios/vista/crear.php";
     }
-} else {
-    permisos_sin_permiso($accion, $pagina, $_usuarios_usuario);
-} 
