@@ -16,6 +16,36 @@
 
 
 
+
+    <button type="button" class="btn btn-primary btn-small" data-toggle="modal" data-target="#myModal">
+        <?php _t("Nuevo"); ?>
+    </button>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel"><?php _t("Nuevo grupo"); ?></h4>
+            </div>
+            <div class="modal-body">
+                <?php
+                
+                echo __DIR__; 
+                echo "<hr>"; 
+                include "./vista/_grupos/form_crear.php";
+                ?>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 <?php 
 mensaje("atencion","Si no esta seguro, no modifique nada porfavor"); 
 ?>

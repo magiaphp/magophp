@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Nos da la versión actual de Magia_PHP
  * @return string Valor de 3 numeros separados por puntos ejemplo: 0.8.1
