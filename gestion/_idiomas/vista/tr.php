@@ -14,7 +14,7 @@ $porcentaje = '<div class="progress">
 
 $_idiomas_activo = ($_idiomas_activo) ?
         '<span class="glyphicon glyphicon-ok"></span> <a href="?p=_idiomas&c=activar&a=activar&_idiomas_idioma=' . $_idiomas_idioma . '&_idiomas_activo=0">' . _tr("Desactivar") . '</a>' :
-        '<span class="glyphicon glyphicon-remove"></span> <a href="?p=_idiomas&c=activar&a=activaar&_idiomas_idioma=' . $_idiomas_idioma . '&_idiomas_activo=1">' . _tr("Activar") . '</a>'
+        '<span class="glyphicon glyphicon-remove"></span> <a href="?p=_idiomas&c=activar&a=activar&_idiomas_idioma=' . $_idiomas_idioma . '&_idiomas_activo=1">' . _tr("Activar") . '</a>'
 ;
 
 

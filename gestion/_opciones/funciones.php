@@ -106,16 +106,22 @@ function _opciones_campos_a_mostrar() {
     return json_decode($reg[0], true);
 }
 
-function _opciones_thead() {
-    $campo_disponibles = _opciones_campos_disponibles();
-    $_opciones_campos_a_mostrar = _opciones_campos_a_mostrar();
+function _opciones_thead($ganchos=array()) {
     echo "
      <thead>
         <tr> ";
     echo "<th>" . _tr("#") . "</th> "; // numero de linea
-    foreach ($campo_disponibles as $value) {
-        if (in_array($value, $_opciones_campos_a_mostrar)) {
-            echo "<th>" . _tr($value) . "</th> ";
+
+    foreach (_grupo_campos_a_mostrar() as $key => $value) {
+        if ($value == "si") {
+            echo "<th>" . _tr($key) . "</th>";
+        }
+    }
+    if ($ganchos) {
+        $i = 0;
+        while ($i < count($ganchos)) {
+            echo "<th>$ganchos[$i]</th>";
+            $i++;
         }
     }
     echo "<th>" . _tr("Acción") . "</th> "; // accion             

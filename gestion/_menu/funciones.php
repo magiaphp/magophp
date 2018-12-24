@@ -77,3 +77,78 @@ function _menu_numero_actual() {
         return false;
     }
 }
+
+function _menu_campos_disponibles() {
+    global $conexion;
+    $data = array();
+    $sql = mysql_query("SHOW COLUMNS FROM _menu  ", $conexion) or error(__DIR__, __FILE__, __LINE__);
+
+    while ($reg = mysql_fetch_array($sql)) {
+        $data[$reg[0]] = $reg[0];
+    }
+
+    return $data;
+}
+
+/**
+ * Son los campos que se debe mostrar en la tabla del index
+ * @global type $conexion
+ * @return type
+ */
+function _menu_campos_a_mostrar() {
+    global $conexion;
+    $data = array();
+    $sql = mysql_query("SELECT valor FROM _opciones WHERE opcion = '_menu_thead' ", $conexion) or error(__DIR__, __FILE__, __LINE__);
+
+    $reg = mysql_fetch_array($sql);
+
+    return json_decode($reg[0], true);
+    
+    
+    
+    
+    
+    
+}
+
+function _menu_thead($ganchos = array()) {
+
+    $campo_disponibles = _menu_campos_disponibles();
+    $_menu_campos_a_mostrar = _menu_campos_a_mostrar();
+    echo "
+     <thead>
+        <tr> ";
+    echo "<th>" . _tr("#") . "</th> "; // numero de linea
+    foreach ($campo_disponibles as $disponible) {
+        
+        
+        
+        
+        if (in_array($disponible, $_menu_campos_a_mostrar)) {
+            echo "<th>" . _tr($disponible) . "</th> ";
+        }
+    }
+
+
+    if ($ganchos) {
+        $i = 0;
+        while ($i < count($ganchos)) {
+            echo "<th>$ganchos[$i]</th>";
+            $i++;
+        }
+    }
+
+
+
+
+    echo "<th>" . _tr("Acción") . "</th> "; // accion             
+    echo "    </tr>
+    </thead>";
+}
+
+/**
+ * 
+ */
+function _menu_tfoot() {
+    _menu_thead();
+}

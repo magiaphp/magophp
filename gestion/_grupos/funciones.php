@@ -42,7 +42,7 @@ function _grupos_campo($campo, $id) {
 function _grupos_campo_add($campo, $label, $selecionado = "", $excluir = "") {
     global $conexion;
     $sql = mysql_query(
-            "SELECT DISTINCT $campo FROM _menu order by $campo   ", $conexion)
+            "SELECT DISTINCT $campo FROM _grupo order by $campo   ", $conexion)
             or die("Error:" . mysql_error());
     while ($_grupos = mysql_fetch_array($sql)) {
         //include "../gestion/_grupos/reg/reg.php"; 
@@ -61,6 +61,7 @@ function _grupos_campo_add($campo, $label, $selecionado = "", $excluir = "") {
         echo "value=\"$_grupos[$campo]\">$_grupos[$campo]</option> \n";
     }
 }
+
 /**
  * 
  * @global type $conexion
@@ -161,4 +162,61 @@ function _grupos_existe($grupo) {
     } else {
         return false;
     }
+}
+
+function _grupos_campos_disponibles() {
+    global $conexion;
+    $data = array();
+    $sql = mysql_query("SHOW COLUMNS FROM _grupos  ", $conexion) or error(__DIR__, __FILE__, __LINE__);
+
+    while ($reg = mysql_fetch_array($sql)) {
+        $data[$reg[0]] = $reg[0];
+    }
+
+    return $data;
+}
+
+/**
+ * Son los campos que se debe mostrar en la tabla del index
+ * @global type $conexion
+ * @return type
+ */
+function _grupo_campos_a_mostrar() {
+    global $conexion;
+    $data = array();
+    $sql = mysql_query("SELECT valor FROM _opciones WHERE opcion = '_grupos_thead' ", $conexion) or error(__DIR__, __FILE__, __LINE__);
+
+    $reg = mysql_fetch_array($sql);
+
+    return json_decode($reg[0]);
+}
+
+function _grupos_thead($ganchos = array()) {
+    echo "
+     <thead>
+        <tr> ";
+    echo "<th>" . _tr("#") . "</th> "; // numero de linea
+
+    foreach (_grupo_campos_a_mostrar() as $key => $value) {
+        if ($value == "si") {
+            echo "<th>" . _tr($key) . "</th>";
+        }
+    }
+    if ($ganchos) {
+        $i = 0;
+        while ($i < count($ganchos)) {
+            echo "<th>$ganchos[$i]</th>";
+            $i++;
+        }
+    }
+    echo "<th>" . _tr("Acción") . "</th> "; // accion             
+    echo "    </tr>
+    </thead>";
+}
+
+/**
+ * 
+ */
+function _grupos_tfoot() {
+    _grupos_thead();
 }

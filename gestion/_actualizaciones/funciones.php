@@ -120,20 +120,16 @@ function _actualizaciones_campos_a_mostrar() {
 }
 
 function _actualizaciones_thead($ganchos = array()) {
-
-    $campo_disponibles = _actualizaciones_campos_disponibles();
-    $_actualizaciones_campos_a_mostrar = _actualizaciones_campos_a_mostrar();
     echo "
      <thead>
         <tr> ";
     echo "<th>" . _tr("#") . "</th> "; // numero de linea
-    foreach ($campo_disponibles as $value) {
-        if (in_array($value, $_actualizaciones_campos_a_mostrar)) {
-            echo "<th>" . _tr($value) . "</th> ";
+
+    foreach (_grupo_campos_a_mostrar() as $key => $value) {
+        if ($value == "si") {
+            echo "<th>" . _tr($key) . "</th>";
         }
     }
-
-
     if ($ganchos) {
         $i = 0;
         while ($i < count($ganchos)) {
@@ -141,10 +137,6 @@ function _actualizaciones_thead($ganchos = array()) {
             $i++;
         }
     }
-
-
-
-
     echo "<th>" . _tr("Acción") . "</th> "; // accion             
     echo "    </tr>
     </thead>";
