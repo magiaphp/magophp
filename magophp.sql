@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 18, 2018 at 06:44 PM
+-- Generation Time: Dec 24, 2018 at 05:05 AM
 -- Server version: 5.7.18
 -- PHP Version: 5.6.31
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `magophp`
+-- Database: `demo`
 --
 
 -- --------------------------------------------------------
@@ -3179,7 +3179,7 @@ ALTER TABLE `_permisos`
 -- AUTO_INCREMENT for table `_traducciones`
 --
 ALTER TABLE `_traducciones`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6065;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6066;
 --
 -- AUTO_INCREMENT for table `_usuarios`
 --
