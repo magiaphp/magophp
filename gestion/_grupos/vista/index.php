@@ -2,6 +2,8 @@
 
 
 <?php //include "tabs.php";    ?>
+
+
 <h2> 
     <span class="glyphicon glyphicon-<?php echo _menu_icono_segun_pagina($p); ?>"></span> 
 
@@ -12,22 +14,24 @@
         <?php _t("Nuevo"); ?>
     </button>
 
+
+    <div class="dropdown nav navbar navbar-right">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <?php _t("Exportar"); ?>
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a href="pdf.php?p=_grupos&c=pdf"><?php _t("PDF"); ?></a></li>
+            <li><a href="index.php?p=_opciones&c=editar&_opciones_id=60">Config</a></li>
+        </ul>
+    </div>
+
+
 </h2>
 
 
-<div class="dropdown">
-    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-        <?php _t("Exportar"); ?>
-        <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-        <li><a href="pdf.php?p=_grupos&c=pdf"><?php _t("PDF"); ?></a></li>
-        <li><a href="index.php?p=_opciones&c=editar&_opciones_id=60">Config</a></li>
-        <li><a href="#">Something else here</a></li>
-        <li role="separator" class="divider"></li>
-        <li><a href="#">Separated link</a></li>
-    </ul>
-</div>
+
+
 
 
 
@@ -36,9 +40,10 @@
 <table class="table table-striped">
     <thead>
         <tr> 
-            <?php 
-            $ganchos = array("Total usuarios"); 
-            _opciones_thead("_grupos", $ganchos); ?>         
+            <?php
+            $ganchos = array("Total usuarios");
+            _opciones_thead("_grupos", $ganchos);
+            ?>         
         </tr>
     </thead>
     <tbody>
@@ -55,11 +60,11 @@
         while ($_grupos = mysql_fetch_array($sql)) {
 
             include "./_grupos/reg/reg.php";
-           // $campo_disponibles = _opciones_campos_disponibles_segun_tabla("_opciones");
+            // $campo_disponibles = _opciones_campos_disponibles_segun_tabla("_opciones");
 
 
-            if (permisos_tiene_permiso("editar", "_grupos", $_usuarios_grupo)) {                
-                include "./_grupos/vista/tr.php";                
+            if (permisos_tiene_permiso("editar", "_grupos", $_usuarios_grupo)) {
+                include "./_grupos/vista/tr.php";
             } else {
                 include "./_grupos/vista/tr.php";
             }
@@ -70,16 +75,16 @@
 
     <tfoot>
         <tr> 
-           <?php _opciones_tfoot("_grupos", $ganchos); ?>             
+            <?php _opciones_tfoot("_grupos", $ganchos); ?>             
         </tr>
     </tfoot>
 
 
-<?php
-if (permisos_tiene_permiso("crear", "_grupos", $_usuarios_grupo)) {
-    // include "./_grupos/vista/tr_anadir.php";
-}
-?>
+    <?php
+    if (permisos_tiene_permiso("crear", "_grupos", $_usuarios_grupo)) {
+        // include "./_grupos/vista/tr_anadir.php";
+    }
+    ?>
 </table> 
 
 
@@ -101,9 +106,9 @@ echo paginacion_master($p, $c, $total_items, $pag);
                 <h4 class="modal-title" id="myModalLabel"><?php _t("Nuevo grupo"); ?></h4>
             </div>
             <div class="modal-body">
-<?php
-include "form_crear.php";
-?>
+                <?php
+                include "form_crear.php";
+                ?>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
