@@ -153,3 +153,15 @@ function _opciones_valor_segun_opcion($opcion) {
         return false;
     }
 }
+
+function _opciones_campos_disponibles_segun_tabla($tabla) {
+    global $conexion;
+    $data = array();
+    $sql = mysql_query("SHOW COLUMNS FROM $tabla  ", $conexion) or error(__DIR__, __FILE__, __LINE__);
+
+    while ($reg = mysql_fetch_array($sql)) {
+        $data[$reg[0]] = $reg[0];
+    }
+
+    return $data;
+}
