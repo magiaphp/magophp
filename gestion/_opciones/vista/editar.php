@@ -36,54 +36,41 @@
 
                 <?php
                 $tabla = str_replace("_thead", "", $_opciones_opcion);
-                
-                echo "<p>$tabla</p>"; 
-                
-                echo var_dump(_opciones_campos_a_mostrar_segun_tabla($tabla));
-                
-                echo "<hr>";
-                echo var_dump(_opciones_valor_json_segun_tabla_campo($tabla, 'id'));
-                echo "<hr>";
-                echo "<hr>";
-                
-                
                 foreach (_opciones_campos_disponibles_segun_tabla($tabla) as $tabla_campo) {
-                    
-                    
+
+
                     $checked_true = (_opciones_valor_json_segun_tabla_campo($tabla, $tabla_campo) == 'si') ? "checked" : "";
                     $checked_false = (_opciones_valor_json_segun_tabla_campo($tabla, $tabla_campo) == 'no') ? "checked" : "";
-                    
-                    
-                 echo "<input type=\"radio\" name=\"_opciones_valor[$tabla_campo]\" value=\"si\" $checked_true>  si "; 
-                 echo "<input type=\"radio\" name=\"_opciones_valor[$tabla_campo]\" value=\"no\" $checked_false> no <b>$tabla_campo</b> <br>"; 
-                    
-                    
-                    
-                    
-                    
 
-/*
-                foreach (json_decode($_opciones_valor) as $dispo_item => $dispo_valor) {
-  
-                    $checked_true = ( ($tabla_campo == $dispo_item) && $dispo_valor == "si") ? "checked" : "";
-                    $checked_false = (($tabla_campo == $dispo_item) && $dispo_valor == "no") ? "checked" : "";
 
-                   // echo $dispo_item . ' <input type="radio" name="_opciones_valor[' . $dispo_item . ']" value="si" ' . $checked_true . '> Visible <input type="radio" name="_opciones_valor[' . $dispo_item . ']" value="no" ' . $checked_false . '> No visible<br>';
-                    if($tabla_campo){
-                                        
-                    echo "<input type=\"radio\" name=\"_opciones_valor[$tabla_campo]\" value=\"si\" $checked_true>  si "; 
-                    echo "<input type=\"radio\" name=\"_opciones_valor[$tabla_campo]\" value=\"no\" $checked_false> no <b>$tabla_campo</b> <br>"; 
-                    }
-                    
-                    }
- * 
- */
-                    
-                    
+                    echo "<input type=\"radio\" name=\"_opciones_valor[$tabla_campo]\" value=\"si\" $checked_true>  si ";
+                    echo "<input type=\"radio\" name=\"_opciones_valor[$tabla_campo]\" value=\"no\" $checked_false> no <b>$tabla_campo</b> <br>";
+
+
+
+
+
+
+                    /*
+                      foreach (json_decode($_opciones_valor) as $dispo_item => $dispo_valor) {
+
+                      $checked_true = ( ($tabla_campo == $dispo_item) && $dispo_valor == "si") ? "checked" : "";
+                      $checked_false = (($tabla_campo == $dispo_item) && $dispo_valor == "no") ? "checked" : "";
+
+                      // echo $dispo_item . ' <input type="radio" name="_opciones_valor[' . $dispo_item . ']" value="si" ' . $checked_true . '> Visible <input type="radio" name="_opciones_valor[' . $dispo_item . ']" value="no" ' . $checked_false . '> No visible<br>';
+                      if($tabla_campo){
+
+                      echo "<input type=\"radio\" name=\"_opciones_valor[$tabla_campo]\" value=\"si\" $checked_true>  si ";
+                      echo "<input type=\"radio\" name=\"_opciones_valor[$tabla_campo]\" value=\"no\" $checked_false> no <b>$tabla_campo</b> <br>";
+                      }
+
+                      }
+                     * 
+                     */
                 }
 
 
-                echo "<hr>"; 
+                echo "<hr>";
 
 
                 // echo var_dump(json_decode($_opciones_valor));
@@ -94,12 +81,12 @@
                     $checked_true = ($dispo_valor == "si") ? "checked" : "";
                     $checked_false = ($dispo_valor == "no") ? "checked" : "";
 
-                   // echo $dispo_item . ' <input type="radio" name="_opciones_valor[' . $dispo_item . ']" value="si" ' . $checked_true . '> Visible <input type="radio" name="_opciones_valor[' . $dispo_item . ']" value="no" ' . $checked_false . '> No visible<br>';
+                    // echo $dispo_item . ' <input type="radio" name="_opciones_valor[' . $dispo_item . ']" value="si" ' . $checked_true . '> Visible <input type="radio" name="_opciones_valor[' . $dispo_item . ']" value="no" ' . $checked_false . '> No visible<br>';
                 }
                 ?>
 
 
-<?php } else { ?> 
+            <?php } else { ?> 
                 <textarea  class="form-control" name="_opciones_valor" id="_opciones_valor" placeholder="<?php _t("Valor"); ?>"><?php echo $_opciones_valor; ?></textarea> 
             <?php } ?>
 

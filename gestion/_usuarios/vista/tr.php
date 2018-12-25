@@ -12,14 +12,20 @@ if ($t_usuarios_estatus) {
 
 
 echo ' <tr>
-    <td>' . $i . '</td> 
+    <td>' . $i . '</td> ';
+
+foreach (_opciones_campos_a_mostrar_segun_tabla("_usuarios") as $key => $value) {
+    if ($value == 'si') {
+        echo "<td>$_usuarios[$key]</td> ";
+    }
+}
+
+echo '
  
 
  <td>' . contactos_campo_segun_email('empresa', $t_usuarios_usuario) . '</td> 
  <td>' . contactos_campo_segun_email('contacto', $t_usuarios_usuario) . '</td> 
  
- <td>' . $t_usuarios_usuario . '</td> 
-<td>' . $t_usuarios_grupo . '</td>  
  <td>' . $t_usuarios_estatus_icono . '</span></td> 
  <td>
 <a href=' . $_SERVER['PHP_SELF'] . '?p=_usuarios&c=ver&t_usuarios_id=' . $t_usuarios_id . '>' . _tr("Ver") . '</a> |  

@@ -36,7 +36,9 @@
 <table class="table table-striped">
     <thead>
         <tr> 
-            <?php _opciones_thead("_grupos"); ?>         
+            <?php 
+            $ganchos = array("Total usuarios"); 
+            _opciones_thead("_grupos", $ganchos); ?>         
         </tr>
     </thead>
     <tbody>
@@ -53,12 +55,11 @@
         while ($_grupos = mysql_fetch_array($sql)) {
 
             include "./_grupos/reg/reg.php";
-            $campo_disponibles = _opciones_campos_disponibles_segun_tabla("_opciones");
+           // $campo_disponibles = _opciones_campos_disponibles_segun_tabla("_opciones");
 
 
-            if (permisos_tiene_permiso("editar", "_grupos", $_usuarios_grupo)) {
-                include "./_grupos/vista/tr.php";
-                // include "./_grupos/vista/tr_editar.php";
+            if (permisos_tiene_permiso("editar", "_grupos", $_usuarios_grupo)) {                
+                include "./_grupos/vista/tr.php";                
             } else {
                 include "./_grupos/vista/tr.php";
             }
@@ -69,7 +70,7 @@
 
     <tfoot>
         <tr> 
-           <?php _opciones_tfoot("_grupos"); ?>             
+           <?php _opciones_tfoot("_grupos", $ganchos); ?>             
         </tr>
     </tfoot>
 

@@ -11,13 +11,8 @@ foreach (_opciones_campos_a_mostrar_segun_tabla("_grupos") as $key => $value) {
         echo "<td>$_grupos[$key]</td> ";
     }
 }
-
-/**
-<td>' . $_grupos_grupo . '</td> 
- <td>' . _usuarios_total_segun_grupo($_grupos_grupo) . '</td> 
- 
-*/
-
+// Lo que se quiera agregar solo sepone la final 
+echo ' <td>' . _usuarios_total_segun_grupo($_grupos_grupo) . '</td> ';
 
 
 echo '<td>

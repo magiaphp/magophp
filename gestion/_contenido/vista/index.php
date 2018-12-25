@@ -1,7 +1,7 @@
 <?php /**
   magia_version: 0.0.8
  * */ ?>
-<?php //include "tabs.php";   ?>
+<?php //include "tabs.php";    ?>
 
 <h2> 
     <span class="glyphicon glyphicon-<?php echo _menu_icono_segun_pagina($p); ?>"></span> 
@@ -16,8 +16,12 @@
 include "form_buscar.php";
 ?>
 
+
+
 <table class="table table-striped">
-    <?php _opciones_thead("_actualizaciones"); ?>
+    <?php 
+    $ganchos = array(); 
+    _opciones_thead("_contenido", $ganchos); ?>
     <tbody>
 
         <?php
@@ -46,7 +50,7 @@ include "form_buscar.php";
         //   include "./_contenido/vista/tr_anadir.php";
     }
     ?>
-    <?php _opciones_tfoot("_actualizaciones"); ?>
+    <?php _opciones_tfoot("_contenido", $ganchos); ?>
 
 
 </table> 

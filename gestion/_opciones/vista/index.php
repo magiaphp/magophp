@@ -50,7 +50,11 @@
             
             
             <table class="table table-striped">
-                <?php _opciones_thead("_opciones"); ?>
+                <?php 
+                
+                $ganchos = array();
+                
+                _opciones_thead("_opciones", $ganchos); ?>
                 
                 <tbody>
                     <?php
@@ -83,7 +87,7 @@
                     //include "./_opciones/vista/tr_anadir.php";
                 }
                 ?>
-                <?php _opciones_tfoot("_opciones"); ?>
+                <?php _opciones_tfoot("_opciones", $ganchos); ?>
 
             </table> 
 

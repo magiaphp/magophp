@@ -144,14 +144,14 @@ function _opciones_campos_a_mostrar_segun_tabla($tabla) {
 }
 /**
  * 
+ * @param type $tabla
  * @param type $ganchos
  */
-function _opciones_thead($tabla, $ganchos = array()) {
+function _opciones_thead($tabla, $ganchos = array()) {    
     echo "
      <thead>
-        <tr> ";
+        <tr> ";    
     echo "<th>" . _tr("#") . "</th> "; // numero de linea
-
     foreach (_opciones_campos_a_mostrar_segun_tabla($tabla) as $key => $value) {
         if ($value == "si") {
             echo "<th>" . _tr($key) . "</th>";
@@ -164,16 +164,16 @@ function _opciones_thead($tabla, $ganchos = array()) {
             $i++;
         }
     }
-    echo "<th>" . _tr("Acción") . "</th> "; // accion             
+    echo "<th>" . _tr("Acción") . "</th> "; 
     echo "    </tr>
     </thead>";
 }
-
 /**
  * 
+ * @param type $tabla
  */
-function _opciones_tfoot($tabla) {
-    _opciones_thead($tabla);
+function _opciones_tfoot($tabla, $ganchos = array()) {
+    _opciones_thead($tabla, $ganchos);
 }
 /**
  * Regresa el valor que tiene una opcion 

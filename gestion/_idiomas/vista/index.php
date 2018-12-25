@@ -8,20 +8,14 @@
     <?php echo _t("Lista de _idiomas"); ?> <a type="button" class="btn btn-primary navbar-btn" href="?p=_idiomas&c=crear"> <?php _t("Nueva"); ?></a>
 </h2>
 
-<table class="table table-striped">
-    <thead>
-        <tr> 
-            <th>#</th>
 
-            <th><?php echo _t("Idioma"); ?></th> 
-            <th><?php echo _t("Nombre"); ?></th> 
-            <th><?php echo _t("Orden"); ?></th> 
-            <th><?php echo _t("Traducido"); ?></th> 
-            <th><?php echo _t("% Traducción"); ?></th> 
-            <th><?php echo _t("Activo"); ?></th> 
-            <th><?php echo _t("Accion"); ?></th> 
-        </tr>
-    </thead>
+
+
+<table class="table table-striped">
+    <?php 
+    $gancho = array("Traducido", "% traduccion"); 
+    _opciones_thead("_idiomas", $gancho); ?>
+   
     <tbody>
 
         <?php
@@ -50,17 +44,9 @@
         include "./_idiomas/vista/tr_anadir.php";
     }
     ?>
-    <tr> 
-        <th>#</th>
-
-        <th><?php echo _t("Idioma"); ?></th> 
-        <th><?php echo _t("Nombre"); ?></th> 
-        <th><?php echo _t("Orden"); ?></th> 
-        <th><?php echo _t("Traducido"); ?></th> 
-        <th><?php echo _t("% Traducción"); ?></th> 
-        <th><?php echo _t("Activo"); ?></th> 
-        <th><?php echo _t("Accion"); ?></th> 
-    </tr>
+    <?php
+    _opciones_tfoot("_idiomas", $gancho); 
+    ?>
 
 </table> 
 

@@ -67,7 +67,9 @@ mensaje("atencion","Si no esta seguro, no modifique nada porfavor");
 
 
 <table class="table table-striped">
-    <?php _opciones_thead("_permisos"); ?>
+    <?php 
+    $ganchos = array(); 
+    _opciones_thead("_permisos", $ganchos); ?>
     <tbody>
 
         <?php
@@ -97,7 +99,7 @@ while ($_permisos = mysql_fetch_array($sql)) {
         }
         ?>
 
-        <?php _opciones_tfoot("_opciones"); ?>
+        <?php _opciones_tfoot("_permisos", $ganchos); ?>
 </table> 
 <?php
 echo paginacion_master($p, $c, $total_items, $pag);

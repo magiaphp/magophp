@@ -11,21 +11,15 @@
 <?php echo _paginas_total(); ?>
 
 <table class="table table-striped">
-    <thead>
-        <tr> 
-            <th>#</th>
-
-            <th><?php echo _t("Página"); ?></th> 
-            <?php
-            foreach (_grupos_array() as $key => $value) {
-                echo '<th>' . _tr($value) . '</th>';
-            }
-            ?>
-
-
-            <th><?php echo _t("Accion"); ?></th> 
-        </tr>
-    </thead>
+    
+    <?php
+    $ganchos = _grupos_array();
+    _opciones_thead("_paginas", $ganchos);
+    
+    ?>
+    
+    
+    
     <tbody>
 
         <?php
@@ -49,28 +43,14 @@
         }
         ?>
     </tbody>
-    <tfoot>
-        <tr> 
-            <th>#</th>
+    
 
-            <th><?php echo _t("Página"); ?></th> 
-            <?php
-            foreach (_grupos_array() as $key => $value) {
-                echo '<th>' . _tr($value) . '</th>';
-            }
-            ?>
-
-
-            <th><?php echo _t("Accion"); ?></th> 
-        </tr>
-    </tfoot>
     <?php
     if (permisos_tiene_permiso("crear", "_paginas", $_usuarios_grupo)) {
           include "./_paginas/vista/tr_anadir.php";
     }
     ?>
-
-
+    <?php    _opciones_tfoot("_paginas", $ganchos);    ?>
 </table> 
 
 <?php

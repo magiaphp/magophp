@@ -13,7 +13,9 @@
 </h2>
 
 <table class="table table-striped">
-    <?php _opciones_thead("_usuarios"); ?>
+    <?php 
+    $ganchos = array("Empresa", "Contacto", "Activo");
+    _opciones_thead("_usuarios", $ganchos); ?>
     <tbody>
 
         <?php
@@ -21,8 +23,7 @@
             // include "./_usuarios/vista/tr_buscar.php";
         }
         ?>
-
-
+        
         <?php
         $i = 1;
         while ($t_usuarios = mysql_fetch_array($sql)) {
@@ -36,13 +37,15 @@
             $i++;
         }
         ?>
+        
     </tbody>
     <?php
     if (permisos_tiene_permiso("crear", "_usuarios", $_usuarios_grupo)) {
         //   include "./_usuarios/vista/tr_anadir.php";
     }
     ?>
-    <?php _opciones_tfoot("_usuarios"); ?>  
+    
+    <?php _opciones_tfoot("_usuarios", $ganchos); ?>  
 
 </table> 
 
