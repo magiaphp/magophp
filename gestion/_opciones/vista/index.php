@@ -43,39 +43,47 @@
         
         <div class="col-lg-10">
 
-            <table class="table table-striped"><?php _opciones_thead(); ?><tbody>
+            
+            
 
+            
+            
+            
+            <table class="table table-striped">
+                <?php _opciones_thead("_opciones"); ?>
+                
+                <tbody>
                     <?php
                     if (permisos_tiene_permiso("ver", "_opciones", $_usuarios_grupo)) {
                        // include "./_opciones/vista/tr_buscar.php";
                     }
-                    ?><?php
+                    ?>
+                        
+                    <?php
                     $i = 1; // cuenta lineas
                     $grupo_actual = "";
                     while ($_opciones = mysql_fetch_array($sql)) {
 
                         include "./_opciones/reg/reg.php";
-
-                        $campo_disponibles = _opciones_campos_disponibles();
-
                         if ($grupo_actual != $_opciones_grupo) {
                             echo "<tr><td colspan=\"6\">Grupo </td></tr>";
                         }
 
-                        echo "<tr>";
-                        //  include "./_opciones/vista/tr_editar.php";
+                        echo "<tr>";                        
                         include "./_opciones/vista/tr.php";
                         echo "</tr>";
                         $grupo_actual = $_opciones_grupo;
                         $i++;
                     }
-                    ?></tbody>
+                    ?>
+                
+                </tbody>
                 <?php
                 if (permisos_tiene_permiso("crear", "_opciones", $_usuarios_grupo)) {
                     //include "./_opciones/vista/tr_anadir.php";
                 }
                 ?>
-                <?php _opciones_tfoot(); ?>
+                <?php _opciones_tfoot("_opciones"); ?>
 
             </table> 
 

@@ -11,7 +11,9 @@
     </a>
 </h2>
 
-<table class="table table-striped"><?php logs_thead(); ?><tbody>
+<table class="table table-striped">
+    <?php _opciones_thead("logs"); ?>
+    <tbody>
 
         <?php
         if (permisos_tiene_permiso("ver", "logs", $_usuarios_grupo)) {

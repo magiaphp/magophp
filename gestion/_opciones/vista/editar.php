@@ -1,6 +1,4 @@
-<?php /**
-  magia_version: 0.0.8
- * */ ?>
+
 <h2>
 
     <span class="glyphicon glyphicon-<?php echo _menu_icono_segun_pagina($p); ?>"></span> 
@@ -41,9 +39,30 @@
                 
                 echo "<p>$tabla</p>"; 
                 
+                echo var_dump(_opciones_campos_a_mostrar_segun_tabla($tabla));
+                
+                echo "<hr>";
+                echo var_dump(_opciones_valor_json_segun_tabla_campo($tabla, 'id'));
+                echo "<hr>";
+                echo "<hr>";
+                
+                
                 foreach (_opciones_campos_disponibles_segun_tabla($tabla) as $tabla_campo) {
+                    
+                    
+                    $checked_true = (_opciones_valor_json_segun_tabla_campo($tabla, $tabla_campo) == 'si') ? "checked" : "";
+                    $checked_false = (_opciones_valor_json_segun_tabla_campo($tabla, $tabla_campo) == 'no') ? "checked" : "";
+                    
+                    
+                 echo "<input type=\"radio\" name=\"_opciones_valor[$tabla_campo]\" value=\"si\" $checked_true>  si "; 
+                 echo "<input type=\"radio\" name=\"_opciones_valor[$tabla_campo]\" value=\"no\" $checked_false> no <b>$tabla_campo</b> <br>"; 
+                    
+                    
+                    
+                    
+                    
 
-
+/*
                 foreach (json_decode($_opciones_valor) as $dispo_item => $dispo_valor) {
   
                     $checked_true = ( ($tabla_campo == $dispo_item) && $dispo_valor == "si") ? "checked" : "";
@@ -57,6 +76,8 @@
                     }
                     
                     }
+ * 
+ */
                     
                     
                 }

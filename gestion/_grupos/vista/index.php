@@ -36,7 +36,7 @@
 <table class="table table-striped">
     <thead>
         <tr> 
-            <?php _grupos_thead(); ?>             
+            <?php _opciones_thead("_grupos"); ?>         
         </tr>
     </thead>
     <tbody>
@@ -53,6 +53,7 @@
         while ($_grupos = mysql_fetch_array($sql)) {
 
             include "./_grupos/reg/reg.php";
+            $campo_disponibles = _opciones_campos_disponibles_segun_tabla("_opciones");
 
 
             if (permisos_tiene_permiso("editar", "_grupos", $_usuarios_grupo)) {
@@ -68,7 +69,7 @@
 
     <tfoot>
         <tr> 
-           <?php _grupos_thead(); ?>             
+           <?php _opciones_tfoot("_grupos"); ?>             
         </tr>
     </tfoot>
 

@@ -181,7 +181,7 @@ function _grupos_campos_disponibles() {
  * @global type $conexion
  * @return type
  */
-function _grupo_campos_a_mostrar() {
+function _grupos_campos_a_mostrar() {
     global $conexion;
     $data = array();
     $sql = mysql_query("SELECT valor FROM _opciones WHERE opcion = '_grupos_thead' ", $conexion) or error(__DIR__, __FILE__, __LINE__);
@@ -197,7 +197,7 @@ function _grupos_thead($ganchos = array()) {
         <tr> ";
     echo "<th>" . _tr("#") . "</th> "; // numero de linea
 
-    foreach (_grupo_campos_a_mostrar() as $key => $value) {
+    foreach (_grupos_campos_a_mostrar() as $key => $value) {
         if ($value == "si") {
             echo "<th>" . _tr($key) . "</th>";
         }

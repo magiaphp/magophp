@@ -14,14 +14,7 @@ Exportar <a href="index.php?p=_traducciones&c=export_google">google</a>
 
 
 <table class="table table-striped">
-    <thead>
-        <tr> 
-            <th><?php echo _t("Frase original"); ?></th> 
-            <th><?php echo _t("Idioma"); ?></th> 
-            <th><?php echo _t("Traduccion"); ?></th> 
-            <th><?php echo _t("Accion"); ?></th> 
-        </tr>
-    </thead>
+    <?php _opciones_thead("_traducciones"); ?>
     <tbody>
 
         <tr>
@@ -44,6 +37,7 @@ Exportar <a href="index.php?p=_traducciones&c=export_google">google</a>
             ?>
         </tr>
     </tbody>
+    <?php _opciones_tfoot("_traducciones"); ?>
 </table> 
 
 <?php

@@ -17,16 +17,7 @@ include "form_buscar.php";
 ?>
 
 <table class="table table-striped">
-    <thead>
-        <tr> 
-            <th>#</th>
-
-            <th><?php echo _t("Id"); ?></th> 
-            <th><?php echo _t("Frase"); ?></th> 
-            <th><?php echo _t("Contexto"); ?></th> 
-            <th><?php echo _t("Accion"); ?></th> 
-        </tr>
-    </thead>
+    <?php _opciones_thead("_actualizaciones"); ?>
     <tbody>
 
         <?php
@@ -40,6 +31,7 @@ include "form_buscar.php";
         $i = 1;
         while ($_contenido = mysql_fetch_array($sql)) {
             include "./_contenido/reg/reg.php";
+            $campo_disponibles = _opciones_campos_disponibles_segun_tabla("_opciones");
 
             include "./_contenido/vista/tr.php";
 
@@ -54,14 +46,7 @@ include "form_buscar.php";
         //   include "./_contenido/vista/tr_anadir.php";
     }
     ?>
-    <tr> 
-        <th>#</th>
-
-        <th><?php echo _t("Id"); ?></th> 
-        <th><?php echo _t("Frase"); ?></th> 
-        <th><?php echo _t("Contexto"); ?></th> 
-        <th><?php echo _t("Accion"); ?></th> 
-    </tr>
+    <?php _opciones_tfoot("_actualizaciones"); ?>
 
 
 </table> 

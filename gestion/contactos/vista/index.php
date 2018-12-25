@@ -64,6 +64,7 @@
 
 
 <table class="table table-striped">
+    
     <thead>
         <tr> 
             <?php contactos_tabla_index_titulo($orden); ?>
