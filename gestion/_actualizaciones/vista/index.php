@@ -9,10 +9,26 @@
     <a type="button" class="btn btn-primary navbar-btn" href="?p=_actualizaciones&c=crear"> 
         <?php _t("Nuevo"); ?> 
     </a>
+
+    
+    <div class="dropdown nav navbar navbar-right">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <?php _t("Acciones"); ?>
+            <span class="caret"></span>
+        </button>
+       <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a href="pdf.php?p=_actualizaciones&c=pdf"><?php _t("PDF"); ?></a></li>
+            <li><a href="index.php?p=_opciones&c=buscar&_opciones_opcion=_actualizaciones_thead&_opciones_valor=&_opciones_grupo=">Config</a></li>
+        </ul>
+    </div>
+    
+    
+
 </h2>
 
+
 <table class="table table-striped">
-    <?php _opciones_thead("_actualizaciones");?>
+    <?php _opciones_thead("_actualizaciones"); ?>
     <tbody>
 
         <?php

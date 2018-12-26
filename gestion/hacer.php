@@ -30,5 +30,7 @@
 
 
  * ERRORES
- *  
+ * Add item _menu
+ *  poner cambiar idioma como accion - cambiar_idioma de contactos
+ * al cambiar de idioma
  */

@@ -20,9 +20,9 @@
             <?php _t("Acciones"); ?>
             <span class="caret"></span>
         </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+       <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
             <li><a href="pdf.php?p=_grupos&c=pdf"><?php _t("PDF"); ?></a></li>
-            <li><a href="index.php?p=_opciones&c=editar&_opciones_id=60">Config</a></li>
+            <li><a href="index.php?p=_opciones&c=buscar&_opciones_opcion=_grupos_thead&_opciones_valor=&_opciones_grupo=">Config</a></li>
         </ul>
     </div>
 
