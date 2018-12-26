@@ -1,0 +1,2719 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class HTML2PDF_myPdf | magophp</title>
+
+	<link rel="stylesheet" href="resources/style.css?c2f33731c1948fbed7c333554678bfa68d4817da">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li>
+					<a href="namespace-Composer.html">
+						Composer<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Composer.Autoload.html">
+						Autoload					</a>
+
+						</li>
+							</ul></li>
+				<li>
+					<a href="namespace-League.html">
+						League<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-League.OAuth2.html">
+						OAuth2<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-League.OAuth2.Client.html">
+						Client<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-League.OAuth2.Client.Provider.html">
+						Provider					</a>
+
+						</li>
+							</ul></li></ul></li></ul></li>
+				<li class="active">
+					<a href="namespace-None.html">
+						None					</a>
+
+						</li>
+				<li>
+					<a href="namespace-PHP.html">
+						PHP					</a>
+
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-ComposerAutoloaderInit8b473ceb0ad225e6e7609c2c47d83ccc.html">ComposerAutoloaderInit8b473ceb0ad225e6e7609c2c47d83ccc</a></li>
+				<li><a href="class-EasyPeasyICS.html">EasyPeasyICS</a></li>
+				<li><a href="class-FPDF.html">FPDF</a></li>
+				<li><a href="class-GoogleTranslate.html">GoogleTranslate</a></li>
+				<li><a href="class-HTML2PDF.html">HTML2PDF</a></li>
+				<li><a href="class-HTML2PDF_exception.html">HTML2PDF_exception</a></li>
+				<li><a href="class-HTML2PDF_locale.html">HTML2PDF_locale</a></li>
+				<li class="active"><a href="class-HTML2PDF_myPdf.html">HTML2PDF_myPdf</a></li>
+				<li><a href="class-HTML2PDF_parsingCss.html">HTML2PDF_parsingCss</a></li>
+				<li><a href="class-HTML2PDF_parsingHtml.html">HTML2PDF_parsingHtml</a></li>
+				<li><a href="class-ntlm_sasl_client_class.html">ntlm_sasl_client_class</a></li>
+				<li><a href="class-PDF.html">PDF</a></li>
+				<li><a href="class-PDML.html">PDML</a></li>
+				<li><a href="class-PHPMailer.html">PHPMailer</a></li>
+				<li><a href="class-PHPMailerOAuth.html">PHPMailerOAuth</a></li>
+				<li><a href="class-PHPMailerOAuthGoogle.html">PHPMailerOAuthGoogle</a></li>
+				<li><a href="class-POP3.html">POP3</a></li>
+				<li><a href="class-SMTP.html">SMTP</a></li>
+			</ul>
+
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-phpmailerException.html">phpmailerException</a></li>
+			</ul>
+
+
+			<h3>Functions</h3>
+			<ul>
+				<li><a href="function-__autoload.html">__autoload</a></li>
+				<li><a href="function-_actualizaciones_add.html">_actualizaciones_add</a></li>
+				<li><a href="function-_actualizaciones_campo.html">_actualizaciones_campo</a></li>
+				<li><a href="function-_actualizaciones_campo_add.html">_actualizaciones_campo_add</a></li>
+				<li><a href="function-_actualizaciones_campos_a_mostrar.html">_actualizaciones_campos_a_mostrar</a></li>
+				<li><a href="function-_actualizaciones_campos_disponibles.html">_actualizaciones_campos_disponibles</a></li>
+				<li><a href="function-_actualizaciones_numero_actual.html">_actualizaciones_numero_actual</a></li>
+				<li><a href="function-_actualizaciones_tfoot.html">_actualizaciones_tfoot</a></li>
+				<li><a href="function-_actualizaciones_thead.html">_actualizaciones_thead</a></li>
+				<li><a href="function-_campo.html">_campo</a></li>
+				<li><a href="function-_contenido_add.html">_contenido_add</a></li>
+				<li><a href="function-_contenido_campo.html">_contenido_campo</a></li>
+				<li><a href="function-_contenido_campo_add.html">_contenido_campo_add</a></li>
+				<li><a href="function-_contenido_numero_actual.html">_contenido_numero_actual</a></li>
+				<li><a href="function-_estatus.html">_estatus</a></li>
+				<li><a href="function-_formulario_checkbox.html">_formulario_checkbox</a></li>
+				<li><a href="function-_formulario_radio.html">_formulario_radio</a></li>
+				<li><a href="function-_grupo_campos_a_mostrar.html">_grupo_campos_a_mostrar</a></li>
+				<li><a href="function-_grupos.html">_grupos</a></li>
+				<li><a href="function-_grupos_add.html">_grupos_add</a></li>
+				<li><a href="function-_grupos_array.html">_grupos_array</a></li>
+				<li><a href="function-_grupos_array_grupos.html">_grupos_array_grupos</a></li>
+				<li><a href="function-_grupos_campo.html">_grupos_campo</a></li>
+				<li><a href="function-_grupos_campo_add.html">_grupos_campo_add</a></li>
+				<li><a href="function-_grupos_campos_disponibles.html">_grupos_campos_disponibles</a></li>
+				<li><a href="function-_grupos_existe.html">_grupos_existe</a></li>
+				<li><a href="function-_grupos_numero_actual.html">_grupos_numero_actual</a></li>
+				<li><a href="function-_grupos_tfoot.html">_grupos_tfoot</a></li>
+				<li><a href="function-_grupos_thead.html">_grupos_thead</a></li>
+				<li><a href="function-_idiomas.html">_idiomas</a></li>
+				<li><a href="function-_idiomas_add.html">_idiomas_add</a></li>
+				<li><a href="function-_idiomas_array.html">_idiomas_array</a></li>
+				<li><a href="function-_idiomas_campo.html">_idiomas_campo</a></li>
+				<li><a href="function-_idiomas_campo_add.html">_idiomas_campo_add</a></li>
+				<li><a href="function-_idiomas_numero_actual.html">_idiomas_numero_actual</a></li>
+				<li><a href="function-_idiomas_segun_iso.html">_idiomas_segun_iso</a></li>
+				<li><a href="function-_imagenes_add.html">_imagenes_add</a></li>
+				<li><a href="function-_imagenes_campo.html">_imagenes_campo</a></li>
+				<li><a href="function-_imagenes_campo_add.html">_imagenes_campo_add</a></li>
+				<li><a href="function-_imagenes_campos_a_mostrar.html">_imagenes_campos_a_mostrar</a></li>
+				<li><a href="function-_imagenes_campos_disponibles.html">_imagenes_campos_disponibles</a></li>
+				<li><a href="function-_imagenes_numero_actual.html">_imagenes_numero_actual</a></li>
+				<li><a href="function-_imagenes_tfoot.html">_imagenes_tfoot</a></li>
+				<li><a href="function-_imagenes_thead.html">_imagenes_thead</a></li>
+				<li><a href="function-_incluir_funciones.html">_incluir_funciones</a></li>
+				<li><a href="function-_incluir_funciones_gestion.html">_incluir_funciones_gestion</a></li>
+				<li><a href="function-_listar_directorios_ruta.html">_listar_directorios_ruta</a></li>
+				<li><a href="function-_listar_ficheros_de_carpeta.html">_listar_ficheros_de_carpeta</a></li>
+				<li><a href="function-_magia_menu.html">_magia_menu</a></li>
+				<li><a href="function-_menu_add.html">_menu_add</a></li>
+				<li><a href="function-_menu_campo.html">_menu_campo</a></li>
+				<li><a href="function-_menu_campo_add.html">_menu_campo_add</a></li>
+				<li><a href="function-_menu_campos_a_mostrar.html">_menu_campos_a_mostrar</a></li>
+				<li><a href="function-_menu_campos_disponibles.html">_menu_campos_disponibles</a></li>
+				<li><a href="function-_menu_icono_segun_pagina.html">_menu_icono_segun_pagina</a></li>
+				<li><a href="function-_menu_items_segun_padre_ubicacion.html">_menu_items_segun_padre_ubicacion</a></li>
+				<li><a href="function-_menu_numero_actual.html">_menu_numero_actual</a></li>
+				<li><a href="function-_menu_sidebar.html">_menu_sidebar</a></li>
+				<li><a href="function-_menu_tfoot.html">_menu_tfoot</a></li>
+				<li><a href="function-_menu_thead.html">_menu_thead</a></li>
+				<li><a href="function-_menu_top.html">_menu_top</a></li>
+				<li><a href="function-_opciones_add.html">_opciones_add</a></li>
+				<li><a href="function-_opciones_campo.html">_opciones_campo</a></li>
+				<li><a href="function-_opciones_campo_add.html">_opciones_campo_add</a></li>
+				<li><a href="function-_opciones_campos_a_mostrar.html">_opciones_campos_a_mostrar</a></li>
+				<li><a href="function-_opciones_campos_a_mostrar_segun_tabla.html">_opciones_campos_a_mostrar_segun_tabla</a></li>
+				<li><a href="function-_opciones_campos_disponibles.html">_opciones_campos_disponibles</a></li>
+				<li><a href="function-_opciones_campos_disponibles_segun_tabla.html">_opciones_campos_disponibles_segun_tabla</a></li>
+				<li><a href="function-_opciones_numero_actual.html">_opciones_numero_actual</a></li>
+				<li><a href="function-_opciones_tfoot.html">_opciones_tfoot</a></li>
+				<li><a href="function-_opciones_thead.html">_opciones_thead</a></li>
+				<li><a href="function-_opciones_valor_json_segun_tabla_campo.html">_opciones_valor_json_segun_tabla_campo</a></li>
+				<li><a href="function-_opciones_valor_segun_opcion.html">_opciones_valor_segun_opcion</a></li>
+				<li><a href="function-_paginas_add.html">_paginas_add</a></li>
+				<li><a href="function-_paginas_campo.html">_paginas_campo</a></li>
+				<li><a href="function-_paginas_campo_add.html">_paginas_campo_add</a></li>
+				<li><a href="function-_paginas_existe.html">_paginas_existe</a></li>
+				<li><a href="function-_paginas_numero_actual.html">_paginas_numero_actual</a></li>
+				<li><a href="function-_paginas_total.html">_paginas_total</a></li>
+				<li><a href="function-_permisos_add.html">_permisos_add</a></li>
+				<li><a href="function-_permisos_campo.html">_permisos_campo</a></li>
+				<li><a href="function-_permisos_campo_add.html">_permisos_campo_add</a></li>
+				<li><a href="function-_permisos_numero_actual.html">_permisos_numero_actual</a></li>
+				<li><a href="function-_permisos_paginas_segun_grupo.html">_permisos_paginas_segun_grupo</a></li>
+				<li><a href="function-_t.html">_t</a></li>
+				<li><a href="function-_tr.html">_tr</a></li>
+				<li><a href="function-_traducciones_add.html">_traducciones_add</a></li>
+				<li><a href="function-_traducciones_campo.html">_traducciones_campo</a></li>
+				<li><a href="function-_traducciones_campo_add.html">_traducciones_campo_add</a></li>
+				<li><a href="function-_traducciones_numero_actual.html">_traducciones_numero_actual</a></li>
+				<li><a href="function-_traducciones_segun_idioma_frase.html">_traducciones_segun_idioma_frase</a></li>
+				<li><a href="function-_traducciones_total_segun_idioma.html">_traducciones_total_segun_idioma</a></li>
+				<li><a href="function-_usuarios_add.html">_usuarios_add</a></li>
+				<li><a href="function-_usuarios_campo.html">_usuarios_campo</a></li>
+				<li><a href="function-_usuarios_campo_add.html">_usuarios_campo_add</a></li>
+				<li><a href="function-_usuarios_campo_segun_email.html">_usuarios_campo_segun_email</a></li>
+				<li><a href="function-_usuarios_numero_actual.html">_usuarios_numero_actual</a></li>
+				<li><a href="function-_usuarios_total_segun_grupo.html">_usuarios_total_segun_grupo</a></li>
+				<li><a href="function-ano_add.html">ano_add</a></li>
+				<li><a href="function-ano_ant.html">ano_ant</a></li>
+				<li><a href="function-ano_prox.html">ano_prox</a></li>
+				<li><a href="function-ayer.html">ayer</a></li>
+				<li><a href="function-bst_dropdowns.html">bst_dropdowns</a></li>
+				<li><a href="function-bst_iconos_add.html">bst_iconos_add</a></li>
+				<li><a href="function-cambio_claves_add.html">cambio_claves_add</a></li>
+				<li><a href="function-cambio_claves_campo.html">cambio_claves_campo</a></li>
+				<li><a href="function-cambio_claves_campo_add.html">cambio_claves_campo_add</a></li>
+				<li><a href="function-cambio_claves_campo_segun_email.html">cambio_claves_campo_segun_email</a></li>
+				<li><a href="function-cambio_claves_campos_a_mostrar.html">cambio_claves_campos_a_mostrar</a></li>
+				<li><a href="function-cambio_claves_campos_disponibles.html">cambio_claves_campos_disponibles</a></li>
+				<li><a href="function-cambio_claves_numero_actual.html">cambio_claves_numero_actual</a></li>
+				<li><a href="function-cambio_claves_tfoot.html">cambio_claves_tfoot</a></li>
+				<li><a href="function-cambio_claves_thead.html">cambio_claves_thead</a></li>
+				<li><a href="function-captcha_genera.html">captcha_genera</a></li>
+				<li><a href="function-captcha_html.html">captcha_html</a></li>
+				<li><a href="function-captcha_verifica.html">captcha_verifica</a></li>
+				<li><a href="function-CheckTTF.html">CheckTTF</a></li>
+				<li><a href="function-codifica_clave.html">codifica_clave</a></li>
+				<li><a href="function-contactos_add.html">contactos_add</a></li>
+				<li><a href="function-contactos_campo.html">contactos_campo</a></li>
+				<li><a href="function-contactos_campo_add.html">contactos_campo_add</a></li>
+				<li><a href="function-contactos_campo_segun_email.html">contactos_campo_segun_email</a></li>
+				<li><a href="function-contactos_idioma.html">contactos_idioma</a></li>
+				<li><a href="function-contactos_numero_actual.html">contactos_numero_actual</a></li>
+				<li><a href="function-contactos_sin_usuario_add.html">contactos_sin_usuario_add</a></li>
+				<li><a href="function-contactos_tabla_index_titulo.html">contactos_tabla_index_titulo</a></li>
+				<li><a href="function-contactos_tiene_login.html">contactos_tiene_login</a></li>
+				<li><a href="function-contactos_total_segun_estatus.html">contactos_total_segun_estatus</a></li>
+				<li><a href="function-contenido_buscar_frase.html">contenido_buscar_frase</a></li>
+				<li><a href="function-contenido_existe_frase_en_contenido.html">contenido_existe_frase_en_contenido</a></li>
+				<li><a href="function-contenido_registrar_frase.html">contenido_registrar_frase</a></li>
+				<li><a href="function-dia_segun_fecha.html">dia_segun_fecha</a></li>
+				<li><a href="function-emails_enviar.html">emails_enviar</a></li>
+				<li><a href="function-error.html">error</a></li>
+				<li><a href="function-fecha_corta.html">fecha_corta</a></li>
+				<li><a href="function-fecha_larga.html">fecha_larga</a></li>
+				<li><a href="function-formularios_campo.html">formularios_campo</a></li>
+				<li><a href="function-formularios_campo_areaDeTexto.html">formularios_campo_areaDeTexto</a></li>
+				<li><a href="function-formularios_campo_escondido.html">formularios_campo_escondido</a></li>
+				<li><a href="function-formularios_campo_texto.html">formularios_campo_texto</a></li>
+				<li><a href="function-formularios_opciones.html">formularios_opciones</a></li>
+				<li><a href="function-genera_clave.html">genera_clave</a></li>
+				<li><a href="function-horas_segun_segundos.html">horas_segun_segundos</a></li>
+				<li><a href="function-hoy.html">hoy</a></li>
+				<li><a href="function-HTMLFilter.html">HTMLFilter</a></li>
+				<li><a href="function-incluir_modelo.html">incluir_modelo</a></li>
+				<li><a href="function-logo.html">logo</a></li>
+				<li><a href="function-logs_add.html">logs_add</a></li>
+				<li><a href="function-logs_campo.html">logs_campo</a></li>
+				<li><a href="function-logs_campo_add.html">logs_campo_add</a></li>
+				<li><a href="function-logs_campos_a_mostrar.html">logs_campos_a_mostrar</a></li>
+				<li><a href="function-logs_campos_disponibles.html">logs_campos_disponibles</a></li>
+				<li><a href="function-logs_historico.html">logs_historico</a></li>
+				<li><a href="function-logs_numero_actual.html">logs_numero_actual</a></li>
+				<li><a href="function-logs_registrar.html">logs_registrar</a></li>
+				<li><a href="function-logs_tfoot.html">logs_tfoot</a></li>
+				<li><a href="function-logs_thead.html">logs_thead</a></li>
+				<li><a href="function-m.html">m</a></li>
+				<li><a href="function-magia_version.html">magia_version</a></li>
+				<li><a href="function-MakeFont.html">MakeFont</a></li>
+				<li><a href="function-MakeFontDescriptor.html">MakeFontDescriptor</a></li>
+				<li><a href="function-MakeFontEncoding.html">MakeFontEncoding</a></li>
+				<li><a href="function-MakeWidthArray.html">MakeWidthArray</a></li>
+				<li><a href="function-manana.html">manana</a></li>
+				<li><a href="function-mensaje.html">mensaje</a></li>
+				<li><a href="function-mes_ant.html">mes_ant</a></li>
+				<li><a href="function-mes_corto.html">mes_corto</a></li>
+				<li><a href="function-mes_largo.html">mes_largo</a></li>
+				<li><a href="function-mes_prox.html">mes_prox</a></li>
+				<li><a href="function-n_dia_segun_fecha.html">n_dia_segun_fecha</a></li>
+				<li><a href="function-n_mes_fecha.html">n_mes_fecha</a></li>
+				<li><a href="function-ob_pdml.html">ob_pdml</a></li>
+				<li><a href="function-ordenpor.html">ordenpor</a></li>
+				<li><a href="function-paginacion.html" class="invalid">paginacion</a></li>
+				<li><a href="function-paginacion_master.html">paginacion_master</a></li>
+				<li><a href="function-pdml2pdf.html">pdml2pdf</a></li>
+				<li><a href="function-pdml_entity_decode.html">pdml_entity_decode</a></li>
+				<li><a href="function-permisos_obtiene_permiso.html">permisos_obtiene_permiso</a></li>
+				<li><a href="function-permisos_plugin_controlador.html">permisos_plugin_controlador</a></li>
+				<li><a href="function-permisos_sin_permiso.html">permisos_sin_permiso</a></li>
+				<li><a href="function-permisos_tiene_permiso.html">permisos_tiene_permiso</a></li>
+				<li><a href="function-PHPMailerAutoload.html">PHPMailerAutoload</a></li>
+				<li><a href="function-ReadAFM.html">ReadAFM</a></li>
+				<li><a href="function-ReadLong.html">ReadLong</a></li>
+				<li><a href="function-ReadMap.html">ReadMap</a></li>
+				<li><a href="function-ReadShort.html">ReadShort</a></li>
+				<li><a href="function-SaveToFile.html">SaveToFile</a></li>
+				<li><a href="function-sms.html">sms</a></li>
+				<li><a href="function-sql_limpia_despues_reg.html">sql_limpia_despues_reg</a></li>
+				<li><a href="function-sql_pone_barra_invertida.html">sql_pone_barra_invertida</a></li>
+				<li><a href="function-sql_quita_barra_invertida.html">sql_quita_barra_invertida</a></li>
+				<li><a href="function-sumar_dias.html">sumar_dias</a></li>
+				<li><a href="function-t_usuarios_add.html">t_usuarios_add</a></li>
+				<li><a href="function-t_usuarios_campo.html">t_usuarios_campo</a></li>
+				<li><a href="function-t_usuarios_campo_add.html">t_usuarios_campo_add</a></li>
+				<li><a href="function-t_usuarios_numero_actual.html">t_usuarios_numero_actual</a></li>
+				<li><a href="function-tln_body2div.html">tln_body2div</a></li>
+				<li><a href="function-tln_casenormalize.html">tln_casenormalize</a></li>
+				<li><a href="function-tln_deent.html">tln_deent</a></li>
+				<li><a href="function-tln_defang.html">tln_defang</a></li>
+				<li><a href="function-tln_findnxreg.html">tln_findnxreg</a></li>
+				<li><a href="function-tln_findnxstr.html">tln_findnxstr</a></li>
+				<li><a href="function-tln_fixatts.html">tln_fixatts</a></li>
+				<li><a href="function-tln_fixstyle.html">tln_fixstyle</a></li>
+				<li><a href="function-tln_fixurl.html">tln_fixurl</a></li>
+				<li><a href="function-tln_getnxtag.html">tln_getnxtag</a></li>
+				<li><a href="function-tln_sanitize.html">tln_sanitize</a></li>
+				<li><a href="function-tln_skipspace.html">tln_skipspace</a></li>
+				<li><a href="function-tln_tagprint.html">tln_tagprint</a></li>
+				<li><a href="function-tln_unspace.html">tln_unspace</a></li>
+				<li><a href="function-traductor_actualiza_traduccion.html">traductor_actualiza_traduccion</a></li>
+				<li><a href="function-traductor_buscar_traduccion.html">traductor_buscar_traduccion</a></li>
+				<li><a href="function-traductor_registrar_traduccion.html">traductor_registrar_traduccion</a></li>
+				<li><a href="function-vardump.html">vardump</a></li>
+				<li><a href="function-x.html">x</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-None.html" title="Summary of None"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class HTML2PDF_myPdf</h1>
+
+
+	<div class="description">
+	<p>HTML2PDF Library - myPdf class</p>
+
+<p>HTML => PDF convertor
+distributed under the LGPL License</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+TCPDF
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>HTML2PDF_myPdf</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> Html2pdf<br>
+
+				<b>Copyright:</b>
+				2016 Laurent MINGUET<br>
+				<b>Author:</b>
+				Laurent MINGUET <a href="&#x6d;&#97;&#105;l&#x74;&#x6f;&#58;w&#x65;&#x62;&#109;&#97;&#x73;&#x74;&#101;&#114;&#x40;&#x68;&#116;&#109;&#x6c;&#x32;&#112;&#100;&#x66;&#x2e;&#102;&#114;">w&#x65;&#x62;&#109;&#97;&#x73;&#x74;&#101;&#114;&#x40;&#x68;&#116;&#109;&#x6c;&#x32;&#112;&#100;&#x66;&#x2e;&#102;&#114;</a><br>
+			<b>Located at</b> <a href="source-class-HTML2PDF_myPdf.html#2-1418" title="Go to source code">includes/html2pdf-4.5.1/_class/myPdf.class.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#25-59" title="Go to source code">__construct</a>( <span>string <var>$orientation</var> = <span class="php-quote">'P'</span></span>, <span>string <var>$unit</var> = <span class="php-quote">'mm'</span></span>, <span>mixed <var>$format</var> = <span class="php-quote">'A4'</span></span>, <span>boolean <var>$unicode</var> = <span class="php-keyword1">true</span></span>, <span>String <var>$encoding</var> = <span class="php-quote">'UTF-8'</span></span>, <span>boolean <var>$diskcache</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			<p>class constructor</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>class constructor</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$orientation</var></dt>
+					<dd>page orientation, same as TCPDF</dd>
+					<dt><var>$unit</var></dt>
+					<dd>User measure unit, same as TCPDF</dd>
+					<dt><var>$format</var></dt>
+					<dd>The format used for pages, same as TCPDF</dd>
+					<dt><var>$unicode</var></dt>
+					<dd>TRUE means that the input text is unicode (default = true)</dd>
+					<dt><var>$encoding</var></dt>
+					<dd>charset encoding; default is UTF-8</dd>
+					<dt><var>$diskcache</var></dt>
+					<dd>if TRUE reduce the RAM memory usage by caching temporary data on filesystem (slower).</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="SetMyFooter" id="_SetMyFooter">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_SetMyFooter">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#61-78" title="Go to source code">SetMyFooter</a>( <span>boolean <var>$page</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$date</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$hour</var> = <span class="php-keyword1">false</span></span>, <span>boolean <var>$form</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			<p>Set the parameters for the automatic footer</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Set the parameters for the automatic footer</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$page</var></dt>
+					<dd>display the page number</dd>
+					<dt><var>$date</var></dt>
+					<dd>display the date</dd>
+					<dt><var>$hour</var></dt>
+					<dd>display the hour</dd>
+					<dt><var>$form</var></dt>
+					<dd>display a warning abour forms</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="Footer" id="_Footer">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_Footer">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#80-125" title="Go to source code">Footer</a>( )</code>
+
+		<div class="description short">
+			<p>This function is call automatically by TCPDF at the end of a page
+It takes no parameters</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>This function is call automatically by TCPDF at the end of a page
+It takes no parameters</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="cloneFontFrom" id="_cloneFontFrom">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_cloneFontFrom">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#127-145" title="Go to source code">cloneFontFrom</a>( <span>&amp;HTML2PDF_myPdf <var>&amp; $pdf</var></span> )</code>
+
+		<div class="description short">
+			<p>after cloning a object, we does not want to clone all the front informations
+because it take a lot a time and a lot of memory => we use reference</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>after cloning a object, we does not want to clone all the front informations
+because it take a lot a time and a lot of memory => we use reference</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$pdf</var></dt>
+					<dd>object</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getFonts" id="_getFonts">
+
+		<td class="attributes"><code>
+			 public 
+
+			&amp;array
+			&amp;
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getFonts">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#147-157" title="Go to source code">getFonts</a>( )</code>
+
+		<div class="description short">
+			<p>multiple public accessor for some private attributs
+used only by cloneFontFrom</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>multiple public accessor for some private attributs
+used only by cloneFontFrom</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					&amp;array
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getFontFiles" id="_getFontFiles">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			&amp;
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getFontFiles">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#158-161" title="Go to source code">getFontFiles</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getDiffs" id="_getDiffs">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			&amp;
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getDiffs">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#162-165" title="Go to source code">getDiffs</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getFontList" id="_getFontList">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			&amp;
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getFontList">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#166-169" title="Go to source code">getFontList</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getNumFonts" id="_getNumFonts">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			&amp;
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getNumFonts">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#170-173" title="Go to source code">getNumFonts</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getFontKeys" id="_getFontKeys">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			&amp;
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getFontKeys">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#174-177" title="Go to source code">getFontKeys</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getFontObjIds" id="_getFontObjIds">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			&amp;
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getFontObjIds">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#178-181" title="Go to source code">getFontObjIds</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getAnnotFonts" id="_getAnnotFonts">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			&amp;
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getAnnotFonts">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#182-185" title="Go to source code">getAnnotFonts</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getN" id="_getN">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			&amp;
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getN">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#186-189" title="Go to source code">getN</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isLoadedFont" id="_isLoadedFont">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isLoadedFont">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#191-209" title="Go to source code">isLoadedFont</a>( <span>string <var>$fontKey</var></span> )</code>
+
+		<div class="description short">
+			<p>Verify that a Font is already loaded</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Verify that a Font is already loaded</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$fontKey</var></dt>
+					<dd>Key</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getWordSpacing" id="_getWordSpacing">
+
+		<td class="attributes"><code>
+			 public 
+
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getWordSpacing">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#211-220" title="Go to source code">getWordSpacing</a>( )</code>
+
+		<div class="description short">
+			<p>Get the Word Spacing</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get the Word Spacing</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					float<br>word spacing
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setWordSpacing" id="_setWordSpacing">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setWordSpacing">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#222-232" title="Go to source code">setWordSpacing</a>( <span>float <var>$ws</var> = <span class="php-num">0</span>.</span> )</code>
+
+		<div class="description short">
+			<p>set the Word Spacing</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>set the Word Spacing</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$ws</var></dt>
+					<dd>spacing</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clippingPathStart" id="_clippingPathStart">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clippingPathStart">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#234-364" title="Go to source code">clippingPathStart</a>( <span>float <var>$x</var> = <span class="php-keyword1">null</span></span>, <span>float <var>$y</var> = <span class="php-keyword1">null</span></span>, <span>float <var>$w</var> = <span class="php-keyword1">null</span></span>, <span>float <var>$h</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$cornerTL</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$cornerTR</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$cornerBL</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$cornerBR</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>start to use a rectangular Cliping Path with radius corners</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>start to use a rectangular Cliping Path with radius corners</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$x</var></dt>
+					<dd>(top left corner)</dd>
+					<dt><var>$y</var></dt>
+					<dd>(top left corner)</dd>
+					<dt><var>$w</var></dt>
+					<dd>(x+w  = botom rigth corner)</dd>
+					<dt><var>$h</var></dt>
+					<dd>(y+h = botom rigth corner)</dd>
+					<dt><var>$cornerTL</var></dt>
+					<dd>radius of the Top Left corner</dd>
+					<dt><var>$cornerTR</var></dt>
+					<dd>radius of the Top Right corner</dd>
+					<dt><var>$cornerBL</var></dt>
+					<dd>radius of the Bottom Left corner</dd>
+					<dt><var>$cornerBR</var></dt>
+					<dd>radius of the Bottom Right corner</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clippingPathStop" id="_clippingPathStop">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clippingPathStop">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#366-374" title="Go to source code">clippingPathStop</a>( )</code>
+
+		<div class="description short">
+			<p>stop to use the Cliping Path</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>stop to use the Cliping Path</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="drawCurve" id="_drawCurve">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_drawCurve">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#376-447" title="Go to source code">drawCurve</a>( <span>float <var>$ext1X</var></span>, <span>float <var>$ext1Y</var></span>, <span>float <var>$ext2X</var></span>, <span>float <var>$ext2Y</var></span>, <span>float <var>$int1X</var></span>, <span>float <var>$int1Y</var></span>, <span>float <var>$int2X</var></span>, <span>float <var>$int2Y</var></span>, <span>float <var>$cenX</var></span>, <span>float <var>$cenY</var></span> )</code>
+
+		<div class="description short">
+			<p>draw a filled corner of a border with a external and a internal radius
+        /--------+ ext2
+       /         |
+      /  /-------+ int2
+     /  /
+     | /
+     | |
+     | |
+ext1 +-+ int1        + cen</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>draw a filled corner of a border with a external and a internal radius /--------+ ext2 /         | /  /-------+ int2 /  / | / | | | |
+ext1 +-+ int1        + cen</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$ext1X</var></dt>
+					<dd></dd>
+					<dt><var>$ext1Y</var></dt>
+					<dd></dd>
+					<dt><var>$ext2X</var></dt>
+					<dd></dd>
+					<dt><var>$ext2Y</var></dt>
+					<dd></dd>
+					<dt><var>$int1X</var></dt>
+					<dd></dd>
+					<dt><var>$int1Y</var></dt>
+					<dd></dd>
+					<dt><var>$int2X</var></dt>
+					<dd></dd>
+					<dt><var>$int2Y</var></dt>
+					<dd></dd>
+					<dt><var>$cenX</var></dt>
+					<dd></dd>
+					<dt><var>$cenY</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="drawCorner" id="_drawCorner">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_drawCorner">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#449-504" title="Go to source code">drawCorner</a>( <span>float <var>$ext1X</var></span>, <span>float <var>$ext1Y</var></span>, <span>float <var>$ext2X</var></span>, <span>float <var>$ext2Y</var></span>, <span>float <var>$intX</var></span>, <span>float <var>$intY</var></span>, <span>float <var>$cenX</var></span>, <span>float <var>$cenY</var></span> )</code>
+
+		<div class="description short">
+			<p>draw a filled corner of a border with only a external radius
+        /--+ ext2
+       /   |
+      /    |
+     /     |
+     |     |
+     |     |
+     |     |
+ext1 +-----+ int      + cen</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>draw a filled corner of a border with only a external radius /--+ ext2 /   | /    | /     | |     | |     | |     |
+ext1 +-----+ int      + cen</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$ext1X</var></dt>
+					<dd></dd>
+					<dt><var>$ext1Y</var></dt>
+					<dd></dd>
+					<dt><var>$ext2X</var></dt>
+					<dd></dd>
+					<dt><var>$ext2Y</var></dt>
+					<dd></dd>
+					<dt><var>$intX</var></dt>
+					<dd></dd>
+					<dt><var>$intY</var></dt>
+					<dd></dd>
+					<dt><var>$cenX</var></dt>
+					<dd></dd>
+					<dt><var>$cenY</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="startTransform" id="_startTransform">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_startTransform">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#506-514" title="Go to source code">startTransform</a>( )</code>
+
+		<div class="description short">
+			<p>Start a transformation</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Start a transformation</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="stopTransform" id="_stopTransform">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_stopTransform">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#516-524" title="Go to source code">stopTransform</a>( )</code>
+
+		<div class="description short">
+			<p>Stop a transformation</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Stop a transformation</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setTranslate" id="_setTranslate">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setTranslate">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#526-545" title="Go to source code">setTranslate</a>( <span>float <var>$xT</var></span>, <span>float <var>$yT</var></span> )</code>
+
+		<div class="description short">
+			<p>add a Translate transformation</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>add a Translate transformation</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$xT</var></dt>
+					<dd>$Tx</dd>
+					<dt><var>$yT</var></dt>
+					<dd>$Ty</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setRotation" id="_setRotation">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setRotation">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#547-575" title="Go to source code">setRotation</a>( <span>float <var>$angle</var></span>, <span>float <var>$xC</var> = <span class="php-keyword1">null</span></span>, <span>float <var>$yC</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>add a Rotate transformation</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>add a Rotate transformation</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$angle</var></dt>
+					<dd></dd>
+					<dt><var>$xC</var></dt>
+					<dd>$Cx</dd>
+					<dt><var>$yC</var></dt>
+					<dd>$Cy</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="SetX" id="_SetX">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_SetX">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#577-588" title="Go to source code">SetX</a>( <span>float <var>$x</var></span>, <span>boolean <var>$rtloff</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			<p>we redifine the original SetX method, because we don't want the automatic treatment.
+It is HTML2PDF that make the treatment</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>we redifine the original SetX method, because we don't want the automatic treatment.
+It is HTML2PDF that make the treatment</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$x</var></dt>
+					<dd></dd>
+					<dt><var>$rtloff</var></dt>
+					<dd>NOT USED</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="SetY" id="_SetY">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_SetY">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#590-605" title="Go to source code">SetY</a>( <span>float <var>$y</var></span>, <span>boolean <var>$resetx</var> = <span class="php-keyword1">true</span></span>, <span>boolean <var>$rtloff</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			<p>we redifine the original SetY method, because we don't want the automatic treatment.
+It is HTML2PDF that make the treatment</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>we redifine the original SetY method, because we don't want the automatic treatment.
+It is HTML2PDF that make the treatment</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y</var></dt>
+					<dd></dd>
+					<dt><var>$resetx</var></dt>
+					<dd>Reset the X position</dd>
+					<dt><var>$rtloff</var></dt>
+					<dd>NOT USED</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="SetXY" id="_SetXY">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_SetXY">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#607-620" title="Go to source code">SetXY</a>( <span>integer <var>$x</var></span>, <span>integer <var>$y</var></span>, <span>boolean <var>$rtloff</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			<p>we redifine the original SetXY method, because we don't want the automatic treatment.
+It is HTML2PDF that make the treatment</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>we redifine the original SetXY method, because we don't want the automatic treatment.
+It is HTML2PDF that make the treatment</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$x</var></dt>
+					<dd></dd>
+					<dt><var>$y</var></dt>
+					<dd></dd>
+					<dt><var>$rtloff</var></dt>
+					<dd>NOT USED</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getK" id="_getK">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getK">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#622-632" title="Go to source code">getK</a>( )</code>
+
+		<div class="description short">
+			<p>multiple public accessor because HTML2PDF need to use TCPDF without being a extend of it</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>multiple public accessor because HTML2PDF need to use TCPDF without being a extend of it</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getW" id="_getW">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getW">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#633-636" title="Go to source code">getW</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getH" id="_getH">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getH">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#637-640" title="Go to source code">getH</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getlMargin" id="_getlMargin">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getlMargin">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#641-644" title="Go to source code">getlMargin</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getrMargin" id="_getrMargin">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getrMargin">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#645-648" title="Go to source code">getrMargin</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="gettMargin" id="_gettMargin">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_gettMargin">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#649-652" title="Go to source code">gettMargin</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getbMargin" id="_getbMargin">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getbMargin">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#653-656" title="Go to source code">getbMargin</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setbMargin" id="_setbMargin">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setbMargin">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#657-660" title="Go to source code">setbMargin</a>( <span> <var>$v</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="svgSetStyle" id="_svgSetStyle">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_svgSetStyle">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#662-693" title="Go to source code">svgSetStyle</a>( <span>array <var>$styles</var></span> )</code>
+
+		<div class="description short">
+			<p>SVG - Convert a SVG Style in PDF Style</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>SVG - Convert a SVG Style in PDF Style</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$styles</var></dt>
+					<dd>SVG Style</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>PDF style
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="svgRect" id="_svgRect">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_svgRect">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#695-730" title="Go to source code">svgRect</a>( <span>float <var>$x</var></span>, <span>float <var>$y</var></span>, <span>float <var>$w</var></span>, <span>float <var>$h</var></span>, <span>string <var>$style</var></span> )</code>
+
+		<div class="description short">
+			<p>SVG - make a Rectangle</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>SVG - make a Rectangle</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$x</var></dt>
+					<dd></dd>
+					<dt><var>$y</var></dt>
+					<dd></dd>
+					<dt><var>$w</var></dt>
+					<dd></dd>
+					<dt><var>$h</var></dt>
+					<dd></dd>
+					<dt><var>$style</var></dt>
+					<dd>PDF Style</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="svgLine" id="_svgLine">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_svgLine">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#732-750" title="Go to source code">svgLine</a>( <span>float <var>$x1</var></span>, <span>float <var>$y1</var></span>, <span>float <var>$x2</var></span>, <span>float <var>$y2</var></span> )</code>
+
+		<div class="description short">
+			<p>SVG - make a Line</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>SVG - make a Line</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$x1</var></dt>
+					<dd></dd>
+					<dt><var>$y1</var></dt>
+					<dd></dd>
+					<dt><var>$x2</var></dt>
+					<dd></dd>
+					<dt><var>$y2</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="svgEllipse" id="_svgEllipse">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_svgEllipse">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#752-772" title="Go to source code">svgEllipse</a>( <span>float <var>$x0</var></span>, <span>float <var>$y0</var></span>, <span>float <var>$rx</var></span>, <span>float <var>$ry</var></span>, <span>string <var>$style</var></span> )</code>
+
+		<div class="description short">
+			<p>SVG - make a Ellipse</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>SVG - make a Ellipse</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$x0</var></dt>
+					<dd>x Center</dd>
+					<dt><var>$y0</var></dt>
+					<dd>y Center</dd>
+					<dt><var>$rx</var></dt>
+					<dd>x radius</dd>
+					<dt><var>$ry</var></dt>
+					<dd>y radius</dd>
+					<dt><var>$style</var></dt>
+					<dd>PDF Style</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="svgPolygone" id="_svgPolygone">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_svgPolygone">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#774-913" title="Go to source code">svgPolygone</a>( <span>array <var>$actions</var></span>, <span>string <var>$style</var></span> )</code>
+
+		<div class="description short">
+			<p>SVG - make a Advanced Polygone</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>SVG - make a Advanced Polygone</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$actions</var></dt>
+					<dd>list of actions</dd>
+					<dt><var>$style</var></dt>
+					<dd>PDF Style</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_Point" id="__Point">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__Point">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#915-928" title="Go to source code">_Point</a>( <span>float <var>$x</var></span>, <span>float <var>$y</var></span>, <span>boolean <var>$trans</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			<p>SVG - go to a point</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>SVG - go to a point</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$x</var></dt>
+					<dd></dd>
+					<dt><var>$y</var></dt>
+					<dd></dd>
+					<dt><var>$trans</var></dt>
+					<dd>apply transformation</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_Line" id="__Line">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__Line">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#930-943" title="Go to source code">_Line</a>( <span>float <var>$x</var></span>, <span>float <var>$y</var></span>, <span>boolean <var>$trans</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			<p>SVG - make a line from the last point to (x,y)</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>SVG - make a line from the last point to (x,y)</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$x</var></dt>
+					<dd></dd>
+					<dt><var>$y</var></dt>
+					<dd></dd>
+					<dt><var>$trans</var></dt>
+					<dd>apply transformation</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_Curve" id="__Curve">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__Curve">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#945-965" title="Go to source code">_Curve</a>( <span>float <var>$x1</var></span>, <span>float <var>$y1</var></span>, <span>float <var>$x2</var></span>, <span>float <var>$y2</var></span>, <span>float <var>$xf</var></span>, <span>float <var>$yf</var></span>, <span>boolean <var>$trans</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			<p>SVG - make a bezier curve from the last point to (xf,yf), with the 2 direction points (x1,y1) and (x2,y2)</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>SVG - make a bezier curve from the last point to (xf,yf), with the 2 direction points (x1,y1) and (x2,y2)</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$x1</var></dt>
+					<dd></dd>
+					<dt><var>$y1</var></dt>
+					<dd></dd>
+					<dt><var>$x2</var></dt>
+					<dd></dd>
+					<dt><var>$y2</var></dt>
+					<dd></dd>
+					<dt><var>$xf</var></dt>
+					<dd></dd>
+					<dt><var>$yf</var></dt>
+					<dd></dd>
+					<dt><var>$trans</var></dt>
+					<dd>apply transformation</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_Arc" id="__Arc">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__Arc">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#967-1035" title="Go to source code">_Arc</a>( <span>float <var>$xc</var></span>, <span>float <var>$yc</var></span>, <span>float <var>$rx</var></span>, <span>float <var>$ry</var></span>, <span>float <var>$angleBegin</var></span>, <span>float <var>$angleEnd</var></span>, <span>boolean <var>$direction</var> = <span class="php-keyword1">true</span></span>, <span>boolean <var>$drawFirst</var> = <span class="php-keyword1">true</span></span>, <span>boolean <var>$trans</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			<p>SVG - make a arc with Center, Radius, from angleBegin to angleEnd</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>SVG - make a arc with Center, Radius, from angleBegin to angleEnd</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$xc</var></dt>
+					<dd></dd>
+					<dt><var>$yc</var></dt>
+					<dd></dd>
+					<dt><var>$rx</var></dt>
+					<dd></dd>
+					<dt><var>$ry</var></dt>
+					<dd></dd>
+					<dt><var>$angleBegin</var></dt>
+					<dd>in radians</dd>
+					<dt><var>$angleEnd</var></dt>
+					<dd>$angleEng in radians</dd>
+					<dt><var>$direction</var></dt>
+					<dd></dd>
+					<dt><var>$drawFirst</var></dt>
+					<dd>$drawFirst, true => add the first point</dd>
+					<dt><var>$trans</var></dt>
+					<dd>apply transformation</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="_Arc2" id="__Arc2">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#__Arc2">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#1037-1140" title="Go to source code">_Arc2</a>( <span>float <var>$x1</var></span>, <span>float <var>$y1</var></span>, <span>float <var>$x2</var></span>, <span>float <var>$y2</var></span>, <span>float <var>$rx</var></span>, <span>float <var>$ry</var></span>, <span>float <var>$angle</var> = <span class="php-num">0</span>.</span>, <span>boolean <var>$l</var> = <span class="php-num">0</span></span>, <span>boolean <var>$s</var> = <span class="php-num">0</span></span>, <span>boolean <var>$trans</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			<p>SVG - make a arc from Pt1 to Pt2, with Radius</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>SVG - make a arc from Pt1 to Pt2, with Radius</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$x1</var></dt>
+					<dd></dd>
+					<dt><var>$y1</var></dt>
+					<dd></dd>
+					<dt><var>$x2</var></dt>
+					<dd></dd>
+					<dt><var>$y2</var></dt>
+					<dd></dd>
+					<dt><var>$rx</var></dt>
+					<dd></dd>
+					<dt><var>$ry</var></dt>
+					<dd></dd>
+					<dt><var>$angle</var></dt>
+					<dd>deviation angle of the axis X</dd>
+					<dt><var>$l</var></dt>
+					<dd>large-arc-flag</dd>
+					<dt><var>$s</var></dt>
+					<dd>sweep-flag</dd>
+					<dt><var>$trans</var></dt>
+					<dd>apply transformation</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="ptTransform" id="_ptTransform">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_ptTransform">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#1142-1168" title="Go to source code">ptTransform</a>( <span>float <var>&amp; $x</var></span>, <span>float <var>&amp; $y</var></span>, <span>boolean <var>$trans</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			<p>SVG - transform the point (reference)</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>SVG - transform the point (reference)</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$x</var></dt>
+					<dd>$x</dd>
+					<dt><var>$y</var></dt>
+					<dd>$y</dd>
+					<dt><var>$trans</var></dt>
+					<dd>true => convert into PDF unit</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="doTransform" id="_doTransform">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_doTransform">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#1170-1195" title="Go to source code">doTransform</a>( <span>array <var>$n</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>SVG - add a transformation Matric</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>SVG - add a transformation Matric</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$n</var></dt>
+					<dd>matrix</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="undoTransform" id="_undoTransform">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_undoTransform">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#1197-1205" title="Go to source code">undoTransform</a>( )</code>
+
+		<div class="description short">
+			<p>SVG - remove a transformation Matric</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>SVG - remove a transformation Matric</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="myBarcode" id="_myBarcode">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_myBarcode">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#1207-1238" title="Go to source code">myBarcode</a>( <span>string <var>$code</var></span>, <span>string <var>$type</var></span>, <span>integer <var>$x</var></span>, <span>integer <var>$y</var></span>, <span>integer <var>$w</var></span>, <span>integer <var>$h</var></span>, <span>integer <var>$labelFontsize</var></span>, <span>array <var>$color</var></span> )</code>
+
+		<div class="description short">
+			<p>Convert a HTML2PDF barcode in a TCPDF barcode</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Convert a HTML2PDF barcode in a TCPDF barcode</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$code</var></dt>
+					<dd>code to print</dd>
+					<dt><var>$type</var></dt>
+					<dd>type of barcode (see tcpdf/barcodes.php for supported formats)</dd>
+					<dt><var>$x</var></dt>
+					<dd>x position in user units</dd>
+					<dt><var>$y</var></dt>
+					<dd>y position in user units</dd>
+					<dt><var>$w</var></dt>
+					<dd>width in user units</dd>
+					<dt><var>$h</var></dt>
+					<dd>height in user units</dd>
+					<dt><var>$labelFontsize</var></dt>
+					<dd>of the Test Label. If false : no Label</dd>
+					<dt><var>$color</var></dt>
+					<dd>color of the foreground</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createIndex" id="_createIndex">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createIndex">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#1240-1319" title="Go to source code">createIndex</a>( <span>html2pdf <var>&amp; $obj</var></span>, <span>string <var>$titre</var> = <span class="php-quote">'Index'</span></span>, <span>integer <var>$sizeTitle</var> = <span class="php-num">20</span></span>, <span>integer <var>$sizeBookmark</var> = <span class="php-num">15</span></span>, <span>boolean <var>$bookmarkTitle</var> = <span class="php-keyword1">true</span></span>, <span>boolean <var>$displayPage</var> = <span class="php-keyword1">true</span></span>, <span>integer <var>$page</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$fontName</var> = <span class="php-quote">'helvetica'</span></span> )</code>
+
+		<div class="description short">
+			<p>create a automatic Index on a page</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>create a automatic Index on a page</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$obj</var></dt>
+					<dd>parent object</dd>
+					<dt><var>$titre</var></dt>
+					<dd>Title of the Index Page</dd>
+					<dt><var>$sizeTitle</var></dt>
+					<dd>Font size for hthe Title</dd>
+					<dt><var>$sizeBookmark</var></dt>
+					<dd>Font size for the bookmarks</dd>
+					<dt><var>$bookmarkTitle</var></dt>
+					<dd>Bookmark the Title</dd>
+					<dt><var>$displayPage</var></dt>
+					<dd>Display the page number for each bookmark</dd>
+					<dt><var>$page</var></dt>
+					<dd>draw the automatic Index on a specific Page. if null => add a page at the end</dd>
+					<dt><var>$fontName</var></dt>
+					<dd>FontName to use</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMyAliasNbPages" id="_getMyAliasNbPages">
+
+		<td class="attributes"><code>
+			 public 
+
+			string;
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMyAliasNbPages">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#1321-1340" title="Go to source code">getMyAliasNbPages</a>( )</code>
+
+		<div class="description short">
+			<p>Returns the string alias used for the total number of pages.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns the string alias used for the total number of pages.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string;
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						TCPDF::getAliasNbPages(), TCPDF::getPageGroupAlias()<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMyNumPage" id="_getMyNumPage">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer;
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMyNumPage">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#1342-1360" title="Go to source code">getMyNumPage</a>( <span>integer <var>$page</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			<p>Returns the current page number.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Returns the current page number.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$page</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer;
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="myStartPageGroup" id="_myStartPageGroup">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer;
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_myStartPageGroup">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#1362-1373" title="Go to source code">myStartPageGroup</a>( )</code>
+
+		<div class="description short">
+			<p>Start a new group of pages</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Start a new group of pages</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer;
+				</div>
+
+
+				<h4>See</h4>
+				<div class="list">
+						tcpdf::startPageGroup<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMyLastPageGroup" id="_getMyLastPageGroup">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMyLastPageGroup">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#1375-1384" title="Go to source code">getMyLastPageGroup</a>( )</code>
+
+		<div class="description short">
+			<p>get $_myLastPageGroup;</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>get $_myLastPageGroup;</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer<br>$_myLastPageGroup;
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setMyLastPageGroup" id="_setMyLastPageGroup">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setMyLastPageGroup">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#1386-1395" title="Go to source code">setMyLastPageGroup</a>( <span>integer <var>$myLastPageGroup</var></span> )</code>
+
+		<div class="description short">
+			<p>set $_myLastPageGroup;</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>set $_myLastPageGroup;</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$myLastPageGroup</var></dt>
+					<dd>$myLastPageGroup;</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMyLastPageGroupNb" id="_getMyLastPageGroupNb">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMyLastPageGroupNb">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#1397-1406" title="Go to source code">getMyLastPageGroupNb</a>( )</code>
+
+		<div class="description short">
+			<p>get $_myLastPageGroupNb;</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>get $_myLastPageGroupNb;</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer<br>$_myLastPageGroupNb;
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setMyLastPageGroupNb" id="_setMyLastPageGroupNb">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setMyLastPageGroupNb">#</a>
+		<code><a href="source-class-HTML2PDF_myPdf.html#1408-1417" title="Go to source code">setMyLastPageGroupNb</a>( <span>integer <var>$myLastPageGroupNb</var></span> )</code>
+
+		<div class="description short">
+			<p>set $_myLastPageGroupNb;</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>set $_myLastPageGroupNb;</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$myLastPageGroupNb</var></dt>
+					<dd>$myLastPageGroupNb;</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary constants" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="MY_ARC" id="MY_ARC">
+
+		<td class="attributes"><code>float</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-HTML2PDF_myPdf.html#20" title="Go to source code"><b>MY_ARC</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#MY_ARC" class="anchor">#</a>
+				<code><span class="php-num">0.5522847498</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="ARC_NB_SEGMENT" id="ARC_NB_SEGMENT">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-class-HTML2PDF_myPdf.html#23" title="Go to source code"><b>ARC_NB_SEGMENT</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#ARC_NB_SEGMENT" class="anchor">#</a>
+				<code><span class="php-num">8</span></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+
+
+	<table class="summary properties" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="_footerParam" id="$_footerParam">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-HTML2PDF_myPdf.html#14" title="Go to source code"><var>$_footerParam</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_footerParam" class="anchor">#</a>
+				<code><span class="php-keyword1">array</span>()</code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="_transf" id="$_transf">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-HTML2PDF_myPdf.html#15" title="Go to source code"><var>$_transf</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_transf" class="anchor">#</a>
+				<code><span class="php-keyword1">array</span>()</code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="_myLastPageGroup" id="$_myLastPageGroup">
+		<td class="attributes"><code>
+			protected  
+			
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-HTML2PDF_myPdf.html#16" title="Go to source code"><var>$_myLastPageGroup</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_myLastPageGroup" class="anchor">#</a>
+				<code><span class="php-keyword1">null</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="_myLastPageGroupNb" id="$_myLastPageGroupNb">
+		<td class="attributes"><code>
+			protected  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-HTML2PDF_myPdf.html#17" title="Go to source code"><var>$_myLastPageGroupNb</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_myLastPageGroupNb" class="anchor">#</a>
+				<code><span class="php-num">0</span></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		magophp API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

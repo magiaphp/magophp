@@ -24,7 +24,7 @@
         <label for="t_usuarios_usuario" class="col-sm-2 control-label"><?php _t("Contactos sin usuario"); ?></label> 
         <div class="col-sm-10"> 
             <select class="form-control" name="t_usuarios_usuario" >
-                <?php contacto_sin_usuario_add(); ?>
+                <?php contactos_sin_usuario_add()?>
             </select>
         </div> 
     </div> 

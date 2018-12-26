@@ -26,7 +26,7 @@
             echo ucfirst(_tr($g[$i]));
             echo "(" . _usuarios_total_segun_grupo($g[$i]) . ")  ";
             $i++;
-        } 
+        }
     }
     ?>
 
@@ -64,12 +64,21 @@
 
 
 <table class="table table-striped">
-    <thead>
+
+    <?php 
+    $ganchos = array("Grupo");
+    _opciones_thead('contactos', $ganchos);
+    ?>
+    
+    
+   <?php 
+   /* <thead>
         <tr> 
             <?php contactos_tabla_index_titulo($orden); ?>
 
         </tr>
-    </thead>
+    </thead>*/
+   ?>
     <tbody>
         <?php
         $i = 1;
@@ -84,11 +93,11 @@
         }
         ?>
     </tbody>
-    <tfoot>
-        <tr> 
-            <?php contactos_tabla_index_titulo($orden); ?>
-        </tr>
-    </tfoot>
+
+    
+    <?php 
+    _opciones_tfoot('contactos', $ganchos);
+    ?>
 
 </table> 
 

@@ -1,7 +1,7 @@
 <?php
 // si no existe, redireccion para su creacion 
-if( ! file_exists("../admin/bd.php")){
-    header("Location: instalar.php"); 
+if (!file_exists("../admin/bd.php")) {
+    header("Location: instalar.php");
 }
 session_start("magia_php");
 include "../admin/bd.php";
@@ -30,8 +30,10 @@ _incluir_funciones_gestion();
 $aqui_seccion = "";
 $aqui_pagina = "";
 $_usuarios_idioma = contactos_campo_segun_email('idioma', $_usuarios_usuario);
-$p = (isset($_REQUEST['p'])) ? $_REQUEST['p'] : "home";
-$c = (isset($_REQUEST['c'])) ? $_REQUEST['c'] : "index";
+
+$pagina         = $p = (isset($_REQUEST['p'])) ? $_REQUEST['p'] : "home";
+$controaldor    = $c = (isset($_REQUEST['c'])) ? $_REQUEST['c'] : "index";
+$accion         = $a = (isset($_REQUEST['a'])) ? $_REQUEST['a'] : "ver";
 // para las paginaciones de todas las paginas
 $pag = (isset($_REQUEST['pag'])) ? $_REQUEST['pag'] : 0;
 ?>
@@ -55,13 +57,21 @@ $pag = (isset($_REQUEST['pag'])) ? $_REQUEST['pag'] : 0;
         <link rel="stylesheet" href="home/vista/gestion.css" >
         <link rel="stylesheet" href="estilo.css"/>
 
-        
-            
 
+<<<<<<< HEAD
         
 
   
   
+=======
+
+
+
+
+
+
+
+>>>>>>> des
         <?php
         $scripts = "./$p/scripts/$c.php";
         (file_exists($scripts)) ? include "$scripts" : "";
@@ -102,46 +112,81 @@ $pag = (isset($_REQUEST['pag'])) ? $_REQUEST['pag'] : 0;
 
                     <?php
                     include "home/vista/sidebar.php";
-                    
-                    $controlador = "./$p/controlador/$c.php"; 
-                    
-                    if(file_exists($controlador)){
-                        include $controlador;
-                    }else{
-                        echo "Controlador <b>$controlador</b> no existe";  
+
+
+                    if (permisos_tiene_permiso($a, $p, $_usuarios_grupo)) {
+
+
+                        $controlador = "./$p/controlador/$c.php";
+
+                        if (file_exists($controlador)) {
+                            include $controlador;
+                        } else {
+                            echo "Controlador <b>$controlador</b> no existe";
+                        }
+                    } else {
+                        permisos_sin_permiso($a, $p, $_usuarios_usuario);
                     }
-                    
-                    
-                    
-                    
-                    
+
+                    ($config_debug)? permisos_plugin_controlador($p, $a):"";
+
+
+                    if ($config_debug) {
+                        echo '<div class="panel panel-primary">
+                            <div class="panel-heading">/gestion/index.php</div>
+                            <div class="panel-body">';
+
+
+                        echo "<h3>Debug mode (" . __FILE__ . " )</h3>";
+
+                        $variables = array(
+                            "\$pagina" => "$pagina",
+                            "\$controaldor" => "$controlador",
+                            "\$accion" => "$accion",                            
+                            "\$_usuarios_grupo" => "$_usuarios_grupo",
+                            "permisos_tiene_permiso($accion, $pagina,$_usuarios_grupo)" => permisos_tiene_permiso($accion, $pagina, $_usuarios_grupo),
+                            "\$_REQUEST['a']" => "$_REQUEST[a]",
+                            "\$_REQUEST['a']" => "$_REQUEST[a]"
+                        );
+                        echo "<table border>";
+                        echo "<tr><td><b>Variable</b></td><td><b>Valor</b></td></tr>";
+                        foreach ($variables as $key => $value) {
+                            echo "<tr><td><b>$key:</b></td><td>$value</td></tr>";
+                        }
+                            
+                        
+                        echo "</table>";
+
+                        echo '</div>
+</div>';
+                    }
                     ?>
 
                 </div>	  <!-- /3 --> 
             </div>  <!-- /2 -->
         </div>	<!-- /1 -->
 
-        <?php
-        include "home/vista/footer.php";
-        // cerramos la coneccion 
-        //  mysql_close($conexion);
-        ?>
+<?php
+include "home/vista/footer.php";
+// cerramos la coneccion 
+//  mysql_close($conexion);
+?>
 
 
         <!-- Bootstrap core JavaScript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
-        
-        
-        
+
+
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        
-        
+
+
         <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
         <script src="../includes/bootstrap/js/bootstrap.min.js"></script>
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
         <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-        
-        
+
+
     </body>
 </html>

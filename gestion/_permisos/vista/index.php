@@ -12,7 +12,56 @@
     </a>
      * 
      */ ?>
+    
+    
+    
+         <div class="dropdown nav navbar navbar-right">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <?php _t("Acciones"); ?>
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a href="pdf.php?p=_permisos&c=pdf"><?php _t("PDF"); ?></a></li>
+            <li><a href="index.php?p=_opciones&c=buscar&_opciones_opcion=_permisos_thead&_opciones_valor=&_opciones_grupo=">Config</a></li>
+        </ul>
+     </div>  
+    
+    
+    
+    
 </h2>
+
+
+
+
+    <?php 
+    /*<button type="button" class="btn btn-primary btn-small" data-toggle="modal" data-target="#myModal">
+        <?php _t("Nuevo"); ?>
+    </button>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel"><?php _t("Nuevo grupo"); ?></h4>
+            </div>
+            <div class="modal-body">
+                <?php
+                
+                echo __DIR__; 
+                echo "<hr>"; 
+                include "./vista/_grupos/form_crear.php";
+                ?>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>*/
+    ?>
 
 
 
@@ -35,16 +84,9 @@ mensaje("atencion","Si no esta seguro, no modifique nada porfavor");
 
 
 <table class="table table-striped">
-    <thead>
-        <tr> 
-            <th>#</th>
-
-            <th><?php echo _t("Grupo"); ?></th> 
-            <th><?php echo _t("Pagina"); ?></th> 
-            <th><?php echo _t("Permiso"); ?></th> 
-            <th><?php echo _t("Accion"); ?></th> 
-        </tr>
-    </thead>
+    <?php 
+    $ganchos = array(); 
+    _opciones_thead("_permisos", $ganchos); ?>
     <tbody>
 
         <?php
@@ -74,14 +116,7 @@ while ($_permisos = mysql_fetch_array($sql)) {
         }
         ?>
 
-        <tr> 
-            <th>#</th>
-
-            <th><?php echo _t("Grupo"); ?></th> 
-            <th><?php echo _t("Pagina"); ?></th> 
-            <th><?php echo _t("Permiso"); ?></th> 
-            <th><?php echo _t("Accion"); ?></th> 
-        </tr>
+        <?php _opciones_tfoot("_permisos", $ganchos); ?>
 </table> 
 <?php
 echo paginacion_master($p, $c, $total_items, $pag);

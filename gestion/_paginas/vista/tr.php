@@ -9,8 +9,14 @@ $ventana = '
 
 
 echo ' <tr>
-    <td>' . $i . '</td> 
- <td>' . $_paginas_pagina . '</td> ';
+    <td>' . $i . '</td> '; 
+
+
+foreach (_opciones_campos_a_mostrar_segun_tabla("_usuarios") as $key => $value) {
+    if ($value == 'si') {
+        echo "<td>$_usuarios[$key]</td> ";
+    }
+}
 
 
 foreach (_grupos_array() as $key => $grupo) {

@@ -107,5 +107,6 @@ function permisos_plugin_controlador($pagina, $accion){
         
     echo "</theader>"; 
     echo "</table>"; 
+    echo "<p></p>"; 
     
 }

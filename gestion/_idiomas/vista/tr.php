@@ -14,18 +14,22 @@ $porcentaje = '<div class="progress">
 
 $_idiomas_activo = ($_idiomas_activo) ?
         '<span class="glyphicon glyphicon-ok"></span> <a href="?p=_idiomas&c=activar&a=activar&_idiomas_idioma=' . $_idiomas_idioma . '&_idiomas_activo=0">' . _tr("Desactivar") . '</a>' :
-        '<span class="glyphicon glyphicon-remove"></span> <a href="?p=_idiomas&c=activar&a=activaar&_idiomas_idioma=' . $_idiomas_idioma . '&_idiomas_activo=1">' . _tr("Activar") . '</a>'
+        '<span class="glyphicon glyphicon-remove"></span> <a href="?p=_idiomas&c=activar&a=activar&_idiomas_idioma=' . $_idiomas_idioma . '&_idiomas_activo=1">' . _tr("Activar") . '</a>'
 ;
 
 
 echo ' <tr>
-    <td>' . $i . '</td> 
- <td>' . $_idiomas_idioma . '</td> 
- <td>' . $_idiomas_nombre . '</td> 
- <td>' . $_idiomas_orden . '</td> 
+    <td>' . $i . '</td>';
+foreach (_opciones_campos_a_mostrar_segun_tabla("_idiomas") as $key => $value) {
+    if ($value == 'si') {
+        echo "<td>$_idiomas[$key]</td> ";
+    }
+}
+echo '
  <td>' . number_format(_traducciones_total_segun_idioma($_idiomas_idioma), 0) . '</td> 
- <td>' . $porcentaje . '</td> 
- <td>' . $_idiomas_activo . '</td> 
+
+<td>' . $porcentaje . '</td> 
+ 
  <td>
 <a href=' . $_SERVER['PHP_SELF'] . '?p=_idiomas&c=ver&_idiomas_id=' . $_idiomas_id . '>Ver</a> |  
 <a href=' . $_SERVER['PHP_SELF'] . '?p=_idiomas&c=editar&_idiomas_id=' . $_idiomas_id . '>Editar</a>  

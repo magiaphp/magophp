@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 
 /**
@@ -150,3 +151,5 @@ function _grupos_existe($grupo) {
         return false;
     }
 }
+=======
+>>>>>>> des

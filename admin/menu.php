@@ -99,3 +99,19 @@ function _menu_icono_segun_pagina($label) {
 
     return $reg[0];
 }
+
+
+function _menu_array_de_campo($campo) {
+    global $conexion;
+    $sql = mysql_query(
+            "SELECT DISTINCT $campo FROM _menu ORDER BY $campo", $conexion) or die("Error:" . mysql_error());
+
+    $data = array();
+    
+    while ($reg = mysql_fetch_array($sql)) {
+        array_push($data, $reg[0]);
+        }
+        
+        return $data;    
+    
+}

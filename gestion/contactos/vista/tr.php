@@ -39,16 +39,19 @@ switch ($contactos_estatus) {
 
 
 echo ' 
-<tr>
- 
- 
- <td><img src="../imagenes/usuario.jpg">' . $candado . ' ' . $contactos_empresa . '</td> 
- <td>' . $contactos_contacto . '</td> '; 
+<tr><td>'.$i.'</td>';
+
+foreach (_opciones_campos_a_mostrar_segun_tabla("contactos") as $key => $value) {
+    if ($value == 'si') {
+        echo "<td>$contactos[$key]</td> ";
+    }
+}
+
+//echo '<td><img src="../imagenes/usuario.jpg">' . $candado . ' ' . $contactos_empresa . '</td>'; 
+
  //echo '<td>' . pedidos_segun_email($contactos_email) . '</td> '; 
  
- echo '<td>' . $contactos_ciudad . '</td> 
- <td><a href="mailto:'.$contactos_email.'">' . $contactos_email . '</a></td> 
- <td>'.$contactos_idioma.'</td> 
+ echo '
  <td>' . ucfirst(_usuarios_campo_segun_email("grupo", $contactos_email)) . '</td> 
  <td>
     <a href=' . $_SERVER['PHP_SELF'] . '?p=contactos&c=ver&contactos_id=' . $contactos_id . '>'._tr('Ver').'</a> |  

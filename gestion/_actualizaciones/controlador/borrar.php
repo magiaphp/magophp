@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  <?php 
  /**  
  magia_version: 0.0.11 
@@ -31,3 +32,8 @@ if ($config_debug) {
     }
     echo "</table>";
 }
+=======
+<?php
+    $_actualizaciones_id = mysql_real_escape_string($_REQUEST['_actualizaciones_id']);
+    include "./_actualizaciones/modelos/borrar.php";
+>>>>>>> des

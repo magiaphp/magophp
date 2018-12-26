@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 
 /**
@@ -210,3 +211,5 @@ function contactos_idioma($email) {
     global $config_idioma;
     return (contactos_campo_segun_email('idioma', $email)) ? contactos_campo_segun_email('idioma', $email) : $config_idioma;
 }
+=======
+>>>>>>> des

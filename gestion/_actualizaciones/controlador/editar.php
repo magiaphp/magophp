@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 
 /**
   magia_version: 0.0.11
@@ -11,6 +12,13 @@ if (permisos_tiene_permiso($accion, $pagina, $_usuarios_grupo)) {
         include "./_actualizaciones/reg/post.php";
         include "./_actualizaciones/modelos/editar.php";
 
+=======
+if (isset($_REQUEST['a']) == 'editar') {
+        $_actualizaciones_id = mysql_real_escape_string($_REQUEST['_actualizaciones_id']);
+        include "./_actualizaciones/reg/post.php";
+        include "./_actualizaciones/modelos/editar.php";
+
+>>>>>>> des
         include "./_actualizaciones/modelos/ver.php";
         include "./_actualizaciones/reg/reg.php";
         include "./_actualizaciones/vista/ver.php";
@@ -19,6 +27,7 @@ if (permisos_tiene_permiso($accion, $pagina, $_usuarios_grupo)) {
         include "./_actualizaciones/modelos/ver.php";
         include "./_actualizaciones/reg/reg.php";
         include "./_actualizaciones/vista/editar.php";
+<<<<<<< HEAD
     }
 } else {
     permisos_sin_permiso($accion, $pagina, $_usuarios_usuario);
@@ -43,3 +52,6 @@ if ($config_debug) {
     }
     echo "</table>";
 }
+=======
+    }
+>>>>>>> des

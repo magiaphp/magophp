@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Nos da la versión actual de Magia_PHP
  * @return string Valor de 3 numeros separados por puntos ejemplo: 0.8.1
@@ -251,8 +250,8 @@ function vardump($codigo, $notas = "") {
  * @global type $config_logo
  */
 function logo() {
-    global $config_logo;
-    echo '<a href="index.php" class="thumbnail"><img src="../imagenes/' . $config_logo . '" alt=""></a>';
+    
+    echo '<a href="index.php?p=_opciones&c=ver&_opciones_id=5" class="thumbnail"><img src="../imagenes/' . _opciones_valor_segun_opcion("logo") . '" alt=""></a>';
 }
 
 /**

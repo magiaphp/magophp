@@ -45,7 +45,7 @@
     );
 
 
-if($config_debug){
+/*if($config_debug){
     echo "<h3>Debug mode (".__FILE__." )</h3>";
     
 
@@ -57,4 +57,4 @@ if($config_debug){
     }    
     echo "</table>";
 
-}
+}*/

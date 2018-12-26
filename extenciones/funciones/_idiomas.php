@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 
 /**
@@ -126,3 +127,5 @@ function _idiomas_array() {
 function _idiomas() {
     return _idiomas_array();
 }
+=======
+>>>>>>> des
