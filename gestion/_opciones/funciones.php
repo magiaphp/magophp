@@ -20,6 +20,7 @@ function _opciones_campo($campo, $id) {
         return false;
     }
 }
+
 /**
  * Crea las opciones "<option>" de un <select> de la tabla _opciones
  * @global type $conexion
@@ -53,6 +54,7 @@ function _opciones_campo_add($campo, $label, $selecionado = "", $excluir = "") {
         echo "value=\"$_opciones[$campo]\">$_opciones[$campo]</option> \n";
     }
 }
+
 /**
  * 
  * @global type $conexion
@@ -82,6 +84,7 @@ function _opciones_add($selecionado = "", $excluir = "") {
         echo "value=\"$_opciones[0]\">$_opciones__opciones</option>";
     }
 }
+
 /**
  * 
  * @global type $conexion
@@ -99,6 +102,7 @@ function _opciones_numero_actual() {
         return false;
     }
 }
+
 /**
  * 
  * @global type $conexion
@@ -130,11 +134,12 @@ function _opciones_campos_a_mostrar() {
 
     return json_decode($reg[0], true);
 }
+
 function _opciones_campos_a_mostrar_segun_tabla($tabla) {
     global $conexion;
-        
+
     $valor = $tabla . "_thead";
-    
+
     $data = array();
     $sql = mysql_query("SELECT valor FROM _opciones WHERE opcion = '$valor' ", $conexion) or error(__DIR__, __FILE__, __LINE__);
 
@@ -142,15 +147,16 @@ function _opciones_campos_a_mostrar_segun_tabla($tabla) {
 
     return json_decode($reg[0], true);
 }
+
 /**
  * 
  * @param type $tabla
  * @param type $ganchos
  */
-function _opciones_thead($tabla, $ganchos = array()) {    
+function _opciones_thead($tabla, $ganchos = array()) {
     echo "
      <thead>
-        <tr> ";    
+        <tr> ";
     echo "<th>" . _tr("#") . "</th> "; // numero de linea
     foreach (_opciones_campos_a_mostrar_segun_tabla($tabla) as $key => $value) {
         if ($value == "si") {
@@ -164,10 +170,11 @@ function _opciones_thead($tabla, $ganchos = array()) {
             $i++;
         }
     }
-    echo "<th>" . _tr("Acción") . "</th> "; 
+    echo "<th>" . _tr("Acción") . "</th> ";
     echo "    </tr>
     </thead>";
 }
+
 /**
  * 
  * @param type $tabla
@@ -175,6 +182,7 @@ function _opciones_thead($tabla, $ganchos = array()) {
 function _opciones_tfoot($tabla, $ganchos = array()) {
     _opciones_thead($tabla, $ganchos);
 }
+
 /**
  * Regresa el valor que tiene una opcion 
  * @global type $conexion
@@ -195,6 +203,7 @@ function _opciones_valor_segun_opcion($opcion) {
         return false;
     }
 }
+
 /**
  * Nos entreta en un array el nombre de todos los campos de una tabla
  * @global type $conexion
@@ -206,12 +215,13 @@ function _opciones_campos_disponibles_segun_tabla($tabla) {
     global $conexion;
     $data = array();
     $sql = mysql_query("SHOW COLUMNS FROM $tabla  ", $conexion) or error(__DIR__, __FILE__, __LINE__);
-    
+
     while ($reg = mysql_fetch_array($sql)) {
         $data[$reg[0]] = $reg[0];
     }
     return $data;
 }
+
 /**
  * Saca el valor <b>si</b> o <b>no</b> de un campo del json que esta en la tabla _opciones
  * @param type $tabla Nombre de la tabla
@@ -230,12 +240,27 @@ function _opciones_valor_json_segun_tabla_campo($tabla, $tabla_campo) {
      * y se manda
      */
     $campo_mostrar = _opciones_campos_a_mostrar_segun_tabla($tabla);
-    
-    
-    if(isset($campo_mostrar[$tabla_campo])){
+
+
+    if (isset($campo_mostrar[$tabla_campo])) {
         return $campo_mostrar[$tabla_campo];
-    }else{
-        return "no" ;
+    } else {
+        return "no";
     }
+}
+
+
+function _opciones_array_de_campo($campo) {
+    global $conexion;
+    $sql = mysql_query(
+            "SELECT DISTINCT $campo FROM _opciones ORDER BY $campo", $conexion) or die("Error:" . mysql_error());
+
+    $data = array();
+    
+    while ($reg = mysql_fetch_array($sql)) {
+        array_push($data, $reg[0]);
+        }
+        
+        return $data;    
     
 }

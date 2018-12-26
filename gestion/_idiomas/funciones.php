@@ -111,6 +111,3 @@ function _idiomas_array() {
 
     return $g;
 }
-function _idiomas() {
-    return _idiomas_array();
-}
