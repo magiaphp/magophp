@@ -29,44 +29,21 @@
     <div class="form-group"> 
         <label for="_opciones_valor" class="col-sm-2 control-label"><?php _t("Valor"); ?></label> 
         <div class="col-sm-10"> 
-            <p>Visible?</p><?php
+            <?php
             // con esto busco si el campo tiene _thead, 
             if (strpos($_opciones_opcion, '_thead')) {
                 ?>
-
+                <p><?php _t("Visible"); ?>?</p>
                 <?php
                 $tabla = str_replace("_thead", "", $_opciones_opcion);
                 foreach (_opciones_campos_disponibles_segun_tabla($tabla) as $tabla_campo) {
 
-
                     $checked_true = (_opciones_valor_json_segun_tabla_campo($tabla, $tabla_campo) == 'si') ? "checked" : "";
                     $checked_false = (_opciones_valor_json_segun_tabla_campo($tabla, $tabla_campo) == 'no') ? "checked" : "";
-
 
                     echo "<input type=\"radio\" name=\"_opciones_valor[$tabla_campo]\" value=\"si\" $checked_true>  si ";
                     echo "<input type=\"radio\" name=\"_opciones_valor[$tabla_campo]\" value=\"no\" $checked_false> no <b>$tabla_campo</b> <br>";
 
-
-
-
-
-
-                    /*
-                      foreach (json_decode($_opciones_valor) as $dispo_item => $dispo_valor) {
-
-                      $checked_true = ( ($tabla_campo == $dispo_item) && $dispo_valor == "si") ? "checked" : "";
-                      $checked_false = (($tabla_campo == $dispo_item) && $dispo_valor == "no") ? "checked" : "";
-
-                      // echo $dispo_item . ' <input type="radio" name="_opciones_valor[' . $dispo_item . ']" value="si" ' . $checked_true . '> Visible <input type="radio" name="_opciones_valor[' . $dispo_item . ']" value="no" ' . $checked_false . '> No visible<br>';
-                      if($tabla_campo){
-
-                      echo "<input type=\"radio\" name=\"_opciones_valor[$tabla_campo]\" value=\"si\" $checked_true>  si ";
-                      echo "<input type=\"radio\" name=\"_opciones_valor[$tabla_campo]\" value=\"no\" $checked_false> no <b>$tabla_campo</b> <br>";
-                      }
-
-                      }
-                     * 
-                     */
                 }
 
 

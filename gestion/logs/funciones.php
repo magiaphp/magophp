@@ -192,10 +192,10 @@ function logs_historico($p, $c, $id) {
             $sql = mysql_query("SELECT fecha,usuario, a, comando, argumento FROM logs WHERE p = '$p' AND argumento = '$id' ORDER BY fecha DESC ", $conexion);
             break;
         case "ver":
-            $sql = mysql_query("SELECT fecha,usuario, a, comando FROM logs WHERE p = '$p' AND argumento = '$id' ORDER BY fecha DESC ", $conexion);
+            $sql = mysql_query("SELECT fecha,usuario, a, comando, argumento FROM logs WHERE p = '$p' AND argumento = '$id' ORDER BY fecha DESC ", $conexion);
             break;
         case "editar":
-            $sql = mysql_query("SELECT fecha,usuario, a, comando FROM logs WHERE p = '$p' AND argumento = '$id' ORDER BY fecha DESC ", $conexion);
+            $sql = mysql_query("SELECT fecha,usuario, a, comando, argumento FROM logs WHERE p = '$p' AND argumento = '$id' ORDER BY fecha DESC ", $conexion);
             break;
 
 

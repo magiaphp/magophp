@@ -2,7 +2,7 @@
  /**  
  magia_version: 0.0.8 
  **/ 
-$comando = "SELECT * FROM _menu ORDER BY ubicacion, padre, orden  "; 
+$comando = "SELECT * FROM _menu ORDER BY ubicacion, padre DESC, orden  "; 
 $sql=mysql_query("$comando Limit $inicia, $cfg_limite_items_en_tablas ",$conexion) 
 or die ("Error: en el fichero:" .__FILE__ .' linea: '. __LINE__ .'  '.mysql_error());	  
 // esto es para la paginacion	  

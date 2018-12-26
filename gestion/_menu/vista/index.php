@@ -1,7 +1,7 @@
 <?php /**
   magia_version: 0.0.8
  * */ ?>
-<?php // include "tabs.php";  ?>
+<?php  include "tabs.php";   ?>
 <h2> 
     <span class="glyphicon glyphicon-<?php echo _menu_icono_segun_pagina($p); ?>"></span> 
 
@@ -25,30 +25,38 @@
 <div class="row">
     <div class="col-lg-3"><hr>
 
-        Menu izquierdo
+        <div class="list-group">
+  <a href="#" class="list-group-item active">
+    Cras justo odio
+  </a>
+            
+            
+  <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+  <a href="#" class="list-group-item">Morbi leo risus</a>
+  <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+  <a href="#" class="list-group-item">Vestibulum at eros</a>
+</div>
 
     </div>
     <div class="col-lg-9">
+        <hr>
 
         <table class="table table-striped">
-            <thead>
-                <tr> 
-                    <th>#</th>
 
-                    <th><?php echo _t("Ubicacion"); ?></th> 
-                    <th><?php echo _t("Padre"); ?></th> 
-                    <th><?php echo _t("Label"); ?></th> 
-                    <th><?php echo _t("Url"); ?></th> 
-                    <th><?php echo _t("Icono"); ?></th> 
-                    <th><?php echo _t("Orden"); ?></th> 
-                    <th><?php echo _t("Accion"); ?></th> 
-                </tr>
-            </thead>
+            <?php
+            $ganchos = array("Icono");
+            _opciones_thead("_menu", $ganchos);
+            ?>
+
+
+
+           
+            
             <tbody>
 
                 <?php
                 if (permisos_tiene_permiso("ver", "_menu", $_usuarios_grupo)) {
-                    include "./_menu/vista/tr_buscar.php";
+                   // include "./_menu/vista/tr_buscar.php";
                 }
                 ?>
 
@@ -72,7 +80,7 @@
                 include "./_menu/vista/tr_anadir.php";
             }
             ?>
-
+            <?php _opciones_tfoot("_menu", $ganchos); ?>
 
         </table> 
 
