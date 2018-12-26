@@ -6,6 +6,27 @@
     <span class="glyphicon glyphicon-<?php echo _menu_icono_segun_pagina($p); ?>"></span> 
 
     <?php echo _t("Páginas"); ?> <a type="button" class="btn btn-primary navbar-btn" href="?p=_paginas&c=crear"> <?php _t("Nueva"); ?></a>
+
+    
+     <div class="dropdown nav navbar navbar-right">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <?php _t("Acciones"); ?>
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a href="pdf.php?p=_paginas&c=pdf"><?php _t("PDF"); ?></a></li>
+            <li><a href="index.php?p=_opciones&c=buscar&_opciones_opcion=_paginas_thead&_opciones_valor=&_opciones_grupo=">Config</a></li>
+        </ul>
+     </div>    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </h2>
 <?php echo _t("Items"); ?>: 
 <?php echo _paginas_total(); ?>

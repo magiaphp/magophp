@@ -17,7 +17,7 @@
 
     <div class="dropdown nav navbar navbar-right">
         <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            <?php _t("Exportar"); ?>
+            <?php _t("Acciones"); ?>
             <span class="caret"></span>
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">

@@ -48,7 +48,7 @@
           <ul class="dropdown-menu">
             <li><a href="#"><?php _t("Exportar PDF"); ?></a></li>
             <li><a href="#"><?php _t("Exportar CSV"); ?></a></li>
-            <li><a href="#">Another action</a></li>
+            <li><a href="index.php?p=_opciones&c=buscar&_opciones_opcion=_contenido_thead&_opciones_valor=&_opciones_grupo="><?php _t("Config"); ?></a></li>
             <li><a href="#">Something else here</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="#">Separated link</a></li>
