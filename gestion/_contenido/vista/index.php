@@ -2,11 +2,10 @@
   magia_version: 0.0.8
  * */ ?>
 <?php //include "tabs.php";     ?>
-<?php include "nav.php";     ?>
 
 
-<?php 
-/*
+
+
 <h2> 
     <span class="glyphicon glyphicon-<?php echo _menu_icono_segun_pagina($p); ?>"></span> 
 
@@ -28,7 +27,6 @@
 <a href="?p=_contenido&c=atraducir"><?php _t('No traducidas'); ?></a>
 <?php
 include "form_buscar.php";
-?>*/
 ?>
 
 

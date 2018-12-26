@@ -33,25 +33,6 @@
 <div class="row">
 
     <div class="col-lg-2">
-
-        <div class="list-group">
-            <a href="#" class="list-group-item active">
-                Cras justo odio
-            </a>
-
-
-            <a href="index.php?p=_opciones&c=buscar_segun_grupo&_opciones_grupo=10" class="list-group-item">10</a>
-            <a href="index.php?p=_opciones&c=buscar_segun_grupo&_opciones_grupo=20" class="list-group-item">20 Email</a>
-            <a href="index.php?p=_opciones&c=buscar_segun_grupo&_opciones_grupo=1000" class="list-group-item">1000</a>
-            <a href="index.php?p=_opciones&c=buscar_segun_grupo&_opciones_grupo=9000" class="list-group-item">9000</a>
-            <a href="index.php?p=_opciones&c=buscar_segun_grupo&_opciones_grupo=2000" class="list-group-item">2000 Monedas</a>
-
-
-
-        </div>
-
-
-
         <div class="list-group">
             <a href="#" class="list-group-item active">
                 <?php _t("Grupo"); ?>
