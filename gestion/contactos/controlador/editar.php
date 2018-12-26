@@ -49,21 +49,7 @@ if (isset($_REQUEST['a']) == 'editar') {
 
 
 
-<<<<<<< HEAD
-        // procedemos a registrar el login 
-        $contactos_grupo = (isset($_POST['contactos_grupo'])) ? mysql_real_escape_string(trim($_POST['contactos_grupo'])) : _opciones_valor_segun_opcion("grupo_por_defecto");
-        $contactos_clave = (isset($_POST['contactos_clave'])) ? mysql_real_escape_string(trim($_POST['contactos_clave'])) : false;
-        include "./contactos/modelos/editar_grupo.php";
-
-        
-        if ($contactos_clave) {
-            $contactos_clave = codifica_clave($contactos_clave);
-            include "./contactos/modelos/editar_clave.php";
-            // enviar mensaje al admin
-            // enviar mensaje al usuario de cambia cambiada
-        }
-=======
-    // procedemos a registrar el login 
+ // procedemos a registrar el login 
     $contactos_grupo = (isset($_POST['contactos_grupo'])) ? mysql_real_escape_string(trim($_POST['contactos_grupo'])) : 'centros';
     $contactos_clave = (isset($_POST['contactos_clave'])) ? mysql_real_escape_string(trim($_POST['contactos_clave'])) : false;
 
@@ -75,46 +61,7 @@ if (isset($_REQUEST['a']) == 'editar') {
         // enviar mensaje al admin
         // enviar mensaje al usuario de cambia cambiada
     }
->>>>>>> des
+   
 
 
-
-
-
-    /*
-      include "./contactos/modelos/ver.php";
-      include "./contactos/reg/reg.php";
-      include "./contactos/vista/ver.php";
-     */
-} else {
-<<<<<<< HEAD
-    permisos_sin_permiso($accion, $pagina, $_usuarios_usuario);
-}
-
-if ($config_debug) {
-    // Tabla para ver los permisos de cada grupo de usuarios en la pagina presente 
-    permisos_plugin_controlador($pagina, $accion);
-
-    echo "<h3>Debug mode (" . __FILE__ . " )</h3>";
-
-    $variables = array(
-        "\$accion" => "$accion",
-        "\$pagina" => "$pagina",
-        "\$_usuarios_grupo" => "$_usuarios_grupo",
-        "permisos_tiene_permiso(\$accion, \$pagina, \$_usuarios_grupo)" => permisos_tiene_permiso($accion, $pagina, $_usuarios_grupo),
-        "\$_REQUEST['a']" => "$_REQUEST[a]",
-        "\$_REQUEST['a']" => "$_REQUEST[a]"
-    );
-    echo "<table border>";
-    echo "<tr><td><b>Variable</b></td><td><b>Valor</b></td></tr>";
-    foreach ($variables as $key => $value) {
-        echo "<tr><td><b>$key:</b></td><td>$value</td></tr>";
-    }
-    echo "</table>";
-=======
-    $contactos_id = mysql_real_escape_string($_REQUEST['contactos_id']);
-    include "./contactos/modelos/ver.php";
-    include "./contactos/reg/reg.php";
-    include "./contactos/vista/editar.php";
->>>>>>> des
 }

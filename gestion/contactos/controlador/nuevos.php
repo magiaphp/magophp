@@ -7,24 +7,5 @@ $ordenpor = (isset($_REQUEST['ordenpor']) && $_REQUEST['ordenpor'] != '' ) ? $_R
 $orden = (isset($_REQUEST['orden']) && $_REQUEST['orden'] != '' ) ? $_REQUEST['orden'] : ' DESC ';
 
 
-
-<<<<<<< HEAD
-    $variables = array(
-        "\$accion" => "$accion",
-        "\$pagina" => "$pagina",
-        "\$_usuarios_grupo" => "$_usuarios_grupo",
-        "permisos_tiene_permiso(\$accion, \$pagina, \$_usuarios_grupo)" => permisos_tiene_permiso($accion, $pagina, $_usuarios_grupo),
-        "\$_REQUEST['a']" => "$_REQUEST[a]",
-        "\$_REQUEST['a']" => "$_REQUEST[a]"        
-    );
-    echo "<table border>";
-    echo "<tr><td><b>Variable</b></td><td><b>Valor</b></td></tr>";
-    foreach ($variables as $key => $value) {
-        echo "<tr><td><b>$key:</b></td><td>$value</td></tr>";
-    }
-    echo "</table>";
-}
-=======
 include "./contactos/modelos/nuevos.php";
 include "./contactos/vista/index.php";
->>>>>>> des

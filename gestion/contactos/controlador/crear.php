@@ -51,17 +51,7 @@ if (isset($_REQUEST['a']) == 'crear') {
 
         (file_exists($email_mensaje)) ?
                         include "$email_mensaje" :
-                        include "./emails/vista/en_GB/invitacion_al_crear_cuenta.php"
-        ;
-
-
-
-
-
-
-
-
-
+                        include "./emails/vista/en_GB/invitacion_al_crear_cuenta.php";
 
         emails_enviar($contactos_email, utf8_decode($body), _tr('Nueva cuenta creada', false, $contactos_idioma));
     } else {
@@ -70,39 +60,8 @@ if (isset($_REQUEST['a']) == 'crear') {
     }
 
 
-
-
-
-
-
     // echo '<META http-equiv="refresh" content="0; URL=index.php?p=contactos">';
 } else {
-<<<<<<< HEAD
-    permisos_sin_permiso($accion, $pagina, $_usuarios_usuario);
-} 
 
-if ($config_debug) {
-    // Tabla para ver los permisos de cada grupo de usuarios en la pagina presente 
-    permisos_plugin_controlador($pagina, $accion);
-    
-    echo "<h3>Debug mode (" . __FILE__ . " )</h3>";
-
-    $variables = array(
-        "\$accion" => "$accion",
-        "\$pagina" => "$pagina",
-        "\$_usuarios_grupo" => "$_usuarios_grupo",
-        "permisos_tiene_permiso(\$accion, \$pagina, \$_usuarios_grupo)" => permisos_tiene_permiso($accion, $pagina, $_usuarios_grupo),
-        "\$_REQUEST['a']" => "$_REQUEST[a]",
-        "\$_REQUEST['a']" => "$_REQUEST[a]"
-    );
-    echo "<table border>";
-    echo "<tr><td><b>Variable</b></td><td><b>Valor</b></td></tr>";
-    foreach ($variables as $key => $value) {
-        echo "<tr><td><b>$key:</b></td><td>$value</td></tr>";
-    }
-    echo "</table>";
-}
-=======
     include "./contactos/vista/crear.php";
 }
->>>>>>> des
