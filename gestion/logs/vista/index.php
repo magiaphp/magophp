@@ -38,8 +38,7 @@
 
             include "./logs/reg/reg.php";
 
-            $campo_disponibles = logs_campos_disponibles();
-
+          
             echo "<tr>";
             include "./logs/vista/tr.php";
             echo "</tr>";
@@ -52,7 +51,7 @@
             //include "./logs/vista/tr_anadir.php";
         }
         ?>
-    <?php logs_tfoot(); ?>
+    <?php _opciones_tfoot("logs"); ?>
 
 </table> 
 
