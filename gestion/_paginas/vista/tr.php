@@ -11,12 +11,15 @@ $ventana = '
 echo ' <tr>
     <td>' . $i . '</td> '; 
 
-
-foreach (_opciones_campos_a_mostrar_segun_tabla("_usuarios") as $key => $value) {
+foreach (_opciones_campos_a_mostrar_segun_tabla("_paginas") as $key => $value) {
     if ($value == 'si') {
-        echo "<td>$_usuarios[$key]</td> ";
+        echo "<td>$_paginas[$key]</td> ";
     }
 }
+
+
+
+
 
 
 foreach (_grupos_array() as $key => $grupo) {

@@ -1,8 +1,15 @@
 <?php
 
 /**
-  magia_version: 0.0.8
- * */
+ * 
+ * @global type $conexion
+ * @param type $campo
+ * @param type $id
+ * @return boolean
+ * @package _menu
+ * @version 0.0.1
+ * @author Robinson Coello <robinson@coello.be> 
+ */
 function _menu_campo($campo, $id) {
     global $conexion;
     $sql = mysql_query(
@@ -17,7 +24,17 @@ function _menu_campo($campo, $id) {
         return false;
     }
 }
-
+/**
+ * 
+ * @global type $conexion
+ * @param type $campo
+ * @param type $label
+ * @param type $selecionado
+ * @param type $excluir
+ * @package _menu
+ * @version 0.0.1
+ * @author Robinson Coello <robinson@coello.be> 
+ */
 function _menu_campo_add($campo, $label, $selecionado = "", $excluir = "") {
     global $conexion;
     $sql = mysql_query(
@@ -40,7 +57,15 @@ function _menu_campo_add($campo, $label, $selecionado = "", $excluir = "") {
         echo "value=\"$_menu[$campo]\">$_menu[$campo]</option> \n";
     }
 }
-
+/**
+ * 
+ * @global type $conexion
+ * @param type $selecionado
+ * @param type $excluir
+ * @package _menu
+ * @version 0.0.1
+ * @author Robinson Coello <robinson@coello.be> 
+ */
 function _menu_add($selecionado = "", $excluir = "") {
     global $conexion;
     $sql = mysql_query(
@@ -64,7 +89,14 @@ function _menu_add($selecionado = "", $excluir = "") {
         echo "value=\"$_menu[0]\">$_menu__menu</option>";
     }
 }
-
+/**
+ * 
+ * @global type $conexion
+ * @return boolean
+ * @package _menu
+ * @version 0.0.1
+ * @author Robinson Coello <robinson@coello.be> 
+ */
 function _menu_numero_actual() {
     global $conexion;
     $sql = mysql_query(

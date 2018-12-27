@@ -57,21 +57,6 @@ $pag = (isset($_REQUEST['pag'])) ? $_REQUEST['pag'] : 0;
         <link rel="stylesheet" href="home/vista/gestion.css" >
         <link rel="stylesheet" href="estilo.css"/>
 
-
-<<<<<<< HEAD
-        
-
-  
-  
-=======
-
-
-
-
-
-
-
->>>>>>> des
         <?php
         $scripts = "./$p/scripts/$c.php";
         (file_exists($scripts)) ? include "$scripts" : "";

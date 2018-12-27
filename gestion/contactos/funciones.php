@@ -1,8 +1,12 @@
 <?php
 
 /**
-  magia_version: 0.0.8
- * */
+ * 
+ * @global type $conexion
+ * @param type $campo
+ * @param type $id
+ * @return boolean
+ */
 function contactos_campo($campo, $id) {
     global $conexion;
     $sql = mysql_query(
@@ -15,7 +19,14 @@ function contactos_campo($campo, $id) {
         return false;
     }
 }
-
+/**
+ * 
+ * @global type $conexion
+ * @param type $campo
+ * @param type $label
+ * @param type $selecionado
+ * @param type $excluir
+ */
 function contactos_campo_add($campo, $label, $selecionado = "", $excluir = "") {
     global $conexion;
     $sql = mysql_query(
@@ -38,20 +49,16 @@ function contactos_campo_add($campo, $label, $selecionado = "", $excluir = "") {
         echo "value=\"$contactos[$campo]\">$contactos[$campo]</option> \n";
     }
 }
-
+/**
+ * 
+ * @global type $conexion
+ * @global type $_usuarios_usuario
+ * @global type $_usuarios_grupo
+ * @param type $selecionado
+ * @param type $excluir
+ */
 function contactos_add($selecionado = "", $excluir = "") {
     global $conexion, $_usuarios_usuario, $_usuarios_grupo;
-
-    /* // grupo segun usuario 
-      // si ese grupo puede crear pedidos_otros
-      if (permisos_tiene_permiso('crear', 'pedidos_otros', $_usuarios_grupo)) {
-      $sql = mysql_query("SELECT * FROM contactos ORDER BY estatus DESC, empresa ", $conexion);
-      } else {
-      $sql = mysql_query("SELECT * FROM contactos WHERE email = '$_usuarios_usuario' ", $conexion);
-      }
-      // sino
-     */
-
 
     if (permisos_tiene_permiso('ver', "contactos_ajenos", $_usuarios_grupo)) {
         $comando = "SELECT * FROM contactos ORDER BY estatus DESC, empresa";
@@ -59,12 +66,7 @@ function contactos_add($selecionado = "", $excluir = "") {
         $comando = "SELECT * FROM contactos WHERE id ='" . contactos_campo_segun_email('id', $_usuarios_usuario) . "' ORDER BY estatus DESC, empresa";
     }
 
-
-
-
     $sql = mysql_query($comando, $conexion);
-
-
 
     while ($contactos = mysql_fetch_array($sql)) {
 
@@ -86,7 +88,12 @@ function contactos_add($selecionado = "", $excluir = "") {
         echo "value=\"$contactos[id]\">" . strtoupper($contactos['empresa']) . " - $contactos[contacto] ($contactos[email])</option>";
     }
 }
-
+/**
+ * 
+ * @global type $conexion
+ * @param type $selecionado
+ * @param type $excluir
+ */
 function contactos_sin_usuario_add($selecionado = "", $excluir = "") {
     global $conexion;
     $sql = mysql_query(
@@ -99,7 +106,11 @@ function contactos_sin_usuario_add($selecionado = "", $excluir = "") {
         } // fi tiene login 
     }
 }
-
+/**
+ * 
+ * @global type $conexion
+ * @return boolean
+ */
 function contactos_numero_actual() {
     global $conexion;
     $sql = mysql_query(
@@ -114,11 +125,11 @@ function contactos_numero_actual() {
 }
 
 /**
- * Verifica si el email del contacto esta presente en la tabla de _usuarios; si es asi me entrega su id
+ * Verifica si el $email del contacto esta presente en la tabla de _usuarios; si es asi me entrega su id
  * sino me entrega falso
  * @global type $conexion
  * @param type $campo
- * @param type $id
+ * @param type $id 
  * @return boolean
  */
 function contactos_tiene_login($email) {
@@ -134,7 +145,13 @@ function contactos_tiene_login($email) {
         return false;
     }
 }
-
+/**
+ * Regresa el valor del $campo del contacto con el $email dado
+ * @global type $conexion
+ * @param type $campo Valor que deseamos conocer 
+ * @param type $email Email del contacto 
+ * @return boolean Valor del $campo o false si no halla
+ */
 function contactos_campo_segun_email($campo, $email) {
     global $conexion;
     $sql = mysql_query(
@@ -148,7 +165,10 @@ function contactos_campo_segun_email($campo, $email) {
         return false;
     }
 }
-
+/**
+ * 
+ * @param type $orden
+ */
 function contactos_tabla_index_titulo($orden) {
 
     $columnas_disponibles = array(
@@ -178,7 +198,12 @@ function contactos_tabla_index_titulo($orden) {
         echo '<th> ' . _tr(ucfirst($value)) . '</th> ';
     }
 }
-
+/**
+ * Total de contactos segun el estatus que e pasa como parametro 
+ * @global type $conexion
+ * @param type $estatus Parametro del estatus 
+ * @return boolean Da un numero superior a 0 o false
+ */
 function contactos_total_segun_estatus($estatus) {
     global $conexion;
     $sql = mysql_query(
@@ -194,8 +219,9 @@ function contactos_total_segun_estatus($estatus) {
 
 /**
  * Entrega el idioma del usuario, si no tiene entrega el idioma por defecto del sistema
- * @global type $conexion
- * @return boolean
+ * @global type $config_idioma
+ * @param type $email Email del contacto del cual queremos saber el idioma registrado
+ * @return type Regresa el codigo del idioma de este contacto
  */
 function contactos_idioma($email) {
     global $config_idioma;

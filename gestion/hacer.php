@@ -3,20 +3,6 @@
  * 
  * 
  * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
  * Al modificar un auto, no me deja ya q la placa existe
  * al crear un nuevo contacto, la confirmacion da error 
  * Al moficiar un contacto, no da pantalla de confirmacion 
@@ -33,4 +19,5 @@
  * Add item _menu
  *  poner cambiar idioma como accion - cambiar_idioma de contactos
  * al cambiar de idioma
+ * editar contacto error
  */

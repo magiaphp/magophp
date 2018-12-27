@@ -5,6 +5,7 @@
  * @param type $p  Pagina 
  * @param type $g Grupo
  * @return type Regresa ek permiso que tiene este grupo $g en esta pagina $p 0000 - 1111
+ * @package admin/permisos
  */
 function permisos_obtiene_permiso($p, $g) {
     global $conexion;
@@ -21,6 +22,7 @@ function permisos_obtiene_permiso($p, $g) {
  * @param type $pagina Pagina donde nos encontramos
  * @param type $grupo Grupo del cual queremos obtener el permiso
  * @return boolean [true, false] segun si tiene o no permiso para realizar esta accion 
+ * @package admin/permisos
  */
 function permisos_tiene_permiso($accion, $pagina, $_usuarios_grupo) {
     global $r1, $r2;
@@ -61,6 +63,7 @@ function permisos_tiene_permiso($accion, $pagina, $_usuarios_grupo) {
  * @param type $accion Accion deseada
  * @param type $pagina Donde se desea realizar esta $accion
  * @param type $u_login El login del usuario que desea realizar esta acción
+ * @package admin/permisos
  */
 function permisos_sin_permiso($accion, $pagina, $u_login) {
 
@@ -78,10 +81,10 @@ echo '<div class="list-group">
  * 
  * @param type $pagina
  * @param type $accion
+ * @package admin/permisos
  */
 function permisos_plugin_controlador($pagina, $accion){
-    
-    
+        
     echo "<h2>Pagina: $pagina, Accion: $accion</h2>"; 
     echo "<table border width=500>"; 
     echo "<theader>"; 
@@ -100,10 +103,6 @@ function permisos_plugin_controlador($pagina, $accion){
             $b = (permisos_tiene_permiso("borrar", $pagina, $grupo))?"SI":"-"; 
             echo "<tr><td>$grupo</td> <td>$v</td> <td>$c</td> <td>$e</td> <td>$b</td> </tr>"; 
         }
-        
-        
-
-        
         
     echo "</theader>"; 
     echo "</table>"; 

@@ -49,7 +49,7 @@ if (isset($_REQUEST['a']) == 'editar') {
 
 
 
- // procedemos a registrar el login 
+    // procedemos a registrar el login 
     $contactos_grupo = (isset($_POST['contactos_grupo'])) ? mysql_real_escape_string(trim($_POST['contactos_grupo'])) : 'centros';
     $contactos_clave = (isset($_POST['contactos_clave'])) ? mysql_real_escape_string(trim($_POST['contactos_clave'])) : false;
 
@@ -61,7 +61,6 @@ if (isset($_REQUEST['a']) == 'editar') {
         // enviar mensaje al admin
         // enviar mensaje al usuario de cambia cambiada
     }
-   
-
-
 }
+
+include "./contactos/vista/editar.php";

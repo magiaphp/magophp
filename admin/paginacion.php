@@ -8,6 +8,7 @@
  * @param type $total_items Total de items en general 
  * @param type $pagina_actual Pag Actual
  * @return boolean  Si total de paginas es superior a 1 crea el html del paginador, sino regresa falso
+ * @package admin/paginacion
  */
 function paginacion_master($p, $c, $total_items = 0, $pagina_actual = 0) {
     global $conexion, $cfg_limite_items_en_tablas;

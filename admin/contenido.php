@@ -6,6 +6,7 @@
  * @param type $frase
  * @param type $contexto
  * @return boolean
+ * @package admin/contenido
  */
 function contenido_existe_frase_en_contenido($frase, $contexto = "") {
     global $conexion;
@@ -28,13 +29,13 @@ function contenido_existe_frase_en_contenido($frase, $contexto = "") {
         return FALSE;
     }
 }
-
 /**
  * 
  * @global type $conexion
  * @param type $frase
  * @param type $contexto
  * @return boolean
+ * @package admin/contenido
  */
 function contenido_buscar_frase($frase, $contexto = "") {
     global $conexion;
@@ -64,6 +65,7 @@ function contenido_buscar_frase($frase, $contexto = "") {
  * @global type $conexion
  * @param type $frase
  * @param type $contexto
+ * @package admin/contenido
  */
 function contenido_registrar_frase($frase, $contexto = "") {
     global $conexion;

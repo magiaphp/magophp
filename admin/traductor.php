@@ -1,25 +1,25 @@
 <?php
 /**
- * Hace un ECHO de la traduccion de la frase 
+ * Hace un ECHO de la traduccion de la frase, si se desea asignar a una variable lo mejor es usar _tr()
  * @global type $conexion
  * @global type $_usuarios_idioma El idioma que el usuario tiene defino
  * @global type $cfg_idioma El idioma por defecto configurado en el sistema
- * @param type $frase La frase que se desea traducir
+ * @param type $frase La frase que se desea traducir al $idioma dado
  * @param type $contexto El $contexto en el cual esta $frase sera traducida
  * @param type $idioma El idioma al cual se traducira la $frase
  * @return type Regresa la frase traducida
+ * @package admin/traductor
  */
 function _t($frase, $contexto = "", $idioma = "") {
-    global $conexion, $_usuarios_idioma, $cfg_idioma;
-
+    global $_usuarios_idioma, $cfg_idioma;
     // si el contacto no tiene definido idioma 
     $idioma = ($_usuarios_idioma) ? $_usuarios_idioma : $cfg_idioma;
-
     $frase = _tr($frase, $contexto);
-
     echo "$frase";
     // echo "--";
 }
+
+
 /**
  * Hace un retorno para asignarla a un variable de la traduccion 
  * @global type $conexion
@@ -29,6 +29,7 @@ function _t($frase, $contexto = "", $idioma = "") {
  * @param type $contexto Contexto en la cual la traduccion sera traducida
  * @param type $idioma Idioma al cual se traducira 
  * @return type Valor a ser asignado a una variable
+ * @package admin/traductor
  */
 function _tr($frase, $contexto = "", $idioma = '') {
 
@@ -80,6 +81,7 @@ function _tr($frase, $contexto = "", $idioma = '') {
  * @param type $frase Frase a buscar si tiene traduccion
  * @param type $idioma Idioma en el cual buscamos
  * @return boolean Devuelve la traduccion si la hay o devuelve falso si no halla 
+ * @package admin/traductor
  */
 function traductor_buscar_traduccion($frase, $idioma) {
     global $conexion;
@@ -107,6 +109,7 @@ function traductor_buscar_traduccion($frase, $idioma) {
  * @param type $idioma Idioma a ser traducido
  * @param type $traduccion Traduccion de la $frase 
  * @return type 0 No regresa nada esta funcion 
+ * @package admin/traductor
  */
 function traductor_registrar_traduccion($frase, $idioma, $traduccion) {
     global $conexion;
@@ -130,14 +133,11 @@ function traductor_registrar_traduccion($frase, $idioma, $traduccion) {
  * @param type $id_frase Identificador de la frase 
  * @param type $idioma Idioma a ser traducido
  * @param type $traduccion Traduccion a ser actualzada
+ * @package admin/traductor
  */
 function traductor_actualiza_traduccion($id_frase, $idioma, $traduccion) {
     global $conexion;
-
     $frase = sql_pone_barra_invertida($frase);
     $traduccion = sql_pone_barra_invertida($traduccion);
-
-
-
     $sql = mysql_query("UPDATE traducciones SET traduccion = '$traduccion' WHERE id_frase = $id_frase AND idioma = '$idioma'  ", $conexion) or die(" traductor_actualiza_traduccion() " . mysql_error());
 }

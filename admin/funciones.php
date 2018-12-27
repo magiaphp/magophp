@@ -8,6 +8,7 @@
   return "0.0.8";
   }
  * </code></pre>
+ * @package admin/funciones
  */
 function magia_version() {
     return "0.0.11";
@@ -17,6 +18,7 @@ function magia_version() {
  * @param type $v1
  * @param type $v2
  * @return type
+ * @package admin/funciones
  */
 function m($v1, $v2) {
     return ($v1 == $v2) ? TRUE : FALSE;
@@ -26,6 +28,7 @@ function m($v1, $v2) {
  * @global type $r1
  * @global type $r2
  * @return type
+ * @package admin/funciones
  */
 function x() {
     global $r1, $r2;
@@ -39,6 +42,7 @@ function x() {
  * @param type $id Identificador de registro
  * @param type $campo Nombre del campo del registro
  * @return type Resultado obtenido
+ * @package admin/funciones
  */
 function _campo($tabla, $id, $campo) {
     global $conexion;
@@ -49,7 +53,7 @@ function _campo($tabla, $id, $campo) {
 }
 
 /**
- * Incluye las funciones creadas para cada tabla
+ * @package admin/funciones
  */
 function _incluir_funciones() {
     
@@ -62,7 +66,7 @@ function _incluir_funciones() {
     }
 }
 /**
- * 
+ * @package admin/funciones
  */
 function _incluir_funciones_gestion() {
     
@@ -83,6 +87,7 @@ function _incluir_funciones_gestion() {
  * 
  * @param type $ruta
  * @return type
+ * @package admin/funciones
  */
 function _listar_directorios_ruta($ruta = "./") {
     // abrir un directorio y listarlo recursivo 
@@ -116,6 +121,7 @@ function _listar_directorios_ruta($ruta = "./") {
  * Entrega una lista de ficheros que tiene una capeta
  * @param type $ruta de la carpeta
  * @return type Devuelve un array() con los ficheros contenidos en la carpeta
+ * @package admin/funciones
  */
 function _listar_ficheros_de_carpeta($ruta = '.') {
     $directorio = opendir($ruta); //ruta actual
@@ -135,6 +141,7 @@ function _listar_ficheros_de_carpeta($ruta = '.') {
 /**
  * Genera el menu para el sistema
  * @param type $selecionado
+ * @package admin/funciones
  */
 function _magia_menu($selecionado) {
     $menu_items = _listar_directorios_ruta();
@@ -160,6 +167,7 @@ function _magia_menu($selecionado) {
  * Estatus Activo / Bloquado
  * @param type $estatus
  * @return type
+ * @package admin/funciones
  */
 function _estatus($estatus) {
     if ($estatus == 0) {
@@ -171,6 +179,7 @@ function _estatus($estatus) {
 /**
  * 
  * @return type
+ * @package admin/funciones
  */
 function genera_clave() {
     //Se define una cadena de caractares. Te recomiendo que uses esta.
@@ -196,6 +205,7 @@ function genera_clave() {
 
 /**
  * Regresa la clave codificada
+ * @package admin/funciones
  */
 function codifica_clave($clave) {
     //http://php.net/manual/es/function.password-hash.php
@@ -210,6 +220,7 @@ function codifica_clave($clave) {
  * @global type $config_debug
  * @param type $codigo
  * @param type $notas
+ * @package admin/funciones
  */
 function vardump($codigo, $notas = "") {
     global $config_debug;
@@ -248,6 +259,7 @@ function vardump($codigo, $notas = "") {
 /**
  * 
  * @global type $config_logo
+ * @package admin/funciones
  */
 function logo() {
     
@@ -260,6 +272,7 @@ function logo() {
  * @param type $label
  * @param type $ordenpor
  * @param type $orden
+ * @package admin/funciones
  */
 function ordenpor($url, $label, $ordenpor, $orden){
     

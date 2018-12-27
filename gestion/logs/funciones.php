@@ -1,15 +1,18 @@
 <?php
 
 /**
-  magia_version: 0.0.8
- * */
+ * 
+ * @global type $conexion
+ * @param type $campo
+ * @param type $id
+ * @return boolean
+ * @package logs
+ */
 function logs_campo($campo, $id) {
     global $conexion;
     $sql = mysql_query(
             "SELECT $campo FROM logs WHERE id = $id   ", $conexion) or error(__DIR__, __FILE__, __LINE__);
     $reg = mysql_fetch_array($sql);
-
-
 
     if ($reg[$campo]) {
         return $reg[$campo];
@@ -18,11 +21,20 @@ function logs_campo($campo, $id) {
     }
 }
 
+/**
+ * 
+ * @global type $conexion
+ * @param type $campo
+ * @param type $label
+ * @param type $selecionado
+ * @param type $excluir
+ * @package logs
+ * 
+ */
 function logs_campo_add($campo, $label, $selecionado = "", $excluir = "") {
     global $conexion;
     $sql = mysql_query(
-            "SELECT DISTINCT $campo FROM _menu order by $campo   ", $conexion)
-            or error(__DIR__, __FILE__, __LINE__);
+            "SELECT DISTINCT $campo FROM _menu order by $campo   ", $conexion) or error(__DIR__, __FILE__, __LINE__);
     while ($logs = mysql_fetch_array($sql)) {
         //include "../gestion/logs/reg/reg.php"; 
 
@@ -41,6 +53,13 @@ function logs_campo_add($campo, $label, $selecionado = "", $excluir = "") {
     }
 }
 
+/**
+ * 
+ * @global type $conexion
+ * @param type $selecionado
+ * @param type $excluir
+ * @package logs
+ */
 function logs_add($selecionado = "", $excluir = "") {
     global $conexion;
     $sql = mysql_query(
@@ -65,8 +84,12 @@ function logs_add($selecionado = "", $excluir = "") {
     }
 }
 
-/**/
-
+/**
+ * Regresa el id max de la tabla logs
+ * @global type $conexion 
+ * @return boolean Si encuentra regrea el id maximo, sino regresa false
+ * @package logs
+ */
 function logs_numero_actual() {
     global $conexion;
     $sql = mysql_query(
@@ -80,63 +103,25 @@ function logs_numero_actual() {
     }
 }
 
-function logs_campos_disponibles() {
-    global $conexion;
-    $data = array();
-    $sql = mysql_query("SHOW COLUMNS FROM logs  ", $conexion) or error(__DIR__, __FILE__, __LINE__);
-
-    while ($reg = mysql_fetch_array($sql)) {
-        $data[$reg[0]] = $reg[0];
-    }
-
-    return $data;
-}
+/* * **************************************************************************** */
+/* * **************************************************************************** */
+/* * **************************************************************************** */
+/* * **************************************************************************** */
+/* * **************************************************************************** */
 
 /**
- * Son los campos que se debe mostrar en la tabla del index
+ * Registra la actividad del sitio 
  * @global type $conexion
- * @return type
+ * @global type $dbh
+ * @param type $_usuarios_usuario
+ * @param type $_usuarios_grupo
+ * @param type $pagina
+ * @param type $controlador
+ * @param type $accion
+ * @param type $variables
+ * @param type $logs_argumento
+ * @param boolean $logs_sospechoso
  */
-function logs_campos_a_mostrar() {
-    global $conexion;
-    $data = array();
-    $sql = mysql_query("SELECT valor FROM _opciones WHERE opcion = 'logs_thead' ", $conexion) or error(__DIR__, __FILE__, __LINE__);
-
-    $reg = mysql_fetch_array($sql);
-
-    return json_decode($reg[0], true);
-}
-
-function logs_thead() {
-    $campo_disponibles = logs_campos_disponibles();
-    $logs_campos_a_mostrar = logs_campos_a_mostrar();
-    echo "
-     <thead>
-        <tr> ";
-    echo "<th>" . _tr("#") . "</th> "; // numero de linea
-    foreach ($campo_disponibles as $value) {
-        if (in_array($value, $logs_campos_a_mostrar)) {
-            echo "<th>" . _tr($value) . "</th> ";
-        }
-    }
-    echo "<th>" . _tr("Acción") . "</th> "; // accion             
-    echo "    </tr>
-    </thead>";
-}
-
-/**
- * 
- */
-function logs_tfoot() {
-    logs_thead();
-}
-
-/* * **************************************************************************** */
-/* * **************************************************************************** */
-/* * **************************************************************************** */
-/* * **************************************************************************** */
-/* * **************************************************************************** */
-
 function logs_registrar($_usuarios_usuario, $_usuarios_grupo, $pagina, $controlador, $accion, $variables, $logs_argumento, $logs_sospechoso) {
     global $conexion, $dbh;
 
@@ -176,6 +161,13 @@ function logs_registrar($_usuarios_usuario, $_usuarios_grupo, $pagina, $controla
     include "../gestion/logs/modelos/crear.php";
 }
 
+/**
+ * Muestra el historico de la activiad del sistema
+ * @global type $conexion
+ * @param type $p
+ * @param type $c
+ * @param type $id
+ */
 function logs_historico($p, $c, $id) {
 
     global $conexion;
@@ -202,14 +194,6 @@ function logs_historico($p, $c, $id) {
         default:
             break;
     }
-
-
-
-
-
-
-
-
     echo '<h3>' . _tr("Historial") . '</h3>';
     echo '<table class="table" >';
     echo '    <theader>            

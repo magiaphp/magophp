@@ -3,6 +3,7 @@
 /**
  * 
  * @param type $seleccionado
+ * @package admin/getbootstrap
  */
 function bst_iconos_add($seleccionado = FALSE) {
 
@@ -16,7 +17,13 @@ function bst_iconos_add($seleccionado = FALSE) {
         echo 'value="glyphicon glyphicon-' . $valor . '">' . substr($línea, 0, 10) . ' ' . $valor . '</option>';
     }
 }
-
+/**
+ * 
+ * @param type $titulo
+ * @param type $items
+ * @return string
+ * @package admin/getbootstrap
+ */
 function bst_dropdowns($titulo, $items){
     
     

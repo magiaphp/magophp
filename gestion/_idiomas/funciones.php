@@ -1,8 +1,15 @@
 <?php
 
 /**
-  magia_version: 0.0.8
- * */
+ * 
+ * @global type $conexion
+ * @param type $campo
+ * @param type $id
+ * @return boolean
+ * @package _idiomas
+ * @version 0.0.1
+ * @author Robinson Coello <robinson@coello.be> 
+ */
 function _idiomas_campo($campo, $id) {
     global $conexion;
     $sql = mysql_query(
@@ -17,7 +24,15 @@ function _idiomas_campo($campo, $id) {
         return false;
     }
 }
-
+/**
+ * 
+ * @global type $conexion
+ * @param type $iso
+ * @return boolean
+ * @package _idiomas
+ * @version 0.0.1
+ * @author Robinson Coello <robinson@coello.be> 
+ */
 function _idiomas_segun_iso($iso) {
     global $conexion;
     $sql = mysql_query(
@@ -30,7 +45,17 @@ function _idiomas_segun_iso($iso) {
         return false;
     }
 }
-
+/**
+ * 
+ * @global type $conexion
+ * @param type $campo
+ * @param type $label
+ * @param type $selecionado
+ * @param type $excluir
+ * @package _idiomas
+ * @version 0.0.1
+ * @author Robinson Coello <robinson@coello.be> 
+ */
 function _idiomas_campo_add($campo, $label, $selecionado = "", $excluir = "") {
     global $conexion;
     $sql = mysql_query(
@@ -53,7 +78,15 @@ function _idiomas_campo_add($campo, $label, $selecionado = "", $excluir = "") {
         echo "value=\"$_idiomas[$campo]\">$_idiomas[$campo]</option> \n";
     }
 }
-
+/**
+ * 
+ * @global type $conexion
+ * @param type $selecionado
+ * @param type $excluir
+ * @package _idiomas
+ * @version 0.0.1
+ * @author Robinson Coello <robinson@coello.be> 
+ */
 function _idiomas_add($selecionado = "", $excluir = "") {
     global $conexion;
     $sql = mysql_query(
@@ -77,7 +110,14 @@ function _idiomas_add($selecionado = "", $excluir = "") {
         echo "value=\"$_idiomas[idioma]\">$_idiomas[idioma] - $_idiomas[nombre]</option>";
     }
 }
-
+/**
+ * 
+ * @global type $conexion
+ * @return boolean
+ * @package _idiomas
+ * @version 0.0.1
+ * @author Robinson Coello <robinson@coello.be> 
+ */
 function _idiomas_numero_actual() {
     global $conexion;
     $sql = mysql_query(
@@ -94,6 +134,9 @@ function _idiomas_numero_actual() {
  * entrega los idiomas activos
  * @global type $conexion
  * @return array
+ * @package _idiomas
+ * @version 0.0.1
+ * @author Robinson Coello <robinson@coello.be> 
  */
 function _idiomas_array() {
     global $conexion;

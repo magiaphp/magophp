@@ -2,6 +2,7 @@
 /**
  * Crea un menu conlos items de ubicacion 'top'
  * @global type $conexion
+ * @package admin/menu
  */
 function _menu_top() {
     global $conexion;
@@ -34,10 +35,12 @@ function _menu_top() {
 }
 
 /**
- * Regresa los items segun su padre
+ * Regresa los items segun el padre
  * @global type $conexion
+ * @global type $_usuarios_grupo
  * @param type $padre
  * @param type $ubicacion
+ * @package admin/menu
  */
 function _menu_items_segun_padre_ubicacion($padre, $ubicacion) {
     global $conexion, $_usuarios_grupo;
@@ -60,6 +63,7 @@ function _menu_items_segun_padre_ubicacion($padre, $ubicacion) {
  * Crea el menu lateral 'segun ubicacion 'sidebar'
  * @global type $conexion
  * @param type $p
+ * @package admin/menu
  */
 function _menu_sidebar($p) {
     global $conexion;
@@ -89,6 +93,7 @@ function _menu_sidebar($p) {
  * @global type $conexion
  * @param type $label
  * @return type
+ * @package admin/menu
  */
 function _menu_icono_segun_pagina($label) {
     global $conexion;
@@ -100,7 +105,13 @@ function _menu_icono_segun_pagina($label) {
     return $reg[0];
 }
 
-
+/**
+ * 
+ * @global type $conexion
+ * @param type $campo
+ * @return array
+ * @package admin/menu
+ */
 function _menu_array_de_campo($campo) {
     global $conexion;
     $sql = mysql_query(

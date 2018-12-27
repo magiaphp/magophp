@@ -1,9 +1,4 @@
 <?php
-
-/**
-  magia_version: 0.0.8
- * */
-
 /**
  * Obtiene un valor del $campo de la tabla segun su $id 
  * @global type $conexion
@@ -13,7 +8,6 @@
  * @package _grupos
  * @version 0.0.1
  * @author Robinson Coello <robinson@coello.be>
- * @
  */
 function _grupos_campo($campo, $id) {
     global $conexion;
@@ -96,7 +90,14 @@ function _grupos_add($selecionado = "", $excluir = "") {
         echo "value=\"$_grupos_grupo\">" . ucfirst(_tr($_grupos_grupo)) . "</option>";
     }
 }
-
+/**
+ * 
+ * @global type $conexion
+ * @return boolean
+ * @package _grupos
+ * @version 0.0.1
+ * @author Robinson Coello <robinson@coello.be> 
+ */
 function _grupos_numero_actual() {
     global $conexion;
     $sql = mysql_query(
@@ -109,7 +110,14 @@ function _grupos_numero_actual() {
         return false;
     }
 }
-
+/**
+ * 
+ * @global type $conexion
+ * @return array
+ * @package _grupos
+ * @version 0.0.1
+ * @author Robinson Coello <robinson@coello.be> 
+ */
 function _grupos_array_grupos() {
     global $conexion;
     $sql = mysql_query(
@@ -125,7 +133,14 @@ function _grupos_array_grupos() {
 
     return $g;
 }
-
+/**
+ * 
+ * @global type $conexion
+ * @return array
+ * @package _grupos
+ * @version 0.0.1
+ * @author Robinson Coello <robinson@coello.be> 
+ */
 function _grupos_array() {
     global $conexion;
 
@@ -146,11 +161,19 @@ function _grupos_array() {
  * Alias de _grupos_array()
  * @global type $conexion
  * @return array
+ * @package _grupos
+ * @version 0.0.1
+ * @author Robinson Coello <robinson@coello.be> 
  */
 function _grupos() {
     return _grupos_array();
 }
-
+/**
+ * 
+ * @global type $conexion
+ * @param type $grupo
+ * @return boolean
+ */
 function _grupos_existe($grupo) {
     global $conexion;
     $sql = mysql_query(

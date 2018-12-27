@@ -134,7 +134,15 @@ function _opciones_campos_a_mostrar() {
 
     return json_decode($reg[0], true);
 }
-
+/**
+ * 
+ * @global type $conexion
+ * @param type $tabla
+ * @return type
+ * @package _opciones
+ * @version 0.0.1
+ * @author Robinson Coello <robinson@coello.be> 
+ */
 function _opciones_campos_a_mostrar_segun_tabla($tabla) {
     global $conexion;
 
@@ -152,6 +160,9 @@ function _opciones_campos_a_mostrar_segun_tabla($tabla) {
  * 
  * @param type $tabla
  * @param type $ganchos
+ * @package _opciones
+ * @version 0.0.1
+ * @author Robinson Coello <robinson@coello.be> 
  */
 function _opciones_thead($tabla, $ganchos = array()) {
     echo "
@@ -178,6 +189,9 @@ function _opciones_thead($tabla, $ganchos = array()) {
 /**
  * 
  * @param type $tabla
+ * @package _opciones
+ * @version 0.0.1
+ * @author Robinson Coello <robinson@coello.be> 
  */
 function _opciones_tfoot($tabla, $ganchos = array()) {
     _opciones_thead($tabla, $ganchos);
@@ -189,6 +203,8 @@ function _opciones_tfoot($tabla, $ganchos = array()) {
  * @param type $opcion La opcion de la cual deseamos tener su valor
  * @return boolean Regresa la opcion, o false en caso de no haber un valor
  * @package _opciones
+ * @version 0.0.1
+ * @author Robinson Coello <robinson@coello.be> 
  */
 function _opciones_valor_segun_opcion($opcion) {
     global $conexion;
@@ -209,7 +225,9 @@ function _opciones_valor_segun_opcion($opcion) {
  * @global type $conexion
  * @param type $tabla Nombre de la tabla que desamos tener la lista de campos
  * @return type Regresa un array() 
- * @package opciones
+ * @package _opciones
+ * @version 0.0.1
+ * @author Robinson Coello <robinson@coello.be> 
  */
 function _opciones_campos_disponibles_segun_tabla($tabla) {
     global $conexion;
@@ -230,7 +248,9 @@ function _opciones_campos_disponibles_segun_tabla($tabla) {
 
  * @example ../docs_ejemplos/_opciones_valor_json_segun_tabla_campo.html description
  * @link ../docs_ejemplos/_opciones_valor_json_segun_tabla_campo.txt description description
- * @ex
+ * @package _opciones
+ * @version 0.0.1
+ * @author Robinson Coello <robinson@coello.be> 
  */
 function _opciones_valor_json_segun_tabla_campo($tabla, $tabla_campo) {
 
@@ -249,7 +269,15 @@ function _opciones_valor_json_segun_tabla_campo($tabla, $tabla_campo) {
     }
 }
 
-
+/**
+ * 
+ * @global type $conexion
+ * @param type $campo
+ * @return array
+ * @package _opciones
+ * @version 0.0.1
+ * @author Robinson Coello <robinson@coello.be> 
+ */
 function _opciones_array_de_campo($campo) {
     global $conexion;
     $sql = mysql_query(
@@ -259,8 +287,7 @@ function _opciones_array_de_campo($campo) {
     
     while ($reg = mysql_fetch_array($sql)) {
         array_push($data, $reg[0]);
-        }
-        
+    }        
         return $data;    
     
 }

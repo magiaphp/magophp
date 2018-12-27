@@ -4,9 +4,7 @@
   magia_version: 0.0.8
  * */
 echo ' <tr>
-    <td>' . $i . '</td> 
-        
- ';
+    <td>' . $i . '</td>';
 
 foreach (_opciones_campos_a_mostrar_segun_tabla("_menu") as $key => $value) {
     if ($value == 'si') {

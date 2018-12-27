@@ -3,6 +3,7 @@
  * Incluye el controlador $c pasado como argumento
  * @param type $p Plugin deseado
  * @param type $c Controlador desaado
+ * @package admin/mvc
  */
 function incluir_modelo($p, $c){
     

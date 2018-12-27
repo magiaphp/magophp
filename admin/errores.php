@@ -1,9 +1,10 @@
 <?php 
 /**
- * Muestra los erroes de una forma mas clara
+ * Muestra los errores SQL de una forma mas clara
  * @param type $dir
  * @param type $file
  * @param type $line
+ * @package admin/errores
  */
 function error($dir, $file, $line){
     echo "<h3></h3>";

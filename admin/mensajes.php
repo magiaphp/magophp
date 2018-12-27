@@ -3,8 +3,8 @@
  * muestra un mensaje 
  * @param type $tipo [atencion, ayuda, alto, info, ok] por defecto es info
  * @param type $sms Texto a ser enviado como mensaje
+ * @package admin/mensajes
  */
-// atencion	//	ayuda//	alto//	info//	ok
 function mensaje($tipo, $sms) {
 
     $tipo = strtolower($tipo); // pasamos todo a minusculas
@@ -56,8 +56,9 @@ function mensaje($tipo, $sms) {
     }
 }
 /**
- * Es un mensaje de Alto conel texto dado
- * @param type $sms Mensaje a ser mostrado
+ * 
+ * @param type $sms
+ * @package admin/mensajes
  */
 function sms($sms) {
     mensaje('alto', $sms);

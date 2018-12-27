@@ -4,6 +4,7 @@
  * @param type $nombre Nombre del campo
  * @param type $id Identificador
  * @param type $valor Valor del campo
+ * @package admin/formularios
  */
 function formularios_campo_escondido($nombre,$id,$valor){    
     echo '<input type="hidden" name="'.$nombre.'" id="'.$id.'" value="'.$valor.'">'; 
@@ -18,6 +19,7 @@ function formularios_campo_escondido($nombre,$id,$valor){
  * @param type $clase
  * @param type $placeholder
  * @param type $desactivado
+ * @package admin/formularios
  */
 function formularios_campo($tipo, $nombre, $id, $valor="", $clase="", $placeholder="", $desactivado=FALSE){            
     switch ($tipo) {
@@ -57,6 +59,7 @@ function formularios_campo($tipo, $nombre, $id, $valor="", $clase="", $placehold
  * @param type $clase
  * @param type $placeholder
  * @param type $desactivado
+ * @package admin/formularios
  */
 function formularios_campo_texto( $nombre, $id, $valor="", $clase="", $placeholder="", $desactivado=false)  {    
     
@@ -79,6 +82,7 @@ function formularios_campo_texto( $nombre, $id, $valor="", $clase="", $placehold
  * @param type $clase
  * @param type $placeholder
  * @param type $desactivado
+ * @package admin/formularios
  */
 function formularios_campo_areaDeTexto( $nombre, $id, $valor="", $clase="", $placeholder="", $desactivado=false)  {    
     
@@ -101,6 +105,7 @@ function formularios_campo_areaDeTexto( $nombre, $id, $valor="", $clase="", $pla
  * @param type $clase
  * @param type $placeholder
  * @param type $desactivado
+ * @package admin/formularios
  */
 function formularios_opciones( $nombre, $id, $valor="", $clase="form-control", $placeholder="", $desactivado=false) {
 
@@ -131,6 +136,7 @@ function formularios_opciones( $nombre, $id, $valor="", $clase="form-control", $
  * @param type $campo
  * @param type $selecionado
  * @param type $excluir
+ * @package admin/formularios
  */
 function _formulario_radio($tabla, $campo, $selecionado = "", $excluir = "") {
     global $conexion;
@@ -160,6 +166,7 @@ function _formulario_radio($tabla, $campo, $selecionado = "", $excluir = "") {
  * @param type $selecionar
  * @param type $desactivar
  * @param type $excluir
+ * @package admin/formularios
  */
 function _formulario_checkbox($tabla, $campo, $selecionar = "", $desactivar = "",$excluir="") {
     global $conexion;

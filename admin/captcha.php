@@ -1,7 +1,8 @@
 <?php
 /**
- * Intento de crear un captcha
+ * 
  * @return string
+ * @package admin/captcha
  */
 function captcha_genera(){
     
@@ -12,6 +13,7 @@ function captcha_genera(){
  * @param type $codigo Valor codificado
  * @param type $valor Valor en claro
  * @return boolean true, false segun si el valor es igual al codigo 
+ * @package admin/captcha
  */
 function captcha_verifica($codigo, $valor){
     if($codigo == $valor){
@@ -22,6 +24,7 @@ function captcha_verifica($codigo, $valor){
 }
 /**
  * Html del captcha
+ * @package admin/captcha
  */
 function captcha_html(){
     echo '<div class="form-group">
