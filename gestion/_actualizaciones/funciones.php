@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Regresa un $campo de la tabla segun su $id
+ * Regresa el valor de un $campo de la tabla segun su $id
  * @global type $conexion
  * @param type $campo Nombre del campo en la tabla
  * @param type $id identificador unico
