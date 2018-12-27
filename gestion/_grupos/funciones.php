@@ -5,7 +5,7 @@
  * @param type $campo
  * @param type $id
  * @return boolean
- * @package _grupos
+ * @package gestion/_grupos
  * @version 0.0.1
  * @author Robinson Coello <robinson@coello.be>
  */
@@ -29,7 +29,7 @@ function _grupos_campo($campo, $id) {
  * @param type $label
  * @param type $selecionado
  * @param type $excluir
- * @package _grupos
+ * @package gestion/_grupos
  * @version 0.0.1
  * @author Robinson Coello <robinson@coello.be> 
  */
@@ -61,7 +61,7 @@ function _grupos_campo_add($campo, $label, $selecionado = "", $excluir = "") {
  * @global type $conexion
  * @param type $selecionado
  * @param type $excluir
- * @package _grupos
+ * @package gestion/_grupos
  * @version 0.0.1
  * @author Robinson Coello <robinson@coello.be>
  * @ 
@@ -94,7 +94,7 @@ function _grupos_add($selecionado = "", $excluir = "") {
  * 
  * @global type $conexion
  * @return boolean
- * @package _grupos
+ * @package gestion/_grupos
  * @version 0.0.1
  * @author Robinson Coello <robinson@coello.be> 
  */
@@ -114,7 +114,7 @@ function _grupos_numero_actual() {
  * 
  * @global type $conexion
  * @return array
- * @package _grupos
+ * @package gestion/_grupos
  * @version 0.0.1
  * @author Robinson Coello <robinson@coello.be> 
  */
@@ -137,7 +137,7 @@ function _grupos_array_grupos() {
  * 
  * @global type $conexion
  * @return array
- * @package _grupos
+ * @package gestion/_grupos
  * @version 0.0.1
  * @author Robinson Coello <robinson@coello.be> 
  */
@@ -161,7 +161,7 @@ function _grupos_array() {
  * Alias de _grupos_array()
  * @global type $conexion
  * @return array
- * @package _grupos
+ * @package gestion/_grupos
  * @version 0.0.1
  * @author Robinson Coello <robinson@coello.be> 
  */

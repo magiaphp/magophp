@@ -26,26 +26,6 @@
 
 						<ul>
 				<li>
-					<a href="package-.actualizaciones.html">
-						\actualizaciones					</a>
-
-						</li>
-				<li>
-					<a href="package-.contenido.html">
-						\contenido					</a>
-
-						</li>
-				<li>
-					<a href="package-.grupos.html">
-						\grupos					</a>
-
-						</li>
-				<li>
-					<a href="package-.idiomas.html">
-						\idiomas					</a>
-
-						</li>
-				<li>
 					<a href="package-.menu.html">
 						\menu					</a>
 
@@ -56,11 +36,6 @@
 
 						</li>
 							</ul></li>
-				<li>
-					<a href="package-actualizaciones.html">
-						actualizaciones					</a>
-
-						</li>
 				<li>
 					<a href="package-admin.html">
 						admin<span></span>
@@ -136,20 +111,38 @@
 						</li>
 							</ul></li>
 				<li>
-					<a href="package-contenido.html">
+					<a href="package-gestion.html">
+						gestion<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-gestion..html">
+						<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="package-gestion..actualizaciones.html">
+						actualizaciones					</a>
+
+						</li>
+				<li>
+					<a href="package-gestion..contenido.html">
 						contenido					</a>
 
 						</li>
 				<li>
-					<a href="package-grupos.html">
+					<a href="package-gestion..grupos.html">
 						grupos					</a>
 
 						</li>
 				<li>
-					<a href="package-idiomas.html">
+					<a href="package-gestion..idiomas.html">
 						idiomas					</a>
 
 						</li>
+							</ul></li></ul></li>
 				<li>
 					<a href="package-logs.html">
 						logs					</a>
@@ -376,7 +369,7 @@
 </span></span><span id="5" class="l"><span class="php-comment"> * @param type $campo Nombre de campo 
 </span></span><span id="6" class="l"><span class="php-comment"> * @param type $id identificador del registro el cual deseo el vallr del $campo
 </span></span><span id="7" class="l"><span class="php-comment"> * @return boolean Regreso el $campo o false segun exixta o no
-</span></span><span id="8" class="l"><span class="php-comment"> * @package _contenido
+</span></span><span id="8" class="l"><span class="php-comment"> * @package gestion/_contenido
 </span></span><span id="9" class="l"><span class="php-comment"> */</span>
 </span><span id="10" class="l"><span class="php-keyword1">function</span> _contenido_campo(<span class="php-var">$campo</span>, <span class="php-var">$id</span>) {
 </span><span id="11" class="l">    <span class="php-keyword1">global</span> <span class="php-var">$conexion</span>;
@@ -398,7 +391,7 @@
 </span></span><span id="27" class="l"><span class="php-comment"> * @param type $selecionado
 </span></span><span id="28" class="l"><span class="php-comment"> * @param type $excluir
 </span></span><span id="29" class="l"><span class="php-comment"> * @todo A verificar, posible error (coje de _menu)
-</span></span><span id="30" class="l"><span class="php-comment"> * @package _contenido
+</span></span><span id="30" class="l"><span class="php-comment"> * @package gestion/_contenido
 </span></span><span id="31" class="l"><span class="php-comment"> */</span>
 </span><span id="32" class="l"><span class="php-keyword1">function</span> _contenido_campo_add(<span class="php-var">$campo</span>, <span class="php-var">$label</span>, <span class="php-var">$selecionado</span> = <span class="php-quote">&quot;&quot;</span>, <span class="php-var">$excluir</span> = <span class="php-quote">&quot;&quot;</span>) {
 </span><span id="33" class="l">    <span class="php-keyword1">global</span> <span class="php-var">$conexion</span>;
@@ -433,7 +426,7 @@
 </span></span><span id="62" class="l"><span class="php-comment"> * @param type $selecionado valor a ser seleccionado 
 </span></span><span id="63" class="l"><span class="php-comment"> * @param type $excluir Valor a excluir de la lista
 </span></span><span id="64" class="l"><span class="php-comment"> * @return type html &lt;option&gt;
-</span></span><span id="65" class="l"><span class="php-comment"> * @package _contenido
+</span></span><span id="65" class="l"><span class="php-comment"> * @package gestion/_contenido
 </span></span><span id="66" class="l"><span class="php-comment"> */</span>
 </span><span id="67" class="l"><span class="php-keyword1">function</span> _contenido_add(<span class="php-var">$selecionado</span> = <span class="php-quote">&quot;&quot;</span>, <span class="php-var">$excluir</span> = <span class="php-quote">&quot;&quot;</span>) {
 </span><span id="68" class="l">    <span class="php-keyword1">global</span> <span class="php-var">$conexion</span>;
@@ -462,7 +455,7 @@
 </span></span><span id="91" class="l"><span class="php-comment"> * Regresa el id mas alto de la tabla _contenido
 </span></span><span id="92" class="l"><span class="php-comment"> * @global type $conexion
 </span></span><span id="93" class="l"><span class="php-comment"> * @return boolean Si hay un valor regresa el max, sino regresa falso
-</span></span><span id="94" class="l"><span class="php-comment"> * @package _contenido
+</span></span><span id="94" class="l"><span class="php-comment"> * @package gestion/_contenido
 </span></span><span id="95" class="l"><span class="php-comment"> */</span>
 </span><span id="96" class="l"><span class="php-keyword1">function</span> _contenido_numero_actual() {
 </span><span id="97" class="l">    <span class="php-keyword1">global</span> <span class="php-var">$conexion</span>;

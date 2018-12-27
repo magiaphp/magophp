@@ -6,7 +6,7 @@
  * @param type $campo Nombre del campo en la tabla
  * @param type $id identificador unico
  * @return boolean Regresa el valor que el $campo tiene
- * @package _actualizaciones
+ * @package gestion/_actualizaciones
  */
 function _actualizaciones_campo($campo, $id) {
     global $conexion;
@@ -27,7 +27,7 @@ function _actualizaciones_campo($campo, $id) {
  * @param type $label
  * @param type $selecionado
  * @param type $excluir
- * @package _actualizaciones
+ * @package gestion/_actualizaciones
  * @todo Poner en array los items a excluir
  */
 function _actualizaciones_campo_add($campo, $label, $selecionado = "", $excluir = "") {
@@ -52,7 +52,13 @@ function _actualizaciones_campo_add($campo, $label, $selecionado = "", $excluir 
         echo "value=\"$_actualizaciones[$campo]\">$_actualizaciones[$campo]</option> \n";
     }
 }
-
+/**
+ * 
+ * @global type $conexion
+ * @param type $selecionado
+ * @param type $excluir
+ * @package gestion/_actualizaciones
+ */
 function _actualizaciones_add($selecionado = "", $excluir = "") {
     global $conexion;
     $sql = mysql_query(
@@ -77,7 +83,12 @@ function _actualizaciones_add($selecionado = "", $excluir = "") {
     }
 }
 
-/**/
+/**
+ * 
+ * @global type $conexion
+ * @return boolean
+ * @package gestion/_actualizaciones
+ */
 
 function _actualizaciones_numero_actual() {
     global $conexion;

@@ -5,7 +5,7 @@
  * @param type $campo Nombre de campo 
  * @param type $id identificador del registro el cual deseo el vallr del $campo
  * @return boolean Regreso el $campo o false segun exixta o no
- * @package _contenido
+ * @package gestion/_contenido
  */
 function _contenido_campo($campo, $id) {
     global $conexion;
@@ -27,7 +27,7 @@ function _contenido_campo($campo, $id) {
  * @param type $selecionado
  * @param type $excluir
  * @todo A verificar, posible error (coje de _menu)
- * @package _contenido
+ * @package gestion/_contenido
  */
 function _contenido_campo_add($campo, $label, $selecionado = "", $excluir = "") {
     global $conexion;
@@ -62,7 +62,7 @@ function _contenido_campo_add($campo, $label, $selecionado = "", $excluir = "") 
  * @param type $selecionado valor a ser seleccionado 
  * @param type $excluir Valor a excluir de la lista
  * @return type html <option>
- * @package _contenido
+ * @package gestion/_contenido
  */
 function _contenido_add($selecionado = "", $excluir = "") {
     global $conexion;
@@ -91,7 +91,7 @@ function _contenido_add($selecionado = "", $excluir = "") {
  * Regresa el id mas alto de la tabla _contenido
  * @global type $conexion
  * @return boolean Si hay un valor regresa el max, sino regresa falso
- * @package _contenido
+ * @package gestion/_contenido
  */
 function _contenido_numero_actual() {
     global $conexion;

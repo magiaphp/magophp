@@ -1,10 +1,15 @@
 <?php
 /**
- * Obtiene 4 digitos del permiso que el grupo $g tiene en la pagina $g
+ * Obtiene 4 digitos como permiso, para [ver, crear, editar, borrar] que el grupo $g tiene en la pagina $p,<br>
+ * [1111] puede ver, crear, editar y borrar </br>
+ * [1110] puede ver, crear, edtar, pero NO puede borrar</br> 
+ * [1100] puede ver, crear, NO PUEDE editar, NI borrar </br>
+ * [1000] Solo puede ver, y NO PUEDE crear, editar, ni borrar</br>
+ * [0000] NO PUEDE ni ver, ni crear, ni editar, ni borrar, osea NADA de nada</br>
  * @global type $conexion
  * @param type $p  Pagina 
  * @param type $g Grupo
- * @return type Regresa ek permiso que tiene este grupo $g en esta pagina $p 0000 - 1111
+ * @return type Regresa el permiso que tiene este grupo $g en esta pagina $p 0000 - 1111
  * @package admin/permisos
  */
 function permisos_obtiene_permiso($p, $g) {
@@ -15,42 +20,36 @@ function permisos_obtiene_permiso($p, $g) {
     return $reg[0];
 }
 /**
- * Regresa el true, false segun tiene o no tiene permiso para realizar esa accion 
+ * Regresa el true, false segun tiene o no tiene permiso para realizar esa accion segun el grupo 
  * @global type $r1 [Globales]
  * @global type $r2
- * @param string $accion [ver[buscar], crear, editar, borrar]
+ * @param string $accion [ver [buscar], crear, editar, borrar]
  * @param type $pagina Pagina donde nos encontramos
  * @param type $grupo Grupo del cual queremos obtener el permiso
  * @return boolean [true, false] segun si tiene o no permiso para realizar esta accion 
  * @package admin/permisos
  */
-function permisos_tiene_permiso($accion, $pagina, $_usuarios_grupo) {
-    global $r1, $r2;
-    if ($accion == 'buscar') {
-        $accion = 'ver';
-    }
-    $p = permisos_obtiene_permiso($pagina, $_usuarios_grupo);
-    $ver = $p[0];
-    $crear = $p[1];
-    $editar = $p[2];
-    $borrar = $p[3];
-
+function permisos_tiene_permiso($accion, $pagina, $_usuarios_grupo) {    
+    if ($accion == 'buscar') {$accion = 'ver';}
+    
+    $p = permisos_obtiene_permiso($pagina, $_usuarios_grupo);  
+    
     switch ($accion) {
         case "ver":
             //return ($ver == 1)? true:false; 
-            return ($ver) ? true : false;
+            return ($p[0]) ? true : false;
             break;
 
         case "crear":
-            return ($crear) ? true : false;
+            return ($p[1]) ? true : false;
             break;
 
         case "editar":
-            return ($editar) ? true : false;
+            return ($p[2]) ? true : false;
             break;
 
         case "borrar":
-            return ($borrar) ? true : false;
+            return ($p[3]) ? true : false;
             break;
 
         default: // por defecto enviamos falso

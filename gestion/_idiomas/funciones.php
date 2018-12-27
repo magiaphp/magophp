@@ -6,7 +6,7 @@
  * @param type $campo
  * @param type $id
  * @return boolean
- * @package _idiomas
+ * @package gestion/_idiomas
  * @version 0.0.1
  * @author Robinson Coello <robinson@coello.be> 
  */
@@ -29,7 +29,7 @@ function _idiomas_campo($campo, $id) {
  * @global type $conexion
  * @param type $iso
  * @return boolean
- * @package _idiomas
+ * @package gestion/_idiomas
  * @version 0.0.1
  * @author Robinson Coello <robinson@coello.be> 
  */
@@ -52,7 +52,7 @@ function _idiomas_segun_iso($iso) {
  * @param type $label
  * @param type $selecionado
  * @param type $excluir
- * @package _idiomas
+ * @package gestion/_idiomas
  * @version 0.0.1
  * @author Robinson Coello <robinson@coello.be> 
  */
@@ -83,7 +83,7 @@ function _idiomas_campo_add($campo, $label, $selecionado = "", $excluir = "") {
  * @global type $conexion
  * @param type $selecionado
  * @param type $excluir
- * @package _idiomas
+ * @package gestion/_idiomas
  * @version 0.0.1
  * @author Robinson Coello <robinson@coello.be> 
  */
@@ -114,7 +114,7 @@ function _idiomas_add($selecionado = "", $excluir = "") {
  * 
  * @global type $conexion
  * @return boolean
- * @package _idiomas
+ * @package gestion/_idiomas
  * @version 0.0.1
  * @author Robinson Coello <robinson@coello.be> 
  */
@@ -134,7 +134,7 @@ function _idiomas_numero_actual() {
  * entrega los idiomas activos
  * @global type $conexion
  * @return array
- * @package _idiomas
+ * @package gestion/_idiomas
  * @version 0.0.1
  * @author Robinson Coello <robinson@coello.be> 
  */
