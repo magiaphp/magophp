@@ -13,4 +13,5 @@ if (isset($_REQUEST['a']) == 'editar') {
     include "./_idiomas/modelos/ver.php";
     include "./_idiomas/reg/reg.php";
     include "./_idiomas/vista/editar.php";
+    include "./_idiomas/vista/borrar.php";
 }
