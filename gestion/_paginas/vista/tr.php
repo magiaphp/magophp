@@ -28,8 +28,9 @@ foreach (_grupos_array() as $key => $grupo) {
 
 
 echo'<td>
-<a href=' . $_SERVER['PHP_SELF'] . '?p=_paginas&c=ver&_paginas_id=' . $_paginas_id . '>Ver</a> |  
-<a href=' . $_SERVER['PHP_SELF'] . '?p=_paginas&c=editar&_paginas_id=' . $_paginas_id . '>Editar</a>  
+<a href=' . $_SERVER['PHP_SELF'] . '?p=_paginas&c=ver&_paginas_id=' . $_paginas_id . '>'._tr("Ver").'</a> |  
+<a href=' . $_SERVER['PHP_SELF'] . '?p=_paginas&c=editar&_paginas_id=' . $_paginas_id . '>'._tr("Editar").'</a>  |
+<a href=' . $_SERVER['PHP_SELF'] . '?p=_paginas&c=borrar&_paginas_id=' . $_paginas_id . '>'._tr("Borrar").'</a>  
                       
                 </td></tr>';
 ?>

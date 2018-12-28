@@ -11,7 +11,8 @@
 
 
  <td>
-<a href='.$_SERVER['PHP_SELF'].'?p=_permisos&c=ver&_permisos_id='.$_permisos_id.'>Ver</a> |  
-<a href='.$_SERVER['PHP_SELF'].'?p=_permisos&c=editar&_permisos_id='.$_permisos_id.'>Editar</a>  
+<a href='.$_SERVER['PHP_SELF'].'?p=_permisos&c=ver&_permisos_id='.$_permisos_id.'>'._tr("Ver").'</a> |  
+<a href='.$_SERVER['PHP_SELF'].'?p=_permisos&c=editar&_permisos_id='.$_permisos_id.'>'._tr("Editar").'</a>  |
+<a href='.$_SERVER['PHP_SELF'].'?p=_permisos&c=borrar&_permisos_id='.$_permisos_id.'>'._tr("Borrar").'</a>  
                       
                 </td></tr>';  

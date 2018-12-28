@@ -5,4 +5,5 @@ include "./_paginas/reg/get.php";
 include "./_paginas/modelos/buscar.php";
 
 include "./_paginas/vista/index.php";
-logs_historico($p, $c, false);
+
+//logs_historico($p, $c, false);

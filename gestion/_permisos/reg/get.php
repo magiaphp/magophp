@@ -1,8 +1,7 @@
 <?php
 
-/**
-  magia_version: 0.0.8
- * */
+
+
 //$_permisos_id = mysql_real_escape_string($_GET['_permisos_id']); 
 $_permisos_grupo = mysql_real_escape_string($_GET['_permisos_grupo']);
 $_permisos_pagina = mysql_real_escape_string($_GET['_permisos_pagina']);
