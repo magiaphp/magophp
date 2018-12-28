@@ -13,4 +13,8 @@ if (isset($_REQUEST['a']) == 'editar') {
     include "./_menu/modelos/ver.php";
     include "./_menu/reg/reg.php";
     include "./_menu/vista/editar.php";
+    // borrar
+    if(permisos_tiene_permiso("borrar", "_menu", $_usuarios_grupo)){
+        include "./_menu/vista/borrar.php";
+    }
 }

@@ -7,4 +7,4 @@
 $_idiomas_idioma = mysql_real_escape_string($_GET['_idiomas_idioma']);
 $_idiomas_nombre = mysql_real_escape_string($_GET['_idiomas_nombre']);
 $_idiomas_orden = mysql_real_escape_string($_GET['_idiomas_orden']);
-$_idiomas_activo = mysql_real_escape_string($_GET['_idiomas_activo']);
+$_idiomas_activo = (isset($_GET['_idiomas_activo'])) ? mysql_real_escape_string($_GET['_idiomas_activo']) : false;

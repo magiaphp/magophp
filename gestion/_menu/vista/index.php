@@ -53,7 +53,7 @@
 
             <?php
             $ganchos = array("Icono");
-            _opciones_thead("_usuarios", $ganchos);
+            _opciones_thead("_menu", $ganchos);
             ?>
 
 
@@ -88,7 +88,7 @@
                 include "./_menu/vista/tr_anadir.php";
             }
             ?>
-            <?php _opciones_tfoot("_usuarios", $ganchos); ?>
+            <?php _opciones_tfoot("_menu", $ganchos); ?>
 
         </table> 
 

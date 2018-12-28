@@ -6,7 +6,8 @@
  FROM _idiomas  
  WHERE  
  idioma like '%$_idiomas_idioma%'    
- AND  nombre like '%$_idiomas_nombre%'    
+ AND  nombre like '%$_idiomas_nombre%'  
+      AND  activo like '%$_idiomas_activo%'  
  ORDER BY id DESC"; 
  $sql=mysql_query( 
          " $comando   
