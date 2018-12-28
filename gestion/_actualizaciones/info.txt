@@ -1,0 +1,6 @@
+Nombre = Actualizaciones 
+Descripcion = Para la gestion de las actualizaciones  
+Version = 0.0.1 
+Autor = Robinson Coello 
+Email = robin@coello.be     
+Url = http://robinson.coello.be

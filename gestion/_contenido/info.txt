@@ -1,0 +1,6 @@
+Nombre = Contenido 
+Descripcion = Para la gestion del contenido del sitio web  
+Version = 0.0.1 
+Autor = Robinson Coello 
+Email = robin@coello.be     
+Url = http://robinson.coello.be

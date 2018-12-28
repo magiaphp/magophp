@@ -1,0 +1,6 @@
+Nombre = Idiomas 
+Descripcion = Para la gestion del los idiomas que tiene el sistema  
+Version = 0.0.1 
+Autor = Robinson Coello 
+Email = robin@coello.be     
+Url = http://robinson.coello.be
