@@ -289,3 +289,10 @@ function ordenpor($url, $label, $ordenpor, $orden){
     echo $enlace; 
     
 }
+/**
+ * Redirecciona a la url dada
+ * @param type $url
+ */
+function redireccion($url){
+    echo '<meta http-equiv="refresh" content="0; url='.$url.'">';
+}
